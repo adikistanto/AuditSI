@@ -33,7 +33,7 @@
                 <div data-role="page" id="form1" class="upage-content ac0 content-area vertical-col left">
                     <form action="" method="POST" name="login" class="my-form">
 
-                        <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
+                        <label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
                             <input type="text" placeholder="Enter office's name" name="office-name">
                         </label>
                         <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address*</span>
@@ -49,7 +49,7 @@
                 <div data-role="page" id="form2" class="upage-content ac0 content-area vertical-col left">
                     <form action="" method="POST" name="login" class="my-form">
 
-                        <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span>
+                        <label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span>
                             <input type="text" placeholder="Enter responsibility" name="office-name" value="">
                         </label>
                         <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span>
@@ -59,13 +59,16 @@
                             <input type="text" placeholder="Enter alternative" name="office-contact">
                         </label>
                     </form>
+                    <div class="add">
+                        <button class="button button-assertive icon ion-plus-circled"></button>
+                    </div>
                 </div>
-                
+
                 <!-- Form 3 -->
                 <div data-role="page" id="form3" class="upage-content ac0 content-area vertical-col left">
                     <form action="" method="POST" name="login" class="my-form">
 
-                        <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Form*</span>
+                        <label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Form*</span>
                             <input type="text" placeholder="Enter responsibility" name="office-name" value="">
                         </label>
                         <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of 3*</span>
@@ -88,8 +91,7 @@
                 </ion-footer-bar>
             </div>
         </div>
-        
-        
+
         <script>
             $(document).ready(function() {
                 $("#form1").show();
@@ -107,6 +109,11 @@
                         number -= 1;
                     }
                     $("#form"+number.toString()).show();
+                });
+                
+                /* Menambahkan form 2 */
+                $(".add button").click(function(){
+                    $("#form2 form").append('<label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span><input type="text" placeholder="Enter responsibility" name="office-name" value=""></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span><input type="text" placeholder="Enter employee\'s name" name="office-address"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span><input type="text" placeholder="Enter alternative" name="office-contact"></label>')
                 });
             });
         </script>
