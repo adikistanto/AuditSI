@@ -29,7 +29,7 @@
                     </div>
                     <div id="form1">
                         <!-- FORM SATU-->
-                        <label class="item item-input widget uib_w_5 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of office 1</span>
+                        <label class="item item-input widget uib_w_5 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of office</span>
                             <input type="text" placeholder="type here">
                         </label>
                         <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address</span>
@@ -39,20 +39,31 @@
                             <input type="number" placeholder="type here">
                         </label>
                     </div>
-                    <!-- AKKHIR FORM SATU-->
+<!-- ---------------------------------------------------AKKHIR FORM SATU ------------------------------>
                     <div id="form2">
                         <!-- FORM DUA-->
-                        <label class="item item-input widget uib_w_5 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of office 2</span>
+                        <label class="item item-input widget uib_w_5 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Date Of Receipt</span>
                             <input type="text" placeholder="type here">
                         </label>
-                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address</span>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Author</span>
                             <input type="text" placeholder="type here">
                         </label>
-                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Phone number</span>
-                            <input type="number" placeholder="type here">
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Custodian</span>
+                            <input type="text" placeholder="type here">
+                        </label>
+                        <label class="item item-input widget uib_w_8 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">On-Site Location</span>
+                            <input type="text" placeholder="type here">
+                        </label>
+                        <label class="item item-input widget uib_w_9 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Off-Site Location</span>
+                            <input type="text" placeholder="type here">
                         </label>
                     </div>
-                    <!-- AKKHIR FORM DUA-->
+<!----------------------------------------- AKKHIR FORM DUA ------------------------------------------->
                 </div>
                 <ion-header-bar class="bar inner-element uib_w_3 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
                     <div class="buttons widget-container content-area horiz-area wrapping-col">
@@ -60,7 +71,7 @@
                             <button class="button widget uib_w_4 d-margins ion ion-home icon-left" data-uib="ionic/button" data-ver="0"></button>
                         </a>
                     </div>
-                    <h1 class="title">Documentation List</h1>
+                    <h1 id="header_text" class="title"></h1>
                     <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
                 </ion-header-bar>
                 <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
@@ -77,15 +88,18 @@
         </div>
         <script>
             $(document).ready(function() {
-                $("#form2").show();
-                $("#form1").hide();
+                $("#form1").show();
+                $("#form2").hide();
+                document.getElementById("header_text").innerHTML = "Documentation List";
                 $("#next").click(function(){
-                    $("#form2").hide();
-                    $("#form1").show();
-                });
-                $("#back").click(function(){
                     $("#form1").hide();
                     $("#form2").show();
+                    document.getElementById("header_text").innerHTML = "Manual";
+                });
+                $("#back").click(function(){
+                    $("#form2").hide();
+                    $("#form1").show();
+                    document.getElementById("header_text").innerHTML = "Documentation List";
                 });
             });
         </script>
