@@ -29,36 +29,50 @@
                     <h1 class="title">Alternative Site Procedure</h1>
                 </ion-header-bar>
 
-                <!-- Form -->
-                <div class="upage-content ac0 content-area vertical-col left" id="page_20_31">
+                <!-- Form 1 -->
+                <div data-role="page" id="form-1" class="upage-content ac0 content-area vertical-col left">
                     <form action="" method="POST" name="login" class="my-form">
-                        <label class="item-stacked-label text-padding">
-                            <div class="my-label">Name of Office*:</div>
-                            <input placeholder="Enter Office's Name" type="text">
+
+                        <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
+                            <input type="text" placeholder="Enter office's name" name="office-name">
                         </label>
-                        <label class="item-stacked-label text-padding">
-                            <div class="my-label">Address*:</div>
-                            <input placeholder="Enter Office's Address" type="text">
+                        <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address*</span>
+                            <input type="text" placeholder="Enter office's address" name="office-address">
                         </label>
-                        <label class="item-stacked-label text-padding">
-                            <div class="my-label">Phone/ Email*:</div>
-                            <input placeholder="Enter Office's Phone/ Email" type="text">
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Phone/ Email*</span>
+                            <input type="text" placeholder="Enter office's phone/ email" name="office-contact">
                         </label>
                     </form>
                 </div>
 
-                <ion-footer-bar class="bar inner-element uib_w_2 bar-footer" data-uib="ionic/footer" data-ver="0">
+                <!-- Form 2 -->
+                <div data-role="page" id="form-2" class="upage-content ac0 content-area vertical-col left">
+                    <form action="" method="POST" name="login" class="my-form">
+
+                        <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span>
+                            <input type="text" placeholder="Enter responsibility" name="office-name" value="">
+                        </label>
+                        <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span>
+                            <input type="text" placeholder="Enter employee's name" name="office-address">
+                        </label>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span>
+                            <input type="text" placeholder="Enter alternative" name="office-contact">
+                        </label>
+                    </form>
+                </div>
+
+                <ion-footer-bar class="bar inner-element uib_w_2 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
                     <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
                     <!-- Back Button -->
                     <div class="back">
-                        <a class="">
+                        <a href="#form-1">
                             <button class="button icon-left ion-chevron-left button-assertive"></button>
                         </a>
                     </div>
                     <!-- Next Button -->
                     <div class="next">
-                        <a class="">
-                            <button class="button icon-right ion-checkmark-round button-positive"></button>
+                        <a target="_blank" href="#form-2">
+                            <button class="button icon-right ion-chevron-right button-positive"></button>
                         </a>
                     </div>
                     <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
