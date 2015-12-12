@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
+        <link rel="stylesheet" type="text/css" href="css/alternative-site-procedure_main.less.css" class="main-less">
+        <link rel="stylesheet" type="text/css" href="css/audit.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+        <script src="intelxdk.js"></script>
+        <script src="cordova.js"></script>
+        <script src="xhr.js"></script>
+        <script src="xdk/init-dev.js"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.js"></script>
+        <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+        <script type="application/javascript" src="js/alternative-site-procedure_init_services.js"></script>
+    </head>
+
+    <body ng-app="myApp">
+
+        <div class="upage" id="mainpage">
+            <div class="upage-outer fixed-header-footer">
+
+                <!-- Header -->
+                <ion-header-bar class="bar inner-element uib_w_1 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+                    <button class="button button-clear icon-left ion-home"></button>
+                    <h1 class="title">Alternative Site Procedure</h1>
+                </ion-header-bar>
+
+                <!-- Form -->
+                <div class="upage-content ac0 content-area vertical-col left" id="page_20_31">
+                    <form action="" method="POST" name="login" class="my-form">
+                        <label class="item-stacked-label text-padding">
+                            <div class="my-label">Name of Office*:</div>
+                            <input placeholder="Enter Office's Name" type="text">
+                        </label>
+                        <label class="item-stacked-label text-padding">
+                            <div class="my-label">Address*:</div>
+                            <input placeholder="Enter Office's Address" type="text">
+                        </label>
+                        <label class="item-stacked-label text-padding">
+                            <div class="my-label">Phone/ Email*:</div>
+                            <input placeholder="Enter Office's Phone/ Email" type="text">
+                        </label>
+                    </form>
+                </div>
+
+                <ion-footer-bar class="bar inner-element uib_w_2 bar-footer" data-uib="ionic/footer" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                    <!-- Back Button -->
+                    <div class="back">
+                        <a class="">
+                            <button class="button icon-left ion-chevron-left button-assertive"></button>
+                        </a>
+                    </div>
+                    <!-- Next Button -->
+                    <div class="next">
+                        <a class="">
+                            <button class="button icon-right ion-checkmark-round button-positive"></button>
+                        </a>
+                    </div>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-footer-bar>
+            </div>
+        </div>
+    </body>
+
+</html>
