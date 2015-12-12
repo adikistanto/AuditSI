@@ -120,6 +120,51 @@
                     13. Vendor Contact Lists Sample Format</ion-item>
             </ion-list>
         </div>
+            <div id="document_display">
+                <ion-list class="widget uib_w_5 d-margins" data-uib="ionic/list" data-ver="0">
+                    <ion-item class="item widget uib_w_6" data-uib="ionic/list_item" data-ver="0">
+                        Alternative Site Procedure</ion-item>
+                    <ion-item class="item widget uib_w_7" data-uib="ionic/list_item" data-ver="0">
+                        2. Communication Resources</ion-item>
+                    <ion-item class="item widget uib_w_8" data-uib="ionic/list_item" data-ver="0">
+                        3. Contingency Log</ion-item>
+                    <ion-item class="item widget uib_w_6" data-uib="ionic/list_item" data-ver="0">
+                        4. Contingency Plan Contact Information</ion-item>
+                    <ion-item class="item widget uib_w_7" data-uib="ionic/list_item" data-ver="0">
+                        5. Documentation List</ion-item>
+                    <ion-item class="item widget uib_w_8" data-uib="ionic/list_item" data-ver="0">
+                        6. Emergency Procedures</ion-item>
+                    <ion-item class="item widget uib_w_6" data-uib="ionic/list_item" data-ver="0">
+                        7. External Support Agreements</ion-item>
+                    <ion-item class="item widget uib_w_7" data-uib="ionic/list_item" data-ver="0">
+                        8. Hardware Inventory</ion-item>
+                    <ion-item class="item widget uib_w_8" data-uib="ionic/list_item" data-ver="0">
+                        9. Information Asset Usage Procedure</ion-item>
+                    <ion-item class="item widget uib_w_6" data-uib="ionic/list_item" data-ver="0">
+                        10. Layout Inventory</ion-item>
+                    <ion-item class="item widget uib_w_7" data-uib="ionic/list_item" data-ver="0">
+                        11. Software Inventory</ion-item>
+                    <ion-item class="item widget uib_w_8" data-uib="ionic/list_item" data-ver="0">
+                        12. Team Staffi ng and Task</ion-item>
+                    <ion-item class="item widget uib_w_8" data-uib="ionic/list_item" data-ver="0">
+                        13. Vendor Contact Lists</ion-item>
+                </ion-list>
+        </div>
+        <script>
+            $("#form").click(function(){
+                $("#document_display").hide();
+                $("#document_form").show();
+                document.getElementById("form").style.background = "#B5B5F2";
+                document.getElementById("display").style.background = "#F4F4F9";
+            });
+
+            $("#display").click(function(){
+                 $("#document_display").show();
+                $("#document_form").hide();
+                document.getElementById("display").style.background = "#B5B5F2";
+                document.getElementById("form").style.background = "#F4F4F9";
+            });
+        </script>
     </body>
 
 </html>
