@@ -3,33 +3,21 @@ body{
 }
 
 /*** FORM 1 - ALTERNATIVE SITE PROCEDURE ***/
-.my-form input[type="text"]{
-    border: 1px solid #333;
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-.my-label {
-    padding-left: 5px;
-    margin-bottom: 10px;
-}
 /* Back Button */
 .back{
     position: absolute;
     left: 5px;
-    bottom: 10px;
 }
 /* Next Button */
 .next{
     position: absolute;
     right: 5px;
-    bottom: 10px;
 }
-.next button,
+/*.next button,
 .back button{
     width: 80px;
     height: 35px;
-}
+}*/
 
 
 
