@@ -332,8 +332,8 @@ body#afui .splt {
     margin-right: 6px;
   }
   .d-margins {
-    margin-top: 5px;
-    margin-bottom: 6px;
+    margin-top: 44px;
+    margin-bottom: 0px;
   }
 }
 @media all {
@@ -417,4 +417,18 @@ body#afui .splt {
 .button-bar .d-margins,
 .tabs .d-margins {
   margin: 0;
+}
+.left-receptacle {
+  float: left;
+}
+.right-receptacle {
+  float: right;
+}
+[data-uib="media/text"] p:first-of-type {
+  margin-top: 0px;
+}
+.ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
