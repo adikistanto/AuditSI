@@ -30,7 +30,7 @@
                 </ion-header-bar>
 
                 <!-- Form 1 -->
-                <div data-role="page" id="form-1" class="upage-content ac0 content-area vertical-col left">
+                <div data-role="page" id="form1" class="upage-content ac0 content-area vertical-col left">
                     <form action="" method="POST" name="login" class="my-form">
 
                         <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
@@ -46,7 +46,7 @@
                 </div>
 
                 <!-- Form 2 -->
-                <div data-role="page" id="form-2" class="upage-content ac0 content-area vertical-col left">
+                <div data-role="page" id="form2" class="upage-content ac0 content-area vertical-col left">
                     <form action="" method="POST" name="login" class="my-form">
 
                         <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span>
@@ -60,25 +60,56 @@
                         </label>
                     </form>
                 </div>
+                
+                <!-- Form 3 -->
+                <div data-role="page" id="form3" class="upage-content ac0 content-area vertical-col left">
+                    <form action="" method="POST" name="login" class="my-form">
 
-                <ion-footer-bar class="bar inner-element uib_w_2 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
-                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
-                    <!-- Back Button -->
-                    <div class="back">
-                        <a href="#form-1">
-                            <button class="button icon-left ion-chevron-left button-assertive"></button>
-                        </a>
+                        <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Form*</span>
+                            <input type="text" placeholder="Enter responsibility" name="office-name" value="">
+                        </label>
+                        <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of 3*</span>
+                            <input type="text" placeholder="Enter employee's name" name="office-address">
+                        </label>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span>
+                            <input type="text" placeholder="Enter alternative" name="office-contact">
+                        </label>
+                    </form>
+                </div>
+
+                <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button id="back" class="button widget uib_w_9 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0"></button>
                     </div>
-                    <!-- Next Button -->
-                    <div class="next">
-                        <a target="_blank" href="#form-2">
-                            <button class="button icon-right ion-chevron-right button-positive"></button>
-                        </a>
+                    <h1 class="title"></h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button id="next" class="button widget uib_w_10 d-margins ion ion-android-arrow-forward" data-uib="ionic/button" data-ver="0"></button>
                     </div>
-                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
                 </ion-footer-bar>
             </div>
         </div>
+        
+        
+        <script>
+            $(document).ready(function() {
+                $("#form1").show();
+                $("#form2").hide();
+                $("#form3").hide();
+                var number = 1;
+                $("#next").click(function(){
+                    $("#form"+number.toString()).hide();
+                    number += 1;
+                    $("#form"+number.toString()).show();
+                });
+                $("#back").click(function(){
+                    $("#form"+number.toString()).hide();
+                    if(number-1 != 0){
+                        number -= 1;
+                    }
+                    $("#form"+number.toString()).show();
+                });
+            });
+        </script>
     </body>
 
 </html>

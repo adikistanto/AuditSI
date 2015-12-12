@@ -3,21 +3,7 @@ body{
 }
 
 /*** FORM 1 - ALTERNATIVE SITE PROCEDURE ***/
-/* Back Button */
-.back{
-    position: absolute;
-    left: 5px;
-}
-/* Next Button */
-.next{
-    position: absolute;
-    right: 5px;
-}
-/*.next button,
-.back button{
-    width: 80px;
-    height: 35px;
-}*/
+
 
 
 
