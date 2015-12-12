@@ -3,14 +3,15 @@ body{
 }
 
 /*** FORM 1 - ALTERNATIVE SITE PROCEDURE ***/
-.add .button{
-    height: 30px;
+.add{
     position: relative;
     top: 40px;
     right: 10px;
     float: right;
 }
-
+.bar-footer{
+    z-index: 100;
+}
 
 
 
