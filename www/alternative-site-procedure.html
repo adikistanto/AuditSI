@@ -30,10 +30,10 @@
                 </ion-header-bar>
 
                 <!-- Form 1 -->
-                <div data-role="page" id="form1" class="upage-content ac0 content-area vertical-col left">
+                <div data-role="page" id="form1" class="upage-content ac0 content-area vertical-col">
                     <form action="" method="POST" name="login" class="my-form">
 
-                        <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
+                        <label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
                             <input type="text" placeholder="Enter office's name" name="office-name">
                         </label>
                         <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address*</span>
@@ -43,39 +43,300 @@
                             <input type="text" placeholder="Enter office's phone/ email" name="office-contact">
                         </label>
                     </form>
-                </div>
+                </div>  <!-- End of Form 1-->
 
                 <!-- Form 2 -->
-                <div data-role="page" id="form2" class="upage-content ac0 content-area vertical-col left">
+                <div data-role="page" id="form2" class="upage-content ac0 content-area vertical-col">
                     <form action="" method="POST" name="login" class="my-form">
 
-                        <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span>
-                            <input type="text" placeholder="Enter responsibility" name="office-name" value="">
+                        <label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span>
+                            <input type="text" placeholder="Enter responsibility" name="responsibility" value="">
                         </label>
                         <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span>
-                            <input type="text" placeholder="Enter employee's name" name="office-address">
+                            <input type="text" placeholder="Enter employee's name" name="employee-name">
                         </label>
                         <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span>
-                            <input type="text" placeholder="Enter alternative" name="office-contact">
+                            <input type="text" placeholder="Enter alternative" name="alternative">
                         </label>
                     </form>
+                    <div class="add">
+                        <button class="button button-assertive icon ion-plus-circled"></button>
+                    </div>
                 </div>
-                
-                <!-- Form 3 -->
-                <div data-role="page" id="form3" class="upage-content ac0 content-area vertical-col left">
-                    <form action="" method="POST" name="login" class="my-form">
 
-                        <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Form*</span>
-                            <input type="text" placeholder="Enter responsibility" name="office-name" value="">
+                <!-- Form 3 -->
+                <div data-role="page" id="form3" class="upage-content ac0 content-area vertical-col">
+                    <form action="" method="POST" name="first-alternative-site" class="my-form">
+                        <label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Location*</span>
+                            <input type="text" placeholder="Enter location's name" name="location-name" value="">
                         </label>
-                        <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of 3*</span>
-                            <input type="text" placeholder="Enter employee's name" name="office-address">
+                        <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address*</span>
+                            <input type="text" placeholder="Enter location's address" name="location-address">
                         </label>
-                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span>
-                            <input type="text" placeholder="Enter alternative" name="office-contact">
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Person to Contact*</span>
+                            <input type="text" placeholder="Enter person's contact" name="person-contact">
+                        </label>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Alternative Person(s)</span>
+                            <textarea placeholder="Enter alternative's name" name="alternative-name" rows="3" wrap="soft"></textarea>
+                        </label>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">How to Reach</span>
+                            <textarea type="text" placeholder="How to reach" name="reach" rows="3" wrap="soft"></textarea>
+                        </label>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Time to Reach</span>
+                            <textarea type="text" placeholder="Time to reach" name="time" rows="3" wrap="soft"></textarea>
                         </label>
                     </form>
-                </div>
+                </div>  <!-- End of Form 3 -->
+                <!-- Form 4 -->
+                <div data-role="page" id="form4" class="list widget uib_w_11 d-margins" data-uib="ionic/radio_button_group" data-ver="0">
+                    <form>
+                        <div class="list">
+                            <!-- Floor Space -->
+                            <div class=" item item-divider">
+                                Floor Space
+                            </div>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="floor-space">
+                                <div class="item-content">
+                                    available
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="floor-space">
+                                <div class="item-content">
+                                    required
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="floor-space">
+                                <div class="item-content">
+                                    to be procured
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <!-- Computers -->
+                            <div class=" item item-divider">
+                                Computers
+                            </div>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="computer">
+                                <div class="item-content">
+                                    available
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="computer">
+                                <div class="item-content">
+                                    required
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="computer">
+                                <div class="item-content">
+                                    to be procured
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <!-- Power Points -->
+                            <div class=" item item-divider">
+                                Power Points
+                            </div>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="power-points">
+                                <div class="item-content">
+                                    available
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="power-points">
+                                <div class="item-content">
+                                    required
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="power-points">
+                                <div class="item-content">
+                                    to be procured
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <!-- Software -->
+                            <div class=" item item-divider">
+                                Software
+                            </div>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="software">
+                                <div class="item-content">
+                                    available
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="software">
+                                <div class="item-content">
+                                    required
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="software">
+                                <div class="item-content">
+                                    to be procured
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <!-- Network -->
+                            <div class=" item item-divider">
+                                Network
+                            </div>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="network">
+                                <div class="item-content">
+                                    available
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="network">
+                                <div class="item-content">
+                                    required
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="network">
+                                <div class="item-content">
+                                    to be procured
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <!-- Peripheral Device -->
+                            <div class=" item item-divider">
+                                Peripheral Devices
+                            </div>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="peripheral-devices">
+                                <div class="item-content">
+                                    available
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="peripheral-devices">
+                                <div class="item-content">
+                                    required
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="peripheral-devices">
+                                <div class="item-content">
+                                    to be procured
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <!-- Customer Service Area -->
+                            <div class=" item item-divider">
+                                Customer Service Area
+                            </div>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="customer-service-area">
+                                <div class="item-content">
+                                    available
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="customer-service-area">
+                                <div class="item-content">
+                                    required
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="customer-service-area">
+                                <div class="item-content">
+                                    to be procured
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <!-- Services Offered -->
+                            <div class=" item item-divider">
+                                Services Offered
+                            </div>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="services-offered">
+                                <div class="item-content">
+                                    available
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="services-offered">
+                                <div class="item-content">
+                                    required
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-radio widget uib_w_12" data-uib="ionic/radio_button" data-ver="0">
+                                <input type="radio" name="services-offered">
+                                <div class="item-content">
+                                    to be procured
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                        </div>
+                    </form>
+                </div>    <!-- End of Form 4 -->
+                <!-- Form 5 -->
+                <div data-role="page" id="form5" class="upage-content ac0 content-area vertical-col d-margins">
+                    <form name="facilities-provider" class="my-form header-margin">
+                        <h3>Computers</h3>
+                        <label class="item item-input widget item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Name, Address, and Contact Number*</span>
+                            <textarea placeholder="" name="computers-provider" rows="3" wrap="soft"></textarea>
+                        </label>
+                        <label class="item item-input widget item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Lead Time*</span>
+                            <input type="text" placeholder="" name="computers-lead-time">
+                        </label>
+                        <h3>Software</h3>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Name, Address, and Contact Number*</span>
+                            <textarea placeholder="" name="provider-software" rows="3" wrap="soft"></textarea>
+                        </label>
+                        <label class="item item-input widget item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Lead Time*</span>
+                            <input type="text" placeholder="" name="software-lead-time">
+                        </label>
+                        <h3>Network</h3>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Name, Address, and Contact Number*</span>
+                            <textarea placeholder="" name="provider-network" rows="3" wrap="soft"></textarea>
+                        </label>
+                        <label class="item item-input widget item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Lead Time*</span>
+                            <input type="text" placeholder="" name="network-lead-time">
+                        </label>
+                        <h3>Peripheral Devices</h3>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Name, Address, and Contact Number*</span>
+                            <textarea placeholder="" name="provider-peripheral" rows="3" wrap="soft"></textarea>
+                        </label>
+                        <label class="item item-input widget item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Lead Time*</span>
+                            <input type="text" placeholder="" name="peripheral-lead-time">
+                        </label>
+                    </form>
+                </div>    <!-- End of Form 5 -->
+                <!-- Form 6 -->
+                <div data-role="page" id="form6" class="upage-content ac0 content-area vertical-col">
+                    <form name="" class="my-form">
+                    </form>
+                </div>    <!-- End of Form 6 -->
+                <!-- Form 7 -->
+                <div data-role="page" id="form7" class="upage-content ac0 content-area vertical-col">
+                    <form name="" class="my-form">
+                    </form>
+                </div>    <!-- End of Form 7 -->
 
                 <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
                     <div class="buttons widget-container content-area horiz-area wrapping-col">
@@ -88,13 +349,14 @@
                 </ion-footer-bar>
             </div>
         </div>
-        
-        
+
         <script>
-            $(document).ready(function() {
+            $(document).ready(function() {                
                 $("#form1").show();
-                $("#form2").hide();
-                $("#form3").hide();
+                /* Menghilangkan Form lain */
+                for (var i = 2; i <= 10; i++) {
+                    $("#form"+i).hide();
+                }
                 var number = 1;
                 $("#next").click(function(){
                     $("#form"+number.toString()).hide();
@@ -107,6 +369,11 @@
                         number -= 1;
                     }
                     $("#form"+number.toString()).show();
+                });
+
+                /* Menambahkan form 2 */
+                $(".add button").click(function(){
+                    $("#form2 form").append('<label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span><input type="text" placeholder="Enter responsibility" name="office-name" value=""></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span><input type="text" placeholder="Enter employee\'s name" name="office-address"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span><input type="text" placeholder="Enter alternative" name="office-contact"></label>')
                 });
             });
         </script>

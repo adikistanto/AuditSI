@@ -3,9 +3,21 @@ body{
 }
 
 /*** FORM 1 - ALTERNATIVE SITE PROCEDURE ***/
-
-
-
+.add{
+    position: relative;
+    top: 40px;
+    right: 10px;
+    float: right;
+}
+.bar-footer{
+    z-index: 100;
+}
+h3{
+    padding-left: 10px;
+}
+.header-margin{
+    margin-top: 35px;
+}
 
 
 
