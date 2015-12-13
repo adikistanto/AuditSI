@@ -21,17 +21,17 @@
   </head>
 
   <body ng-app="myApp">
-      
-   <!-- scrolling content -->
-      <div style='position:absolute; top:0; right:0; bottom:0; left:0; overflow-y:scroll; overflow-x: hidden'>
-          <!-- header -->
-    <ion-header-bar class="bar inner-element uib_w_1 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+      <!-- header -->
+    <ion-header-bar style="position:fixed; z-index:1000" class="bar inner-element uib_w_1 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
       <a href="index.html">
         <button class="button icon-left ion-home"></button>
       </a>
       <h1 id="header_text" class="title">Audit SI</h1>
     </ion-header-bar>
     <!-- end header -->
+   <!-- scrolling content -->
+      <div style='position:absolute; top:0; right:0; bottom:0; left:0; overflow-y:scroll; overflow-x: hidden'>
+          
    
        
     <div class="upage vertical-col" id="mainpage">
