@@ -44,7 +44,7 @@
                         <!-- FORM DUA-->
                         <label class="item item-input widget uib_w_5 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0">
                             <span class="input-label">Date Of Receipt</span>
-                            <input id="date_of_receipt2" type="text" placeholder="type here">
+                            <input id="date_of_receipt2" type="date" placeholder="type here">
                         </label>
                         <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
                             <span class="input-label">Author</span>
@@ -68,7 +68,7 @@
                         <!-- FORM TIGA-->
                         <label class="item item-input widget uib_w_5 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0">
                             <span class="input-label">Date Of Receipt</span>
-                            <input id="date_of_receipt3" type="text" placeholder="type here">
+                            <input id="date_of_receipt3" type="date" placeholder="type here">
                         </label>
                         <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
                             <span class="input-label">Author</span>
@@ -92,7 +92,7 @@
                         <!-- FORM EMPAT-->
                         <label class="item item-input widget uib_w_5 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0">
                             <span class="input-label">Date Of Receipt</span>
-                            <input id="date_of_receipt4" type="text" placeholder="type here">
+                            <input id="date_of_receipt4" type="date" placeholder="type here">
                         </label>
                         <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
                             <span class="input-label">Author</span>
@@ -116,7 +116,7 @@
                         <!-- FORM LIMA-->
                         <label class="item item-input widget uib_w_5 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0">
                             <span class="input-label">Date Of Receipt</span>
-                            <input id="date_of_receipt5" type="text" placeholder="type here">
+                            <input id="date_of_receipt5" type="date" placeholder="type here">
                         </label>
                         <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
                             <span class="input-label">Author</span>
@@ -140,7 +140,7 @@
                         <!-- FORM ENAM-->
                         <label class="item item-input widget uib_w_5 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0">
                             <span class="input-label">Date Of Receipt</span>
-                            <input id="date_of_receipt6" type="text" placeholder="type here">
+                            <input id="date_of_receipt6" type="date" placeholder="type here">
                         </label>
                         <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
                             <span class="input-label">Author</span>
@@ -164,7 +164,7 @@
                         <!-- FORM TUJUH-->
                         <label class="item item-input widget uib_w_5 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0">
                             <span class="input-label">Date Of Receipt</span>
-                            <input id="date_of_receipt7" type="text" placeholder="type here">
+                            <input id="date_of_receipt7" type="date" placeholder="type here">
                         </label>
                         <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
                             <span class="input-label">Author</span>
@@ -201,14 +201,14 @@
                     <h1 class="title"></h1>
                     <div class="buttons widget-container content-area horiz-area wrapping-col">
                         <button id="next" class="button widget uib_w_10 d-margins ion ion-android-arrow-forward" data-uib="ionic/button" data-ver="0"></button>
-                        <button id="check" class="button widget uib_w_10 d-margins ion ion-android-checkmark" data-uib="ionic/button" data-ver="0"></button>
+                        <button id="check" class="button widget uib_w_10 d-margins ion ion-checkmark" data-uib="ionic/button" data-ver="0"></button>
                     </div>
                 </ion-footer-bar>
             </div>
 
         </div>
         <script>
-            $(document).ready(function() {
+            $(document).ready(function(){
                 $("#form1").show();
                 $("#form2").hide();
                 $("#form3").hide();
@@ -217,7 +217,7 @@
                 $("#form6").hide();
                 $("#form7").hide();
                 $("#check").hide();
-                 $("#back").hide();
+                $("#back").hide();
                 document.getElementById("header_text").innerHTML= "Documentation List";
                 // Retrieve data
                 document.getElementById("name_of_office").value = localStorage.getItem("document_list_name_of_office");
@@ -270,12 +270,12 @@
                         $("#check").show();
                     }
                     // MENAMPILKAN DATA
-                            document.getElementById("date_of_receipt"+number).value = localStorage.getItem("document_list_date_of_receipt"+number);
-                            document.getElementById("author"+number).value = localStorage.getItem("document_list_author"+number);
-                            document.getElementById("custodian"+number).value = localStorage.getItem("document_list_custodian"+number);
-                            document.getElementById("on_site_location"+number).value = localStorage.getItem("document_list_on_site_location"+number);
-                            document.getElementById("off_site_location"+number).value = localStorage.getItem("document_list_off_site_location"+number);
-                    
+                    document.getElementById("date_of_receipt"+number).value = localStorage.getItem("document_list_date_of_receipt"+number);
+                    document.getElementById("author"+number).value = localStorage.getItem("document_list_author"+number);
+                    document.getElementById("custodian"+number).value = localStorage.getItem("document_list_custodian"+number);
+                    document.getElementById("on_site_location"+number).value = localStorage.getItem("document_list_on_site_location"+number);
+                    document.getElementById("off_site_location"+number).value = localStorage.getItem("document_list_off_site_location"+number);
+
                     // MEMBUAT NAMA HEADER
                     if(number==1){
                         document.getElementById("header_text").innerHTML= "Documentation List";
@@ -292,7 +292,7 @@
                     }else{
                         document.getElementById("header_text").innerHTML= "Guidlines";
                     }
-                    
+
                 });
 
 
@@ -328,6 +328,26 @@
                     }else{
                         document.getElementById("header_text").innerHTML= "Guidlines";
                     }
+                });
+
+                $("#check").click(function(){
+                    var date_of_receipt = document.getElementById("date_of_receipt"+number).value;
+                    var author = document.getElementById("author"+number).value;
+                    var custodian = document.getElementById("custodian"+number).value;
+                    var on_site_location = document.getElementById("on_site_location"+number).value;
+                    var off_site_location = document.getElementById("off_site_location"+number).value;
+
+                    if (typeof(Storage) !== "undefined") {
+                        // Store
+                        localStorage.setItem("document_list_date_of_receipt"+number, date_of_receipt);
+                        localStorage.setItem("document_list_author"+number, author);
+                        localStorage.setItem("document_list_custodian"+number, custodian);
+                        localStorage.setItem("document_list_on_site_location"+number, on_site_location);
+                        localStorage.setItem("document_list_off_site_location"+number, off_site_location);
+                    }
+                    
+                    window.location = "index.html";
+
                 });
             });
         </script>
