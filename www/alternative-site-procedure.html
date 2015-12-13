@@ -385,18 +385,14 @@
                     $("#back").show();
                     $("#check").hide();
                 }
-                // Menyembunyikan tombol back
-                else if(number-1 == 1){
-                    $("#next").show();
-                    $("#back").hide();
-                    $("#check").hide();
-                }
-                // Menyembunyikan tombol next
+                // Menyembunyikan tombol next - halaman terakhir
                 else if(number == max-1){
                     $("#next").hide();
                     $("#back").show();
                     $("#check").show();
-                }else{
+                }
+                // Menyembunyikan tombol back dan check - halaman 1
+                else{
                     $("#back").hide();
                     $("#next").show();
                     $("#check").hide();
