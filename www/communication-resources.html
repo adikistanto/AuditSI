@@ -21,7 +21,8 @@
   </head>
 
   <body ng-app="myApp">
-      <!-- header -->
+
+    <!-- header -->
     <ion-header-bar style="position:fixed; z-index:1000" class="bar inner-element uib_w_1 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
       <a href="index.html">
         <button class="button icon-left ion-home"></button>
@@ -29,33 +30,56 @@
       <h1 id="header_text" class="title">Audit SI</h1>
     </ion-header-bar>
     <!-- end header -->
-   <!-- scrolling content -->
-      <div style='position:absolute; top:0; right:0; bottom:0; left:0; overflow-y:scroll; overflow-x: hidden'>
-          
-   
-       
-    <div class="upage vertical-col" id="mainpage">
-        
-      <!-- form 1 -->
-      <div id="form1">
-        <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office</span>
-          <br>
-          <input type="text" placeholder="Enter office name">
-        </label>
-        <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address</span>
-          <input type="text" placeholder="Enter office address">
-        </label>
-        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Phone No.</span>
-          <input type="text" placeholder="Enter phone number">
-        </label>
-        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Email ID</span>
-          <input type="text" placeholder="Enter email id">
-        </label>
-      </div>
-      <!-- end form 1-->
+    <!-- scrolling content -->
+    <div style="position:absolute; top:0; right:0; bottom:0; left:0; overflow-y:scroll; overflow-x: hidden; padding-bottom:50px">
 
-      <!-- form 2 -->
-      <div id="form2">
+      <div class="upage vertical-col" id="mainpage">
+
+        <!-- form 1 -->
+        <div id="form1">
+          <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office</span>
+            <br>
+            <input type="text" placeholder="Enter office name">
+          </label>
+          <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address</span>
+            <input type="text" placeholder="Enter office address">
+          </label>
+          <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Phone No.</span>
+            <input type="text" placeholder="Enter phone number">
+          </label>
+          <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Email ID</span>
+            <input type="text" placeholder="Enter email id">
+          </label>
+        </div>
+        <!-- end form 1-->
+
+        <!-- form 2 -->
+        <div id="form2">
+          <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Equipment</span>
+            <br>
+            <input type="text" placeholder="Enter equipment">
+          </label>
+          <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Supplier</span>
+            <input type="text" placeholder="Enter supplier">
+          </label>
+          <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Service Provider</span>
+            <input type="text" placeholder="Enter service provider">
+          </label>
+          <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Technical Specification</span>
+            <input type="text" placeholder="Enter technical specifcatio">
+          </label>
+          <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Drawing</span>
+            <input type="text" placeholder="Enter drawing">
+          </label>
+          <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Support Contact</span>
+            <input type="text" placeholder="Enter support contact">
+          </label>
+        </div>
+      </div>
+      <!-- end form 2 -->
+
+      <!-- form 3 -->
+      <div id="form3">
         <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Equipment</span>
           <br>
           <input type="text" placeholder="Enter equipment">
@@ -76,128 +100,103 @@
           <input type="text" placeholder="Enter support contact">
         </label>
       </div>
-    </div>
-    <!-- end form 2 -->
+      <!-- end form 3 -->
 
-    <!-- form 3 -->
-    <div id="form3">
-      <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Equipment</span>
-        <br>
-        <input type="text" placeholder="Enter equipment">
-      </label>
-      <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Supplier</span>
-        <input type="text" placeholder="Enter supplier">
-      </label>
-      <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Service Provider</span>
-        <input type="text" placeholder="Enter service provider">
-      </label>
-      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Technical Specification</span>
-        <input type="text" placeholder="Enter technical specifcatio">
-      </label>
-      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Drawing</span>
-        <input type="text" placeholder="Enter drawing">
-      </label>
-      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Support Contact</span>
-        <input type="text" placeholder="Enter support contact">
-      </label>
-    </div>
-    <!-- end form 3 -->
-
-    <!-- form 4 -->
-    <div id="form4">
-      <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Equipment</span>
-        <br>
-        <input type="text" placeholder="Enter equipment">
-      </label>
-      <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Supplier</span>
-        <input type="text" placeholder="Enter supplier">
-      </label>
-      <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Service Provider</span>
-        <input type="text" placeholder="Enter service provider">
-      </label>
-      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Technical Specification</span>
-        <input type="text" placeholder="Enter technical specifcatio">
-      </label>
-      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Drawing</span>
-        <input type="text" placeholder="Enter drawing">
-      </label>
-      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Support Contact</span>
-        <input type="text" placeholder="Enter support contact">
-      </label>
-    </div>
-    <!-- end  form 4 -->
-
-    <!-- form 5 -->
-    <div id="form5">
-      <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Equipment</span>
-        <br>
-        <input type="text" placeholder="Enter equipment">
-      </label>
-      <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Supplier</span>
-        <input type="text" placeholder="Enter supplier">
-      </label>
-      <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Service Provider</span>
-        <input type="text" placeholder="Enter service provider">
-      </label>
-      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Technical Specification</span>
-        <input type="text" placeholder="Enter technical specifcatio">
-      </label>
-      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Drawing</span>
-        <input type="text" placeholder="Enter drawing">
-      </label>
-      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Support Contact</span>
-        <input type="text" placeholder="Enter support contact">
-      </label>
-    </div>
-    <!-- end form 5 -->
-
-    <!-- form 6 -->
-    <div id="form6">
-        <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"></label>
-      <h4>Last Update</h4>
-      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
-        <input type="date" placeholder="Placeholder">
-      </label>
-      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
-        <input type="text" placeholder="Enter name">
-      </label>
-      <h4>Veification</h4>
-      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
-        <input type="date" placeholder="Placeholder">
-      </label>
-      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
-        <input type="text" placeholder="Enter name">
-      </label>
-
-      <h4>Sent to Head office</h4>
-      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
-        <input type="date" placeholder="Placeholder">
-      </label>
-      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
-        <input type="text" placeholder="Enter name">
-      </label>
-
-      <h4>Sent to Branch</h4>
-      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
-        <input type="date" placeholder="Placeholder">
-      </label>
-      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
-        <input type="text" placeholder="Enter name">
-      </label>
-
-      <h4>Sent to Off-Site</h4>
-      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
-        <input type="date" placeholder="Placeholder">
-      </label>
-      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
-        <input type="text" placeholder="Enter name">
-      </label>
-    </div>
-    <!-- end form 6 -->
+      <!-- form 4 -->
+      <div id="form4">
+        <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Equipment</span>
+          <br>
+          <input type="text" placeholder="Enter equipment">
+        </label>
+        <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Supplier</span>
+          <input type="text" placeholder="Enter supplier">
+        </label>
+        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Service Provider</span>
+          <input type="text" placeholder="Enter service provider">
+        </label>
+        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Technical Specification</span>
+          <input type="text" placeholder="Enter technical specifcatio">
+        </label>
+        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Drawing</span>
+          <input type="text" placeholder="Enter drawing">
+        </label>
+        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Support Contact</span>
+          <input type="text" placeholder="Enter support contact">
+        </label>
       </div>
-      <!-- scrolling content -->
-      
-      <!-- footer -->
+      <!-- end  form 4 -->
+
+      <!-- form 5 -->
+      <div id="form5">
+        <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Equipment</span>
+          <br>
+          <input type="text" placeholder="Enter equipment">
+        </label>
+        <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Supplier</span>
+          <input type="text" placeholder="Enter supplier">
+        </label>
+        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Service Provider</span>
+          <input type="text" placeholder="Enter service provider">
+        </label>
+        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Technical Specification</span>
+          <input type="text" placeholder="Enter technical specifcatio">
+        </label>
+        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Drawing</span>
+          <input type="text" placeholder="Enter drawing">
+        </label>
+        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Support Contact</span>
+          <input type="text" placeholder="Enter support contact">
+        </label>
+      </div>
+      <!-- end form 5 -->
+
+      <!-- form 6 -->
+      <div id="form6">
+        <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"></label>
+        <h4>Last Update</h4>
+        <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
+          <input type="date" placeholder="Placeholder">
+        </label>
+        <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
+          <input type="text" placeholder="Enter name">
+        </label>
+        <h4>Veification</h4>
+        <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
+          <input type="date" placeholder="Placeholder">
+        </label>
+        <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
+          <input type="text" placeholder="Enter name">
+        </label>
+
+        <h4>Sent to Head office</h4>
+        <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
+          <input type="date" placeholder="Placeholder">
+        </label>
+        <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
+          <input type="text" placeholder="Enter name">
+        </label>
+
+        <h4>Sent to Branch</h4>
+        <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
+          <input type="date" placeholder="Placeholder">
+        </label>
+        <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
+          <input type="text" placeholder="Enter name">
+        </label>
+
+        <h4>Sent to Off-Site</h4>
+        <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
+          <input type="date" placeholder="Placeholder">
+        </label>
+        <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
+          <input type="text" placeholder="Enter name">
+        </label>
+      </div>
+      <!-- end form 6 -->
+    </div>
+    <!-- scrolling content -->
+
+    <!-- footer -->
     <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
       <div class="buttons widget-container content-area horiz-area wrapping-col">
         <button id="prev" class="button widget uib_w_9 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0"></button>
@@ -209,8 +208,6 @@
     </ion-footer-bar>
     <!-- end footer -->
 
-      
-    
     <script>
       var number = 1;
             $(document).ready(function() {
