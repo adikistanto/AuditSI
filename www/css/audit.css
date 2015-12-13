@@ -12,7 +12,12 @@ body{
 .bar-footer{
     z-index: 100;
 }
-
+h3{
+    padding-left: 10px;
+}
+.header-margin{
+    margin-top: 35px;
+}
 
 
 
