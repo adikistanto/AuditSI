@@ -11,12 +11,19 @@ body{
     right: 0px;
     z-index: 0px;
 }
+a{
+    text-decoration: none;
+}
 
 /*** HOME ***/
 #menu{
     position: fixed;
     top: -1px;
     z-index: 10;
+}
+.form-item:hover ion-item{
+    background-color: #92CBE6;
+    color: #FFF;
 }
 
 /*** FORM 1 - ALTERNATIVE SITE PROCEDURE ***/
