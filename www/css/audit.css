@@ -11,6 +11,14 @@ body{
     right: 0px;
     z-index: 0px;
 }
+
+/*** HOME ***/
+#menu{
+    position: fixed;
+    top: -1px;
+    z-index: 10;
+}
+
 /*** FORM 1 - ALTERNATIVE SITE PROCEDURE ***/
 .add{
     position: relative;

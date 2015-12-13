@@ -674,6 +674,9 @@
 
                 // MENGATUR TOMBOL
                 $("#back, #next").click(function(){
+                    /* Scroll to top */
+                    $("div.scroll").scrollTop(0);
+                    
                     // Menyembunyikan tombol check
                     if((number!=max) && (number!=1)){
                         $("#next").show();
