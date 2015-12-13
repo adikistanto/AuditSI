@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
+        <link rel="stylesheet" type="text/css" href="css/alternative-site-procedure_main.less.css" class="main-less">
+        <link rel="stylesheet" type="text/css" href="css/audit.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+        <script src="intelxdk.js"></script>
+        <script src="cordova.js"></script>
+        <script src="xhr.js"></script>
+        <script src="xdk/init-dev.js"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.js"></script>
+        <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+        <script type="application/javascript" src="js/alternative-site-procedure_init_services.js"></script>
+        <script type="application/javascript" src="js/pdfmake.js"></script>
+        <script type="application/javascript" src="js/vfs_fonts.js"></script>
+    </head>
+
+    <body ng-app="myApp">
+
+        <div class="upage" id="mainpage">
+            <div class="upage-outer fixed-header-footer">
+                <div class="upage-content ac0" id="page_3_48">
+                    <div class="upage-outer fixed-header-footer">
+                        <!-- Header -->
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <script>
+            $(document).ready(function() {
+                var docDefinition = { content: 'This is an sample PDF printed with pdfMake' };
+                // open the PDF in a new window
+                //pdfMake.createPdf(docDefinition).open();
+
+                // print the PDF (temporarily Chrome-only)
+                //pdfMake.createPdf(docDefinition).print();
+
+                // download the PDF (temporarily Chrome-only)
+                pdfMake.createPdf(docDefinition).download('optionalName.pdf');
+            });
+        </script>
+    </body>
+
+</html>

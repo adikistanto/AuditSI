@@ -55,7 +55,6 @@
 * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
 -->
         <script src="cordova.js" id="xdkJScordova_"></script>
-
         <script src="js/app.js"></script>
         <!-- for your event code, see README and file comments for details -->
         <script src="js/init-app.js"></script>
@@ -88,12 +87,12 @@
             </div>
             <!-- menu -->
             <div class="button-bar widget uib_w_2 d-margins" data-uib="ionic/button_bar" data-ver="0">
-                <button id="form" class="button widget uib_w_3 button-outline" data-uib="ionic/button" data-ver="0">Form</button>
-                <button id="display" class="button widget uib_w_4" data-uib="ionic/button" data-ver="0">Display</button>
+                <button id="form_but" class="button widget uib_w_3 button-outline" data-uib="ionic/button" data-ver="0">Form</button>
+                <button id="display_but" class="button widget uib_w_4" data-uib="ionic/button" data-ver="0">Display</button>
             </div>
 
             <!-- form -->
-            <ion-list id="document_form" class="widget uib_w_2 d-margins" data-uib="ionic/list" data-ver="0">
+            <ion-list  id="document_form" class="widget uib_w_2 d-margins" data-uib="ionic/list" data-ver="0">
                 <ion-item class="item widget uib_w_6" data-uib="ionic/list_item" data-ver="0"><a href="alternative-site-procedure.html">1. Alternative Site Procedure</a></ion-item>
                 <ion-item class="item widget uib_w_7" data-uib="ionic/list_item" data-ver="0">
                     2. Communication Resources</ion-item>
@@ -121,10 +120,8 @@
                 <ion-item class="item widget uib_w_8" data-uib="ionic/list_item" data-ver="0">
                     13. Vendor Contact Lists</ion-item>
             </ion-list>
-
             <!-- display-->
-
-            <ion-list id="document_display" style="z-index:-1" class="widget uib_w_5 d-margins" data-uib="ionic/list" data-ver="0">
+            <ion-list id="document_display" class="widget uib_w_5 d-margins" data-uib="ionic/list" data-ver="0">
                 <ion-item class="item widget uib_w_6" data-uib="ionic/list_item" data-ver="0">Alternative Site Procedure</ion-item>
                 <ion-item class="item widget uib_w_7" data-uib="ionic/list_item" data-ver="0">
                     2. Communication Resources</ion-item>
@@ -133,7 +130,8 @@
                 <ion-item class="item widget uib_w_6" data-uib="ionic/list_item" data-ver="0">
                     4. Contingency Plan Contact Information</ion-item>
                 <ion-item class="item widget uib_w_7" data-uib="ionic/list_item" data-ver="0">
-                    5. Documentation List</ion-item>
+                    <a href="documentation_list_display.html">Documentation List</a>
+                </ion-item>
                 <ion-item class="item widget uib_w_8" data-uib="ionic/list_item" data-ver="0">
                     6. Emergency Procedures</ion-item>
                 <ion-item class="item widget uib_w_6" data-uib="ionic/list_item" data-ver="0">
@@ -151,21 +149,26 @@
                 <ion-item class="item widget uib_w_8" data-uib="ionic/list_item" data-ver="0">
                     13. Vendor Contact Lists</ion-item>
             </ion-list>
-
         </div>
+        
         <script>
-            $("#form").click(function(){
+            $(document).ready(function(){
+               $("#document_display").hide();
+                $("#document_form").show();
+            });  
+            
+            $("#form_but").click(function(){
                 $("#document_display").hide();
                 $("#document_form").show();
-                document.getElementById("form").style.background = "#B5B5F2";
-                document.getElementById("display").style.background = "#F4F4F9";
+                document.getElementById("form_but").style.background = "#B5B5F2";
+                document.getElementById("display_but").style.background = "#F4F4F9";
             });
 
-            $("#display").click(function(){
+            $("#display_but").click(function(){
                 $("#document_display").show();
                 $("#document_form").hide();
-                document.getElementById("display").style.background = "#B5B5F2";
-                document.getElementById("form").style.background = "#F4F4F9";
+                document.getElementById("display_but").style.background = "#B5B5F2";
+                document.getElementById("form_but").style.background = "#F4F4F9";
             });
         </script>
     </body>

@@ -217,7 +217,7 @@
                 $("#form6").hide();
                 $("#form7").hide();
                 $("#check").hide();
-                 $("#back").hide();
+                $("#back").hide();
                 document.getElementById("header_text").innerHTML= "Documentation List";
                 // Retrieve data
                 document.getElementById("name_of_office").value = localStorage.getItem("document_list_name_of_office");
@@ -270,12 +270,12 @@
                         $("#check").show();
                     }
                     // MENAMPILKAN DATA
-                            document.getElementById("date_of_receipt"+number).value = localStorage.getItem("document_list_date_of_receipt"+number);
-                            document.getElementById("author"+number).value = localStorage.getItem("document_list_author"+number);
-                            document.getElementById("custodian"+number).value = localStorage.getItem("document_list_custodian"+number);
-                            document.getElementById("on_site_location"+number).value = localStorage.getItem("document_list_on_site_location"+number);
-                            document.getElementById("off_site_location"+number).value = localStorage.getItem("document_list_off_site_location"+number);
-                    
+                    document.getElementById("date_of_receipt"+number).value = localStorage.getItem("document_list_date_of_receipt"+number);
+                    document.getElementById("author"+number).value = localStorage.getItem("document_list_author"+number);
+                    document.getElementById("custodian"+number).value = localStorage.getItem("document_list_custodian"+number);
+                    document.getElementById("on_site_location"+number).value = localStorage.getItem("document_list_on_site_location"+number);
+                    document.getElementById("off_site_location"+number).value = localStorage.getItem("document_list_off_site_location"+number);
+
                     // MEMBUAT NAMA HEADER
                     if(number==1){
                         document.getElementById("header_text").innerHTML= "Documentation List";
@@ -292,7 +292,7 @@
                     }else{
                         document.getElementById("header_text").innerHTML= "Guidlines";
                     }
-                    
+
                 });
 
 
@@ -328,6 +328,26 @@
                     }else{
                         document.getElementById("header_text").innerHTML= "Guidlines";
                     }
+                });
+
+                $("#check").click(function(){
+                    var date_of_receipt = document.getElementById("date_of_receipt"+number).value;
+                    var author = document.getElementById("author"+number).value;
+                    var custodian = document.getElementById("custodian"+number).value;
+                    var on_site_location = document.getElementById("on_site_location"+number).value;
+                    var off_site_location = document.getElementById("off_site_location"+number).value;
+
+                    if (typeof(Storage) !== "undefined") {
+                        // Store
+                        localStorage.setItem("document_list_date_of_receipt"+number, date_of_receipt);
+                        localStorage.setItem("document_list_author"+number, author);
+                        localStorage.setItem("document_list_custodian"+number, custodian);
+                        localStorage.setItem("document_list_on_site_location"+number, on_site_location);
+                        localStorage.setItem("document_list_off_site_location"+number, off_site_location);
+                    }
+                    
+                    window.location = "index.html";
+
                 });
             });
         </script>
