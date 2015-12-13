@@ -24,10 +24,16 @@
             <div class="upage-outer fixed-header-footer">
 
                 <!-- Header -->
-                <ion-header-bar class="bar inner-element uib_w_1 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
-                    <button class="button button-clear icon-left ion-home"></button>
-                    <h1 class="title">Alternative Site Procedure</h1>
+                <ion-header-bar class="bar inner-element uib_w_3 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <a href="index.html">
+                            <button class="button widget uib_w_4 d-margins ion ion-home icon-left" data-uib="ionic/button" data-ver="0"></button>
+                        </a>
+                    </div>
+                    <h1 id="header_text" class="title">Alternative Site Procedure</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
                 </ion-header-bar>
+                <!-- End of Header -->
 
                 <!-- Form 1 -->
                 <div data-role="page" id="form1" class="upage-content ac0 content-area vertical-col">
@@ -368,25 +374,25 @@
 
             $("#next").click(function(){
                 $("#form"+number.toString()).hide();
-                    number += 1;
+                number += 1;
                 $("#form"+number.toString()).show();
             });
             $("#back").click(function(){
                 $("#form"+number.toString()).hide();
-                    number -= 1;
+                number -= 1;
                 $("#form"+number.toString()).show();
             });
 
             // MENGATUR TOMBOL
             $("#back, #next").click(function(){
                 // Menyembunyikan tombol check
-                if((number!=max-1) && (number!=1)){
+                if((number!=max) && (number!=1)){
                     $("#next").show();
                     $("#back").show();
                     $("#check").hide();
                 }
                 // Menyembunyikan tombol next - halaman terakhir
-                else if(number == max-1){
+                else if(number == max){
                     $("#next").hide();
                     $("#back").show();
                     $("#check").show();
@@ -396,6 +402,23 @@
                     $("#back").hide();
                     $("#next").show();
                     $("#check").hide();
+                }
+
+                /* Mengganti Header */
+                if(number==1){
+                    document.getElementById("header_text").innerHTML= "Alternative Site Procedure";
+                }else if(number==2){
+                    document.getElementById("header_text").innerHTML= "Alternative Site Team";
+                }else if(number==3){
+                    document.getElementById("header_text").innerHTML= "First Alternative Site";
+                }else if(number==4){
+                    document.getElementById("header_text").innerHTML= "Facilities";
+                }else if(number==5){
+                    document.getElementById("header_text").innerHTML= "Facility Provider";
+                }else if(number==6){
+                    document.getElementById("header_text").innerHTML= "Restoration Target";
+                }else{
+                    document.getElementById("header_text").innerHTML= "Guidlines";
                 }
             });
 
