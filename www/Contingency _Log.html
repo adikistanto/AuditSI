@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
+        <link rel="stylesheet" type="text/css" href="css/alternative-site-procedure_main.less.css" class="main-less">
+        <link rel="stylesheet" type="text/css" href="css/audit.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+        <script src="intelxdk.js"></script>
+        <script src="cordova.js"></script>
+        <script src="xhr.js"></script>
+        <script src="xdk/init-dev.js"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.js"></script>
+        <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+        <script type="application/javascript" src="js/alternative-site-procedure_init_services.js"></script>
+    </head>
+
+    <body ng-app="myApp">
+
+        <div class="upage" id="mainpage">
+            <div class="upage-outer fixed-header-footer">
+
+                <!-- Header -->
+                <ion-header-bar class="bar inner-element uib_w_1 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+                    <button class="button button-clear icon-left ion-home"></button>
+                    <h1 class="title">Contingency Log</h1>
+                </ion-header-bar>
+
+                <!-- Form 1 -->
+                <div data-role="page" id="form1" class="upage-content ac0 content-area vertical-col">
+                    <form action="" method="POST" name="login" class="my-form">
+
+                        <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
+                            <input type="text" placeholder="Enter office's name" name="office-name">
+                        </label>
+                        <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address*</span>
+                            <input type="text" placeholder="Enter office's address" name="office-address">
+                        </label>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Phone/ Email*</span>
+                            <input type="text" placeholder="Enter office's phone/ email" name="office-contact">
+                        </label>
+                    </form>
+                    <div class="widget uib_w_3 widget-container content-area vertical-col uib-card cpad-0 section-dimension-3 d-margins" data-uib="layout/card" data-ver="0"></div>
+                </div>
+
+                <!-- Form 2 -->
+                <div data-role="page" id="form2" class="upage-content ac0 content-area vertical-col">
+                    <form action="" method="POST" name="login" class="my-form">
+
+                        <label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Date*</span>
+                            <input type="text" placeholder="Date" name="responsibility" value="">
+                        </label>
+                        <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Asset Involved*</span>
+                            <input type="text" placeholder="Asset Involved" name="employee-name">
+                        </label>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Nature of Contingency</span>
+                            <input type="text" placeholder="Nature of Contingency" name="alternative">
+                        </label>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Resolution Procedure</span>
+                            <input type="text" placeholder="Resolution Procedure" name="alternative">
+                        </label>
+
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Time Taken</span>
+                            <input type="text" placeholder="Time Taken" name="alternative">
+                        </label>
+
+                    </form>
+                    <div class="add">
+                        <button class="button button-assertive icon ion-plus-circled"></button>
+                    </div>
+                </div>
+
+                <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button id="back" class="button widget uib_w_9 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0"></button>
+                    </div>
+                    <h1 class="title"></h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button id="next" class="button widget uib_w_10 d-margins ion ion-android-arrow-forward" data-uib="ionic/button" data-ver="0"></button>
+                    </div>
+                </ion-footer-bar>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {                
+                $("#form1").show();
+                $("#form2").hide();
+                
+                var number = 1;
+                $("#next").click(function(){
+                    $("#form"+number.toString()).hide();
+                    number += 1;
+                    $("#form"+number.toString()).show();
+                });
+                $("#back").click(function(){
+                    $("#form"+number.toString()).hide();
+                    if(number-1 != 0){
+                        number -= 1;
+                    }
+                    $("#form"+number.toString()).show();
+                });
+
+                /* Menambahkan form 2 */
+                $(".add button").click(function(){
+                    $("#form2 form").append('<label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span><input type="text" placeholder="Enter responsibility" name="office-name" value=""></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span><input type="text" placeholder="Enter employee\'s name" name="office-address"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span><input type="text" placeholder="Enter alternative" name="office-contact"></label>')
+                });
+            });
+        </script>
+    </body>
+
+</html>
