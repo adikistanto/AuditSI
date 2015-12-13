@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/alternative-site-procedure_main.less.css" class="main-less">
+    <link rel="stylesheet" type="text/css" href="css/audit.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script src="xhr.js"></script>
+    <script src="xdk/init-dev.js"></script>
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+    <script type="application/javascript" src="marginal/marginal-position.js"></script>
+    <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+    <script type="application/javascript" src="js/alternative-site-procedure_init_services.js"></script>
+    <script src="//code.ionicframework.com/nightly/js/ionic.bundle.min.js"></script>
+
+  </head>
+
+  <body ng-app="myApp">
+      <!-- header -->
+    <ion-header-bar style="position:fixed; z-index:1000" class="bar inner-element uib_w_1 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+      <a href="index.html">
+        <button class="button icon-left ion-home"></button>
+      </a>
+      <h1 id="header_text" class="title">Audit SI</h1>
+    </ion-header-bar>
+    <!-- end header -->
+   <!-- scrolling content -->
+      <div style='position:absolute; top:0; right:0; bottom:0; left:0; overflow-y:scroll; overflow-x: hidden'>
+          
+   
+       
+    <div class="upage vertical-col" id="mainpage">
+        
+      <!-- form 1 -->
+      <div id="form1">
+        <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office</span>
+          <br>
+          <input type="text" placeholder="Enter office name">
+        </label>
+        <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address</span>
+          <input type="text" placeholder="Enter office address">
+        </label>
+        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Phone No.</span>
+          <input type="text" placeholder="Enter phone number">
+        </label>
+        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Email ID</span>
+          <input type="text" placeholder="Enter email id">
+        </label>
+      </div>
+      <!-- end form 1-->
+
+      <!-- form 2 -->
+      <div id="form2">
+        <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Equipment</span>
+          <br>
+          <input type="text" placeholder="Enter equipment">
+        </label>
+        <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Supplier</span>
+          <input type="text" placeholder="Enter supplier">
+        </label>
+        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Service Provider</span>
+          <input type="text" placeholder="Enter service provider">
+        </label>
+        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Technical Specification</span>
+          <input type="text" placeholder="Enter technical specifcatio">
+        </label>
+        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Drawing</span>
+          <input type="text" placeholder="Enter drawing">
+        </label>
+        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Support Contact</span>
+          <input type="text" placeholder="Enter support contact">
+        </label>
+      </div>
+    </div>
+    <!-- end form 2 -->
+
+    <!-- form 3 -->
+    <div id="form3">
+      <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Equipment</span>
+        <br>
+        <input type="text" placeholder="Enter equipment">
+      </label>
+      <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Supplier</span>
+        <input type="text" placeholder="Enter supplier">
+      </label>
+      <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Service Provider</span>
+        <input type="text" placeholder="Enter service provider">
+      </label>
+      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Technical Specification</span>
+        <input type="text" placeholder="Enter technical specifcatio">
+      </label>
+      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Drawing</span>
+        <input type="text" placeholder="Enter drawing">
+      </label>
+      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Support Contact</span>
+        <input type="text" placeholder="Enter support contact">
+      </label>
+    </div>
+    <!-- end form 3 -->
+
+    <!-- form 4 -->
+    <div id="form4">
+      <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Equipment</span>
+        <br>
+        <input type="text" placeholder="Enter equipment">
+      </label>
+      <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Supplier</span>
+        <input type="text" placeholder="Enter supplier">
+      </label>
+      <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Service Provider</span>
+        <input type="text" placeholder="Enter service provider">
+      </label>
+      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Technical Specification</span>
+        <input type="text" placeholder="Enter technical specifcatio">
+      </label>
+      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Drawing</span>
+        <input type="text" placeholder="Enter drawing">
+      </label>
+      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Support Contact</span>
+        <input type="text" placeholder="Enter support contact">
+      </label>
+    </div>
+    <!-- end  form 4 -->
+
+    <!-- form 5 -->
+    <div id="form5">
+      <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Equipment</span>
+        <br>
+        <input type="text" placeholder="Enter equipment">
+      </label>
+      <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Supplier</span>
+        <input type="text" placeholder="Enter supplier">
+      </label>
+      <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Service Provider</span>
+        <input type="text" placeholder="Enter service provider">
+      </label>
+      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Technical Specification</span>
+        <input type="text" placeholder="Enter technical specifcatio">
+      </label>
+      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Drawing</span>
+        <input type="text" placeholder="Enter drawing">
+      </label>
+      <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Support Contact</span>
+        <input type="text" placeholder="Enter support contact">
+      </label>
+    </div>
+    <!-- end form 5 -->
+
+    <!-- form 6 -->
+    <div id="form6">
+        <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"></label>
+      <h4>Last Update</h4>
+      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
+        <input type="date" placeholder="Placeholder">
+      </label>
+      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
+        <input type="text" placeholder="Enter name">
+      </label>
+      <h4>Veification</h4>
+      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
+        <input type="date" placeholder="Placeholder">
+      </label>
+      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
+        <input type="text" placeholder="Enter name">
+      </label>
+
+      <h4>Sent to Head office</h4>
+      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
+        <input type="date" placeholder="Placeholder">
+      </label>
+      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
+        <input type="text" placeholder="Enter name">
+      </label>
+
+      <h4>Sent to Branch</h4>
+      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
+        <input type="date" placeholder="Placeholder">
+      </label>
+      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
+        <input type="text" placeholder="Enter name">
+      </label>
+
+      <h4>Sent to Off-Site</h4>
+      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Date</span>
+        <input type="date" placeholder="Placeholder">
+      </label>
+      <label class="item item-input widget uib_w_2" data-uib="ionic/input" data-ver="0"><span class="input-label">Verified by</span>
+        <input type="text" placeholder="Enter name">
+      </label>
+    </div>
+    <!-- end form 6 -->
+      </div>
+      <!-- scrolling content -->
+      
+      <!-- footer -->
+    <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
+      <div class="buttons widget-container content-area horiz-area wrapping-col">
+        <button id="prev" class="button widget uib_w_9 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0"></button>
+      </div>
+      <h1 class="title"></h1>
+      <div class="buttons widget-container content-area horiz-area wrapping-col">
+        <button id="next" class="button widget uib_w_10 d-margins ion ion-android-arrow-forward" data-uib="ionic/button" data-ver="0"></button>
+      </div>
+    </ion-footer-bar>
+    <!-- end footer -->
+
+      
+    
+    <script>
+      var number = 1;
+            $(document).ready(function() {
+                $("#form1").show();
+                $("#form2").hide();
+                $("#form3").hide();
+                $("#form4").hide();
+                $("#form5").hide();
+                $("#form6").hide();
+                $('#prev').hide();
+                document.getElementById("header_text").innerHTML = "Communication Resource";
+                $("#next").click(function(){
+                    $("#form"+number.toString()).hide();
+                    number += 1;
+                    $("#form"+number.toString()).show();
+                    $('#prev').show();
+                    if(number==6){
+                        $('#next').hide();
+                    }else{
+                        $('#next').show();
+                    }
+                    if (number==1){
+                     document.getElementById("header_text").innerHTML = "Communication Resource";
+                }else if(number==2){
+                        document.getElementById("header_text").innerHTML = "Voice Services";
+                    }else if(number==3){
+                        document.getElementById("header_text").innerHTML = "Data";
+                    }else if(number==4){
+                        document.getElementById("header_text").innerHTML = "LAN";
+                    }else if(number==5){
+                        document.getElementById("header_text").innerHTML = "WAN";
+                    }else if(number==6){
+                        document.getElementById("header_text").innerHTML = "Verification";
+                    }
+                    
+                });
+                
+                $("#prev").click(function(){
+                    $("#form"+number.toString()).hide();
+                    if(number-1 != 0){
+                        number -= 1;
+                    }
+                    $("#form"+number.toString()).show();
+                    if(number==1){
+                        $('#prev').hide();
+                        $('#next').show();
+                    }else{
+                        $('#next').show();
+                    }
+                    if (number==1){
+                     document.getElementById("header_text").innerHTML = "Communication Resource";
+                }else if(number==2){
+                        document.getElementById("header_text").innerHTML = "Voice Services";
+                    }else if(number==3){
+                        document.getElementById("header_text").innerHTML = "Data";
+                    }else if(number==4){
+                        document.getElementById("header_text").innerHTML = "LAN";
+                    }else if(number==5){
+                        document.getElementById("header_text").innerHTML = "WAN";
+                    }else if(number==6){
+                        document.getElementById("header_text").innerHTML = "Verification";
+                    }
+           
+                });
+                
+                
+                    
+            });
+    </script>
+  </body>
+
+</html>
