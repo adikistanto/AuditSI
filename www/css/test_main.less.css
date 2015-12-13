@@ -283,15 +283,6 @@ input.toggle + label:after {
 body#afui .splt {
   width: 200px;
 }
-.bar > .buttons .d-margins {
-  margin: auto;
-}
-.bar {
-  z-index: 1;
-}
-.upage-outer.fixed-header-footer {
-  position: static;
-}
 .vertical-col > ion-list.widget,
 .vertical-col > .widget.item-radio,
 .vertical-col > .widget.item-toggle,
@@ -321,154 +312,18 @@ body#afui .splt {
   width: 100%;
 }
 @media all {
-  .wrapping-col > .d-margins,
-  .wrapping-col > .afScrollPanel > .d-margins {
-    margin-left: 6px;
-    margin-right: 6px;
-  }
-  .wrapping-col > .d-margins,
-  .wrapping-col > .afScrollPanel > .d-margins {
-    margin-left: 6px;
-    margin-right: 6px;
-  }
-  .d-margins {
-    margin-top: 80px;
-    margin-bottom: 0px;
-  }
+  
 }
 @media all {
-  .default-graphic-button {
-    border-radius: 5px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: grey;
-    background-color: #ffffff;
+  .input-stack {
+    -webkit-flex: 1 1 auto !important;
+    -moz-flex: 1 1 auto !important;
+    -ms-flex: 1 1 auto !important;
+    -o-flex: 1 1 auto !important;
+    flex: 1 1 auto !important;
+    max-width: 300px;
   }
 }
-@media all {
-  .hover-graphic-button:hover {
-    border-radius: 5px;
-    background-color: #eeeeee;
-  }
-}
-@media all {
-  .active-graphic-button:active {
-    border-radius: 5px;
-    background-color: #dddddd;
-  }
-}
-@media all {
-  .default-graphic-text {
-    text-align: left;
-  }
-}
-@media all {
-  .default-graphic-sizing {
-    height: 35px !important;
-    width: 35px !important;
-    -webkit-flex: 0 0 auto !important;
-    -moz-flex: 0 0 auto !important;
-    -ms-flex: 0 0 auto !important;
-    -o-flex: 0 0 auto !important;
-    flex: 0 0 auto !important;
-    min-width: 35px ;
-    max-width: 35px;
-    padding: 5px 5px 5px 5px;
-  }
-}
-@media all {
-  .default-image-sizing > img {
-    width: 50px;
-  }
-}
-@media all {
-  .default-sprite-button div.uib-sprite {
-    background-image: url(../images/Exclaim.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-@media all {
-  .hover-sprite-button:hover div.uib-sprite {
-    background-image: url(../images/Checkmark.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-@media all {
-  .active-sprite-button:active div.uib-sprite {
-    background-image: url(../images/X.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-@media all {
-  .sprite-sizing {
-    height: 135px !important;
-    width: 135px !important;
-    -webkit-flex: 0 0 auto !important;
-    -moz-flex: 0 0 auto !important;
-    -ms-flex: 0 0 auto !important;
-    -o-flex: 0 0 auto !important;
-    flex: 0 0 auto !important;
-  }
-}
-.list .d-margins,
-.button-bar .d-margins,
-.tabs .d-margins {
-  margin: 0;
-}
-.left-receptacle {
-  float: left;
-}
-.right-receptacle {
-  float: right;
-}
-[data-uib="media/text"] p:first-of-type {
-  margin-top: 0px;
-}
-.ellipsis {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-}
-@media all {
-  .bar-bg {
-    background-color: #dadada;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-  }
-}
-@media all {
-  .thumb-bg > .sidebar-thumb {
-    background-image: url('../sidebar/css/images/gripper.png');
-  }
-  .thumb-bg > .sidebar-thumb {
-    background-color: ;
-  }
-  .thumb-bg > .sidebar-thumb:hover,
-  .thumb-bg > .sidebar-thumb:active {
-    background-color: #eeeeee;
-  }
-}
-@media all {
-  .bar-gutter .sidebar-content > .grid-pad {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-}
-@media all {
-  .grid-pad {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-@media all and (min-width: 768px) {
-  .row-height-1 > .col > .content-area {
-    min-height: 68px;
-  }
+.padding {
+  padding-right: 25px;
 }
