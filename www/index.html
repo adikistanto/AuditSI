@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <!--
-* Please see the included README.md file for license terms and conditions.
--->
 
     <head>
         <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
@@ -11,19 +8,6 @@
         <title>Blank App Designer Cordova Web App Project Template</title>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
-        <!--
-* The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
-* Note that Windows device viewports work better when initialized using the @viewport CSS rule.
-* For a quick overview of "meta viewport" and @viewport, see this article:
-*   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
-* To see how it works, try your app on a real device with and without a "meta viewport" tag.
-* Additional useful references include:
-*   http://www.quirksmode.org/mobile/viewports.html
-*   http://www.quirksmode.org/mobile/metaviewport/devices.html
-*   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
--->
-
-        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
 
@@ -39,37 +23,14 @@
         <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
 
-        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
-        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
-        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
-
-        <!-- Recommended location for your JavaScript libraries -->
-        <!-- These library references (below) are just examples to give you the general idea... -->
-        <!-- <script src="lib/mc/hammer.js"></script> -->
-        <!-- <script src="lib/ft/fastclick.js"></script> -->
-
-        <!--
-* cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
-* Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
-* The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
-* You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
--->
-        <script src="cordova.js" id="xdkJScordova_"></script>
-        <script src="js/app.js"></script>
-        <!-- for your event code, see README and file comments for details -->
-        <script src="js/init-app.js"></script>
-        <!-- for your init code, see README and file comments for details -->
+        <script src="intelxdk.js"></script>
+        <script src="cordova.js"></script>
+        <script src="xhr.js"></script>
         <script src="xdk/init-dev.js"></script>
-        <!-- normalizes device and document ready events, see file for details -->
         <script type="application/javascript" src="lib/jquery.min.js"></script>
-        <script type="application/javascript" src="sidebar/js/hammer.js"></script>
-        <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
-        <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
-        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
-        <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
-        <script type="application/javascript" src="js/index_init_services.js"></script>
         <script type="application/javascript" src="marginal/marginal-position.js"></script>
-        <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+        <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+        <script type="application/javascript" src="js/alternative-site-procedure_init_services.js"></script>
     </head>
 
     <body ng-app="myApp">
@@ -80,7 +41,7 @@
         <div class="upage" id="mainpage">
             <div class="upage-outer fixed-header-footer">
                 <!-- Header -->
-                <ion-header-bar class="bar inner-element uib_w_1 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+                <ion-header-bar style="position:fixed; z-index:1000" class="bar inner-element uib_w_1 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
                     <button class="button icon-left ion-home"></button>
                     <h1 class="title">Audit SI</h1>
                 </ion-header-bar>
@@ -92,9 +53,12 @@
             </div>
 
             <!-- form -->
+            <div id="document_form">
             <ion-list  id="document_form" class="widget uib_w_2 d-margins" data-uib="ionic/list" data-ver="0">
                 <ion-item class="item widget uib_w_6" data-uib="ionic/list_item" data-ver="0"><a href="alternative-site-procedure.html">1. Alternative Site Procedure</a></ion-item>
+                    </ion-item>
                 <ion-item class="item widget uib_w_7" data-uib="ionic/list_item" data-ver="0">
+                        <a href="communication-resources.html">2. Communication Resources</a>
                     2. Communication Resources</ion-item>
                 <ion-item class="item widget uib_w_8" data-uib="ionic/list_item" data-ver="0">
                     3. Contingency Log</ion-item>
@@ -120,7 +84,9 @@
                 <ion-item class="item widget uib_w_8" data-uib="ionic/list_item" data-ver="0">
                     13. Vendor Contact Lists</ion-item>
             </ion-list>
+            </div>
             <!-- display-->
+            <div id="document_display">
             <ion-list id="document_display" class="widget uib_w_5 d-margins" data-uib="ionic/list" data-ver="0">
                 <ion-item class="item widget uib_w_6" data-uib="ionic/list_item" data-ver="0">Alternative Site Procedure</ion-item>
                 <ion-item class="item widget uib_w_7" data-uib="ionic/list_item" data-ver="0">
@@ -169,6 +135,7 @@
                 $("#document_form").hide();
                 document.getElementById("display_but").style.background = "#B5B5F2";
                 document.getElementById("form_but").style.background = "#F4F4F9";
+                });
             });
         </script>
     </body>
