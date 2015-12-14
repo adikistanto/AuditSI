@@ -55,15 +55,17 @@
                     <!-- Form 2 - Alternative Site Team -->
                     <div data-role="page" id="form2" class="upage-content ac0 content-area vertical-col">
                         <form>
-                            <label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span>
-                                <input type="text" placeholder="Enter responsibility" name="responsibility" value="">
-                            </label>
-                            <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span>
-                                <input type="text" placeholder="Enter employee's name" name="employee-name">
-                            </label>
-                            <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span>
-                                <input type="text" placeholder="Enter alternative" name="alternative">
-                            </label>
+                            <div class="team">
+                                <label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span>
+                                    <input type="text" placeholder="Enter responsibility" name="responsibility" value="">
+                                </label>
+                                <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span>
+                                    <input type="text" placeholder="Enter employee's name" name="employee-name">
+                                </label>
+                                <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span>
+                                    <input type="text" placeholder="Enter alternative" name="alternative">
+                                </label>
+                            </div>
                         </form>
                         <div class="add">
                             <button class="button button-assertive icon ion-plus-circled"></button>
@@ -80,7 +82,7 @@
                                 <input type="text" placeholder="Enter location's address" name="location-address">
                             </label>
                             <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Person to Contact*</span>
-                                <input type="text" placeholder="Enter person's contact" name="person-contact">
+                                <input type="text" placeholder="Enter person's contact" name="contact-person">
                             </label>
                             <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Alternative Person(s)</span>
                                 <textarea placeholder="Enter alternative's name" name="alternative-name" rows="3" wrap="soft"></textarea>
@@ -300,21 +302,21 @@
                             </label>
                             <h4>Software</h4>
                             <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Name, Address, and Contact Number*</span>
-                                <textarea placeholder="" name="provider-software-1" rows="3" wrap="soft"></textarea>
+                                <textarea placeholder="" name="software-provider-1" rows="3" wrap="soft"></textarea>
                             </label>
                             <label class="item item-input widget item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Lead Time*</span>
                                 <input type="text" placeholder="" name="software-lead-time-1">
                             </label>
                             <h4>Network</h4>
                             <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Name, Address, and Contact Number*</span>
-                                <textarea placeholder="" name="provider-network-1" rows="3" wrap="soft"></textarea>
+                                <textarea placeholder="" name="network-provider-1" rows="3" wrap="soft"></textarea>
                             </label>
                             <label class="item item-input widget item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Lead Time*</span>
                                 <input type="text" placeholder="" name="network-lead-time-1">
                             </label>
                             <h4>Peripheral Devices</h4>
                             <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Name, Address, and Contact Number*</span>
-                                <textarea placeholder="" name="provider-peripheral-1" rows="3" wrap="soft"></textarea>
+                                <textarea placeholder="" name="peripheral-provider-1" rows="3" wrap="soft"></textarea>
                             </label>
                             <label class="item item-input widget item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Lead Time*</span>
                                 <input type="text" placeholder="" name="peripheral-lead-time-1">
@@ -361,7 +363,7 @@
                                 <input type="text" placeholder="Enter location's address" name="location-address-2">
                             </label>
                             <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Person to Contact*</span>
-                                <input type="text" placeholder="Enter person's contact" name="person-contact-2">
+                                <input type="text" placeholder="Enter person's contact" name="contact-person-2">
                             </label>
                             <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Alternative Person(s)</span>
                                 <textarea placeholder="Enter alternative's name" name="alternative-name-2" rows="3" wrap="soft"></textarea>
@@ -581,21 +583,21 @@
                             </label>
                             <h4>Software</h4>
                             <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Name, Address, and Contact Number*</span>
-                                <textarea placeholder="" name="provider-software-2" rows="3" wrap="soft"></textarea>
+                                <textarea placeholder="" name="software-provider-2" rows="3" wrap="soft"></textarea>
                             </label>
                             <label class="item item-input widget item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Lead Time*</span>
                                 <input type="text" placeholder="" name="software-lead-time-2">
                             </label>
                             <h4>Network</h4>
                             <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Name, Address, and Contact Number*</span>
-                                <textarea placeholder="" name="provider-network-2" rows="3" wrap="soft"></textarea>
+                                <textarea placeholder="" name="network-provider-2" rows="3" wrap="soft"></textarea>
                             </label>
                             <label class="item item-input widget item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Lead Time*</span>
                                 <input type="text" placeholder="" name="network-lead-time-2">
                             </label>
                             <h4>Peripheral Devices</h4>
                             <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Name, Address, and Contact Number*</span>
-                                <textarea placeholder="" name="provider-peripheral-2" rows="3" wrap="soft"></textarea>
+                                <textarea placeholder="" name="peripheral-provider-2" rows="3" wrap="soft"></textarea>
                             </label>
                             <label class="item item-input widget item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Lead Time*</span>
                                 <input type="text" placeholder="" name="peripheral-lead-time-2">
@@ -632,11 +634,12 @@
                     </div>
                     <!-- End of Form 12 -->
                 </div>
+
                 <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
                     <div class="buttons widget-container content-area horiz-area wrapping-col">
                         <button id="back" class="button widget uib_w_9 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0"></button>
                     </div>
-                    <h1 class="title"></h1>
+                    <h1 id="result" class="title"></h1>
                     <div class="buttons widget-container content-area horiz-area wrapping-col">
                         <button id="next" class="button widget uib_w_10 d-margins ion ion-android-arrow-forward" data-uib="ionic/button" data-ver="0"></button>
                         <button id="check" class="button widget uib_w_10 d-margins ion ion-checkmark" data-uib="ionic/button" data-ver="0"></button>
@@ -649,9 +652,13 @@
             $(document).ready(function() {
 
                 var number = 1;
-                var max = 12;    // Jumlah maksimal Form
+                var max = 12;    // Jumlah semua Form
 
                 $("#form1").show();
+                // Form 1
+                document.getElementsByName("office-name")[0].value = localStorage.getItem("alternate_site_office_name");
+                document.getElementsByName("office-address")[0].value = localStorage.getItem("alternate_site_office_address");
+                document.getElementsByName("office-contact")[0].value = localStorage.getItem("alternate_site_office_contact");
 
                 /* Menyembunyikan Form lain */
                 for (var i = 2; i <= max; i++) {
@@ -661,22 +668,438 @@
                 $("#check").hide();
                 $("#back").hide();
 
+                // MENYIMPAN DATA =======================
+                //** Dilakukan sebelum var number ditambah atau dikurangi
+                $("#back, #next").click(function(){
+                    if(number == 1){      // Form 1
+                        // Mengambil data dari form
+                        var office_name = document.getElementsByName("office-name")[0].value;
+                        var office_address = document.getElementsByName("office-address")[0].value;
+                        var office_contact = document.getElementsByName("office-contact")[0].value;
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("alternate_site_office_name", office_name);
+                            localStorage.setItem("alternate_site_office_address", office_address);
+                            localStorage.setItem("alternate_site_office_contact", office_contact);
+                        }
+                    }
+                    else if(number == 2){    // Form 2
+                        // Mengambil data dari form
+                        var responsibility = document.getElementsByName("responsibility")[0].value;
+                        var employee_name = document.getElementsByName("employee-name")[0].value;
+                        var alternative = document.getElementsByName("alternative")[0].value;
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("alternate_site_responsibility", responsibility);
+                            localStorage.setItem("alternate_site_employee_name", employee_name);
+                            localStorage.setItem("alternate_site_alternative", alternative);
+                        }
+                    }
+                    else if(number == 3){    // Form 3
+                        // Mengambil data dari form
+                        var location_name = document.getElementsByName("location-name")[0].value;
+                        var location_address = document.getElementsByName("location-address")[0].value;
+                        var contact_person = document.getElementsByName("contact-person")[0].value;
+                        var alternative_name = document.getElementsByName("alternative-name")[0].value;
+                        var reach = document.getElementsByName("reach")[0].value;
+                        var time = document.getElementsByName("time")[0].value;
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("alternate_site_location_name", location_name);
+                            localStorage.setItem("alternate_site_location_address", location_address);
+                            localStorage.setItem("alternate_site_contact_person", contact_person);
+                            localStorage.setItem("alternate_site_alternative_name", alternative_name);
+                            localStorage.setItem("alternate_site_reach", reach);
+                            localStorage.setItem("alternate_site_time", time);
+                        }
+                    }
+                    else if(number == 4){    // Form 4
+                        // Mengambil data dari form
+                        var radio_array = document.getElementsByName("floor-space-1");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                // do whatever you want with the checked radio
+                                var result_1 = i;
+                                // only one radio can be logically checked, don't check the rest
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("computer-1");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_2 = i;
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("power-points-1");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_3 = i;
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("software-1");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_4 = i;
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("network-1");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_5 = i;
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("peripheral-devices-1");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_6 = i;
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("customer-service-area-1");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_7 = i;
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("services-offered-1");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_8 = i;
+                                break;
+                            }
+                        }
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("alternate_site_floor_space_1", result_1);
+                            localStorage.setItem("alternate_site_computer_1", result_2);
+                            localStorage.setItem("alternate_site_power_points_1", result_3);
+                            localStorage.setItem("alternate_site_software_1", result_4);
+                            localStorage.setItem("alternate_site_network_1", result_5);
+                            localStorage.setItem("alternate_site_peripheral_devices_1", result_6);
+                            localStorage.setItem("alternate_site_customer_service_area_1", result_7);
+                            localStorage.setItem("alternate_site_services_offered_1", result_8);
+                        }
+                    }
+                    else if(number == 5){    // Form 5
+                        // Mengambil data dari form
+                        var compt_provider_1 = document.getElementsByName("computers-provider-1")[0].value;
+                        var compt_lead_time_1 = document.getElementsByName("computers-lead-time-1")[0].value;
+                        var soft_provider_1 = document.getElementsByName("software-provider-1")[0].value;
+                        var soft_lead_time_1 = document.getElementsByName("software-lead-time-1")[0].value;
+                        var net_provider_1 = document.getElementsByName("network-provider-1")[0].value;
+                        var net_lead_time_1 = document.getElementsByName("network-lead-time-1")[0].value;
+                        var peri_provider_1 = document.getElementsByName("peripheral-provider-1")[0].value;
+                        var peri_lead_time_1 = document.getElementsByName("peripheral-lead-time-1")[0].value;
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("alternate_site_compt_provider_1", compt_provider_1);
+                            localStorage.setItem("alternate_site_compt_lead_time_1", compt_lead_time_1);
+                            localStorage.setItem("alternate_site_soft_provider_1", soft_provider_1);
+                            localStorage.setItem("alternate_site_soft_lead_time_1", soft_lead_time_1);
+                            localStorage.setItem("alternate_site_net_provider_1", net_provider_1);
+                            localStorage.setItem("alternate_site_net_lead_time_1", net_lead_time_1);
+                            localStorage.setItem("alternate_site_peri_provider_1", peri_provider_1);
+                            localStorage.setItem("alternate_site_peri_lead_time_1", peri_lead_time_1);
+                        }
+                    }
+                    else if(number == 6){    // Form 6
+                        // Mengambil data dari form
+                        var time_shift_1 = document.getElementsByName("time-shift-1")[0].value;
+                        var time_setup_1 = document.getElementsByName("time-setup-1")[0].value;
+                        var time_restart_1 = document.getElementsByName("time-restart-1")[0].value;
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("alternate_site_time_shift_1", time_shift_1);
+                            localStorage.setItem("alternate_site_time_setup_1", time_setup_1);
+                            localStorage.setItem("alternate_site_time_restart_1", time_restart_1);
+                        }
+                    }
+                    else if(number == 7){    // Form 7
+                        // Mengambil data dari form
+                        var alt_site_1 = document.getElementsByName("alternative-site-1")[0].value;
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("alternate_site_alt_site_1", alt_site_1);
+                        }
+                    }
+                    else if(number == 8){    // Form 8
+                        // Mengambil data dari form
+                        var location_name_2 = document.getElementsByName("location-name-2")[0].value;
+                        var location_address_2 = document.getElementsByName("location-address-2")[0].value;
+                        var contact_person_2 = document.getElementsByName("contact-person-2")[0].value;
+                        var alternative_name_2 = document.getElementsByName("alternative-name-2")[0].value;
+                        var reach_2 = document.getElementsByName("reach-2")[0].value;
+                        var time_2 = document.getElementsByName("time-2")[0].value;
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("alternate_site_location_name_2", location_name_2);
+                            localStorage.setItem("alternate_site_location_address_2", location_address_2);
+                            localStorage.setItem("alternate_site_contact_person_2", contact_person_2);
+                            localStorage.setItem("alternate_site_alternative_name_2", alternative_name_2);
+                            localStorage.setItem("alternate_site_reach_2", reach_2);
+                            localStorage.setItem("alternate_site_time_2", time_2);
+                        }
+                    }
+                    else if(number == 9){    // Form 9
+                        // Mengambil data dari form
+                        var radio_array = document.getElementsByName("floor-space-2");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                // do whatever you want with the checked radio
+                                var result_1 = i;
+                                // only one radio can be logically checked, don't check the rest
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("computer-2");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_2 = i;
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("power-points-2");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_3 = i;
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("software-2");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_4 = i;
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("network-2");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_5 = i;
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("peripheral-devices-2");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_6 = i;
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("customer-service-area-2");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_7 = i;
+                                break;
+                            }
+                        }
+                        radio_array = document.getElementsByName("services-offered-2");
+                        for (var i=0; i <= 2; i++) {
+                            if (radio_array[i].checked) {
+                                var result_8 = i;
+                                break;
+                            }
+                        }
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("alternate_site_floor_space_2", result_1);
+                            localStorage.setItem("alternate_site_computer_2", result_2);
+                            localStorage.setItem("alternate_site_power_points_2", result_3);
+                            localStorage.setItem("alternate_site_software_2", result_4);
+                            localStorage.setItem("alternate_site_network_2", result_5);
+                            localStorage.setItem("alternate_site_peripheral_devices_2", result_6);
+                            localStorage.setItem("alternate_site_customer_service_area_2", result_7);
+                            localStorage.setItem("alternate_site_services_offered_2", result_8);
+                        }
+                    }
+                    else if(number == 10){    // Form 10
+                        // Mengambil data dari form
+                        var compt_provider_2 = document.getElementsByName("computers-provider-2")[0].value;
+                        var compt_lead_time_2 = document.getElementsByName("computers-lead-time-2")[0].value;
+                        var soft_provider_2 = document.getElementsByName("software-provider-2")[0].value;
+                        var soft_lead_time_2 = document.getElementsByName("software-lead-time-2")[0].value;
+                        var net_provider_2 = document.getElementsByName("network-provider-2")[0].value;
+                        var net_lead_time_2 = document.getElementsByName("network-lead-time-2")[0].value;
+                        var peri_provider_2 = document.getElementsByName("peripheral-provider-2")[0].value;
+                        var peri_lead_time_2 = document.getElementsByName("peripheral-lead-time-2")[0].value;
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("alternate_site_compt_provider_2", compt_provider_2);
+                            localStorage.setItem("alternate_site_compt_lead_time_2", compt_lead_time_2);
+                            localStorage.setItem("alternate_site_soft_provider_2", soft_provider_2);
+                            localStorage.setItem("alternate_site_soft_lead_time_2", soft_lead_time_2);
+                            localStorage.setItem("alternate_site_net_provider_2", net_provider_2);
+                            localStorage.setItem("alternate_site_net_lead_time_2", net_lead_time_2);
+                            localStorage.setItem("alternate_site_peri_provider_2", peri_provider_2);
+                            localStorage.setItem("alternate_site_peri_lead_time_2", peri_lead_time_2);
+                        }
+                    }
+                    else if(number == 11){    // Form 11
+                        // Mengambil data dari form
+                        var time_shift_2 = document.getElementsByName("time-shift-2")[0].value;
+                        var time_setup_2 = document.getElementsByName("time-setup-2")[0].value;
+                        var time_restart_2 = document.getElementsByName("time-restart-2")[0].value;
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("alternate_site_time_shift_2", time_shift_2);
+                            localStorage.setItem("alternate_site_time_setup_2", time_setup_2);
+                            localStorage.setItem("alternate_site_time_restart_2", time_restart_2);
+                        }
+                    }
+                });
+
                 $("#next").click(function(){
+                    /* Berpindah halaman */
                     $("#form"+number.toString()).hide();
                     number += 1;
                     $("#form"+number.toString()).show();
                 });
+                $("#check").click(function(){
+                    if(number == 12){    // Form 12
+                        // Mengambil data dari form
+                        var alt_site_2 = document.getElementsByName("alternative-site-2")[0].value;
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("alternate_site_alt_site_2", alt_site_2);
+                        }
+                    }
+                    window.location = "index.html";
+                });
+
                 $("#back").click(function(){
                     $("#form"+number.toString()).hide();
                     number -= 1;
                     $("#form"+number.toString()).show();
                 });
 
+                // MENAMPILKAN DATA =======================
+                //** Dilakukan setelah var number ditambah atau dikurangi
+                $("#back, #next").click(function(){
+                    if(number == 1){    // Form 1
+                        document.getElementsByName("office-name")[0].value = localStorage.getItem("alternate_site_office_name");
+                        document.getElementsByName("office-address")[0].value = localStorage.getItem("alternate_site_office_address");
+                        document.getElementsByName("office-contact")[0].value = localStorage.getItem("alternate_site_office_contact");
+                    }
+                    else if(number == 2){   // Form 2
+                        document.getElementsByName("responsibility")[0].value = localStorage.getItem("alternate_site_responsibility");
+                        document.getElementsByName("employee-name")[0].value = localStorage.getItem("alternate_site_employee_name");
+                        document.getElementsByName("alternative")[0].value = localStorage.getItem("alternate_site_alternative");
+                    }
+                    else if(number == 3){   // Form 3
+                        document.getElementsByName("location-name")[0].value = localStorage.getItem("alternate_site_location_name");
+                        document.getElementsByName("location-address")[0].value = localStorage.getItem("alternate_site_location_address");
+                        document.getElementsByName("contact-person")[0].value = localStorage.getItem("alternate_site_contact_person");
+                        document.getElementsByName("alternative-name")[0].value = localStorage.getItem("alternate_site_alternative_name");
+                        document.getElementsByName("reach")[0].value = localStorage.getItem("alternate_site_reach");
+                        document.getElementsByName("time")[0].value = localStorage.getItem("alternate_site_time");
+                    }
+                    else if(number == 4){   // Form 4
+                        var result_1 = localStorage.getItem("alternate_site_floor_space_1");
+                        var result_2 = localStorage.getItem("alternate_site_computer_1");
+                        var result_3 = localStorage.getItem("alternate_site_power_points_1");
+                        var result_4 = localStorage.getItem("alternate_site_software_1");
+                        var result_5 = localStorage.getItem("alternate_site_network_1");
+                        var result_6 = localStorage.getItem("alternate_site_peripheral_devices_1");
+                        var result_7 = localStorage.getItem("alternate_site_customer_service_area_1");
+                        var result_8 = localStorage.getItem("alternate_site_services_offered_1");
+                        
+                        document.getElementsByName("floor-space-1")[result_1].checked = true;
+                        document.getElementsByName("computer-1")[result_2].checked = true;
+                        document.getElementsByName("power-points-1")[result_3].checked = true;
+                        document.getElementsByName("software-1")[result_4].checked = true;
+                        document.getElementsByName("network-1")[result_5].checked = true;
+                        document.getElementsByName("peripheral-devices-1")[result_6].checked = true;
+                        document.getElementsByName("customer-service-area-1")[result_7].checked = true;
+                        document.getElementsByName("services-offered-1")[result_8].checked = true;
+                        
+                    }
+                    else if(number == 5){   // Form 5
+                        document.getElementsByName("computers-provider-1")[0].value = localStorage.getItem("alternate_site_compt_provider_1");
+                        document.getElementsByName("computers-lead-time-1")[0].value = localStorage.getItem("alternate_site_compt_lead_time_1");
+                        document.getElementsByName("software-provider-1")[0].value = localStorage.getItem("alternate_site_soft_provider_1");
+                        document.getElementsByName("software-lead-time-1")[0].value = localStorage.getItem("alternate_site_soft_lead_time_1");
+                        document.getElementsByName("network-provider-1")[0].value = localStorage.getItem("alternate_site_net_provider_1");
+                        document.getElementsByName("network-lead-time-1")[0].value = localStorage.getItem("alternate_site_net_lead_time_1");
+                        document.getElementsByName("peripheral-provider-1")[0].value = localStorage.getItem("alternate_site_peri_provider_1");
+                        document.getElementsByName("peripheral-lead-time-1")[0].value = localStorage.getItem("alternate_site_peri_lead_time_1");
+                    }
+                    else if(number == 6){   // Form 6
+                        document.getElementsByName("time-shift-1")[0].value = localStorage.getItem("alternate_site_time_shift_1");
+                        document.getElementsByName("time-setup-1")[0].value = localStorage.getItem("alternate_site_time_setup_1");
+                        document.getElementsByName("time-restart-1")[0].value = localStorage.getItem("alternate_site_time_restart_1");
+                    }
+                    else if(number == 7){   // Form 7
+                        document.getElementsByName("alternative-site-1")[0].value = localStorage.getItem("alternate_site_alt_site_1");
+                    }
+                    else if(number == 8){   // Form 8
+                        document.getElementsByName("location-name-2")[0].value = localStorage.getItem("alternate_site_location_name_2");
+                        document.getElementsByName("location-address-2")[0].value = localStorage.getItem("alternate_site_location_address_2");
+                        document.getElementsByName("contact-person-2")[0].value = localStorage.getItem("alternate_site_contact_person_2");
+                        document.getElementsByName("alternative-name-2")[0].value = localStorage.getItem("alternate_site_alternative_name_2");
+                        document.getElementsByName("reach-2")[0].value = localStorage.getItem("alternate_site_reach_2");
+                        document.getElementsByName("time-2")[0].value = localStorage.getItem("alternate_site_time_2");
+                    }
+                    else if(number == 9){   // Form 9
+                        result_1 = localStorage.getItem("alternate_site_floor_space_2");
+                        result_2 = localStorage.getItem("alternate_site_computer_2");
+                        result_3 = localStorage.getItem("alternate_site_power_points_2");
+                        result_4 = localStorage.getItem("alternate_site_software_2");
+                        result_5 = localStorage.getItem("alternate_site_network_2");
+                        result_6 = localStorage.getItem("alternate_site_peripheral_devices_2");
+                        result_7 = localStorage.getItem("alternate_site_customer_service_area_2");
+                        result_8 = localStorage.getItem("alternate_site_services_offered_2");
+                        
+                        document.getElementsByName("floor-space-2")[result_1].checked = true;
+                        document.getElementsByName("computer-2")[result_2].checked = true;
+                        document.getElementsByName("power-points-2")[result_3].checked = true;
+                        document.getElementsByName("software-2")[result_4].checked = true;
+                        document.getElementsByName("network-2")[result_5].checked = true;
+                        document.getElementsByName("peripheral-devices-2")[result_6].checked = true;
+                        document.getElementsByName("customer-service-area-2")[result_7].checked =true;
+                        document.getElementsByName("services-offered-2")[result_8].checked = true;
+                    }
+                    else if(number == 10){  // Form 10
+                        document.getElementsByName("computers-provider-2")[0].value = localStorage.getItem("alternate_site_compt_provider_2");
+                        document.getElementsByName("computers-lead-time-2")[0].value = localStorage.getItem("alternate_site_compt_lead_time_2");
+                        document.getElementsByName("software-provider-2")[0].value = localStorage.getItem("alternate_site_soft_provider_2");
+                        document.getElementsByName("software-lead-time-2")[0].value = localStorage.getItem("alternate_site_soft_lead_time_2");
+                        document.getElementsByName("network-provider-2")[0].value = localStorage.getItem("alternate_site_net_provider_2");
+                        document.getElementsByName("network-lead-time-2")[0].value = localStorage.getItem("alternate_site_net_lead_time_2");
+                        document.getElementsByName("peripheral-provider-2")[0].value = localStorage.getItem("alternate_site_peri_provider_2");
+                        document.getElementsByName("peripheral-lead-time-2")[0].value = localStorage.getItem("alternate_site_peri_lead_time_2");
+                    }
+                    else if(number == 11){  // Form 11
+                        document.getElementsByName("time-shift-2")[0].value = localStorage.getItem("alternate_site_time_shift_2");
+                        document.getElementsByName("time-setup-2")[0].value = localStorage.getItem("alternate_site_time_setup_2");
+                        document.getElementsByName("time-restart-2")[0].value = localStorage.getItem("alternate_site_time_restart_2");
+                    }
+                    else if(number == 12){  // Form 12
+                        document.getElementsByName("alternative-site-2")[0].value = localStorage.getItem("alternate_site_alt_site_2");
+                    }
+                });
+
                 // MENGATUR TOMBOL
                 $("#back, #next").click(function(){
                     /* Scroll to top */
                     $("div.scroll").scrollTop(0);
-                    
+
                     // Menyembunyikan tombol check
                     if((number!=max) && (number!=1)){
                         $("#next").show();
@@ -726,7 +1149,7 @@
 
                 /* Menambahkan form 2 */
                 $(".add button").click(function(){
-                    $("#form2 form").append('<label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span><input type="text" placeholder="Enter responsibility" name="office-name" value=""></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span><input type="text" placeholder="Enter employee\'s name" name="office-address"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span><input type="text" placeholder="Enter alternative" name="office-contact"></label>');
+                    $("#form2 form").append('<div class="team"><label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span><input type="text" placeholder="Enter responsibility" name="office-name" value=""></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span><input type="text" placeholder="Enter employee\'s name" name="office-address"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span><input type="text" placeholder="Enter alternative" name="office-contact"></label></div>');
                 });
             });
         </script>
