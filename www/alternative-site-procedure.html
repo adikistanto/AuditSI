@@ -653,12 +653,19 @@
 
                 var number = 1;
                 var max = 12;    // Jumlah semua Form
-
+                var form2_length = localStorage.getItem("alt_site_form2_length");
+                alert(form2_length);
+                
                 $("#form1").show();
                 // Form 1
                 document.getElementsByName("office-name")[0].value = localStorage.getItem("alternate_site_office_name");
                 document.getElementsByName("office-address")[0].value = localStorage.getItem("alternate_site_office_address");
                 document.getElementsByName("office-contact")[0].value = localStorage.getItem("alternate_site_office_contact");
+
+                /* Menampilkan Form 2 tambahan (jika ada) */
+                for (var i = 1; i < form2_length; i++) {
+                    $("#form2 form").append('<div class="team"><label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span><input type="text" placeholder="Enter responsibility" name="responsibility" value=""></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span><input type="text" placeholder="Enter employee\'s name" name="employee-name"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span><input type="text" placeholder="Enter alternative" name="alternative"></label></div>');
+                }
 
                 /* Menyembunyikan Form lain */
                 for (var i = 2; i <= max; i++) {
@@ -686,15 +693,20 @@
                     }
                     else if(number == 2){    // Form 2
                         // Mengambil data dari form
-                        var responsibility = document.getElementsByName("responsibility")[0].value;
-                        var employee_name = document.getElementsByName("employee-name")[0].value;
-                        var alternative = document.getElementsByName("alternative")[0].value;
-                        // Jika perangkat support dengan Local Storage
-                        if (typeof(Storage) !== "undefined") {
-                            // Simpan
-                            localStorage.setItem("alternate_site_responsibility", responsibility);
-                            localStorage.setItem("alternate_site_employee_name", employee_name);
-                            localStorage.setItem("alternate_site_alternative", alternative);
+                        form2_length = document.getElementsByName("responsibility").length;
+                        localStorage.setItem("alt_site_form2_length",form2_length);
+                        alert(form2_length);
+                        for (var i = 0; i < form2_length; i++) {
+                            var responsibility = document.getElementsByName("responsibility")[i].value;
+                            var employee_name = document.getElementsByName("employee-name")[i].value;
+                            var alternative = document.getElementsByName("alternative")[i].value;
+                            // Jika perangkat support dengan Local Storage
+                            if (typeof(Storage) !== "undefined") {
+                                // Simpan
+                                localStorage.setItem("alternate_site_responsibility"+i, responsibility);
+                                localStorage.setItem("alternate_site_employee_name"+i, employee_name);
+                                localStorage.setItem("alternate_site_alternative"+i, alternative);
+                            }
                         }
                     }
                     else if(number == 3){    // Form 3
@@ -998,9 +1010,11 @@
                         document.getElementsByName("office-contact")[0].value = localStorage.getItem("alternate_site_office_contact");
                     }
                     else if(number == 2){   // Form 2
-                        document.getElementsByName("responsibility")[0].value = localStorage.getItem("alternate_site_responsibility");
-                        document.getElementsByName("employee-name")[0].value = localStorage.getItem("alternate_site_employee_name");
-                        document.getElementsByName("alternative")[0].value = localStorage.getItem("alternate_site_alternative");
+                        for (var i = 0; i < form2_length; i++) {
+                            document.getElementsByName("responsibility")[i].value = localStorage.getItem("alternate_site_responsibility"+i);
+                            document.getElementsByName("employee-name")[i].value = localStorage.getItem("alternate_site_employee_name"+i);
+                            document.getElementsByName("alternative")[i].value = localStorage.getItem("alternate_site_alternative"+i);
+                        }
                     }
                     else if(number == 3){   // Form 3
                         document.getElementsByName("location-name")[0].value = localStorage.getItem("alternate_site_location_name");
@@ -1019,7 +1033,7 @@
                         var result_6 = localStorage.getItem("alternate_site_peripheral_devices_1");
                         var result_7 = localStorage.getItem("alternate_site_customer_service_area_1");
                         var result_8 = localStorage.getItem("alternate_site_services_offered_1");
-                        
+
                         document.getElementsByName("floor-space-1")[result_1].checked = true;
                         document.getElementsByName("computer-1")[result_2].checked = true;
                         document.getElementsByName("power-points-1")[result_3].checked = true;
@@ -1028,7 +1042,7 @@
                         document.getElementsByName("peripheral-devices-1")[result_6].checked = true;
                         document.getElementsByName("customer-service-area-1")[result_7].checked = true;
                         document.getElementsByName("services-offered-1")[result_8].checked = true;
-                        
+
                     }
                     else if(number == 5){   // Form 5
                         document.getElementsByName("computers-provider-1")[0].value = localStorage.getItem("alternate_site_compt_provider_1");
@@ -1065,7 +1079,7 @@
                         result_6 = localStorage.getItem("alternate_site_peripheral_devices_2");
                         result_7 = localStorage.getItem("alternate_site_customer_service_area_2");
                         result_8 = localStorage.getItem("alternate_site_services_offered_2");
-                        
+
                         document.getElementsByName("floor-space-2")[result_1].checked = true;
                         document.getElementsByName("computer-2")[result_2].checked = true;
                         document.getElementsByName("power-points-2")[result_3].checked = true;
@@ -1149,7 +1163,7 @@
 
                 /* Menambahkan form 2 */
                 $(".add button").click(function(){
-                    $("#form2 form").append('<div class="team"><label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span><input type="text" placeholder="Enter responsibility" name="office-name" value=""></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span><input type="text" placeholder="Enter employee\'s name" name="office-address"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span><input type="text" placeholder="Enter alternative" name="office-contact"></label></div>');
+                    $("#form2 form").append('<div class="team"><label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span><input type="text" placeholder="Enter responsibility" name="responsibility" value=""></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span><input type="text" placeholder="Enter employee\'s name" name="employee-name"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span><input type="text" placeholder="Enter alternative" name="alternative"></label></div>');
                 });
             });
         </script>
