@@ -633,8 +633,9 @@
                         </form>
                     </div>
                     <!-- End of Form 12 -->
-                </div>
-
+                </div>  <!-- End of scroll -->
+                
+                <!-- Footer -->
                 <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
                     <div class="buttons widget-container content-area horiz-area wrapping-col">
                         <button id="back" class="button widget uib_w_9 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0"></button>
@@ -645,19 +646,19 @@
                         <button id="check" class="button widget uib_w_10 d-margins ion ion-checkmark" data-uib="ionic/button" data-ver="0"></button>
                     </div>
                 </ion-footer-bar>
+                <!-- End of Footer -->
             </div>
         </div>
 
-        <script>
+        <script type="text/javascript">
             $(document).ready(function() {
 
                 var number = 1;
                 var max = 12;    // Jumlah semua Form
                 var form2_length = localStorage.getItem("alt_site_form2_length");
-                alert(form2_length);
                 
                 $("#form1").show();
-                // Form 1
+                // Menampilkan data Form 1 (jika ada)
                 document.getElementsByName("office-name")[0].value = localStorage.getItem("alternate_site_office_name");
                 document.getElementsByName("office-address")[0].value = localStorage.getItem("alternate_site_office_address");
                 document.getElementsByName("office-contact")[0].value = localStorage.getItem("alternate_site_office_contact");
@@ -695,7 +696,6 @@
                         // Mengambil data dari form
                         form2_length = document.getElementsByName("responsibility").length;
                         localStorage.setItem("alt_site_form2_length",form2_length);
-                        alert(form2_length);
                         for (var i = 0; i < form2_length; i++) {
                             var responsibility = document.getElementsByName("responsibility")[i].value;
                             var employee_name = document.getElementsByName("employee-name")[i].value;
