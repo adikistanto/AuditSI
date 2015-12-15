@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
         <link rel="stylesheet" type="text/css" href="css/alternative-site-procedure_main.less.css" class="main-less">
         <link rel="stylesheet" type="text/css" href="css/audit.css">
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
@@ -39,13 +40,13 @@
                     <div data-role="page" id="form1" class="upage-content ac0 content-area vertical-col">
                         <form>
                             <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
-                                <input id="office-name" type="text" placeholder="Enter office's name">
+                                <input id="office_name" type="text" placeholder="Enter office's name">
                             </label>
                             <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address*</span>
-                                <input id="office-address" type="text" placeholder="Enter office's address">
+                                <input id="office_address" type="text" placeholder="Enter office's address">
                             </label>
                             <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Phone/ Email*</span>
-                                <input id="office-contact" type="text" placeholder="Enter office's phone/ email">
+                                <input id="office_contact" type="text" placeholder="Enter office's phone/ email">
                             </label>
                         </form>
                     </div>
@@ -57,12 +58,10 @@
                         <h4>Action</h4>
                         <div class="paragraph-padding">
                             <p>At each stage, assess whether it is possible to carry out the suggested action. If not, move on to the next action. If there is no time, evacuate immediately.</p>
-                        </div>
-                        <label class="item item-input widget uib_w_12" data-uib="ionic/input" data-ver="0">
-                            <input id="auditee_name" type="text" placeholder="Name of auditee">
-                        </label>
-                        <div class="paragraph-space paragraph-padding">
-                            <p><span id="auditee_name_par">(Name of auditee)</span> recognizes human resources as his or her most valuable resource.</p>
+                            <p>
+                                <input id="auditee_name" type="text" placeholder="Name of auditee">
+                            </p>
+                            <p><span class="positive" id="auditee_name_par">(Name of auditee)</span> recognizes human resources as his or her most valuable resource.</p>
                             <p>Identify any injured personnel for immediate vacuation.</p>
                             <p>Shut down computers. Shut down power system, including connection from uninterruptible power supply (UPS).</p>
                             <p>Remove server and data backup from the affected location.</p>
@@ -79,6 +78,137 @@
                             <p>Separated evacuees must establish contact with office head to confirm evacuation.</p>
                         </div>
                     </div>  <!-- End of Form 2 -->
+
+                    <!-- Form 3 - Nonsystem Emergency - Power -->
+                    <div data-role="page" id="form3" class="upage-content ac0 content-area vertical-col">
+                        <h4 class="d-margins sub-menu">Power</h4>
+                        <h4>Action</h4>
+                        <div class="paragraph-padding">
+                            <p>Confirm power failure by checking with neighborhood and main power connectors to ensure that a fuse has not blown.</p>
+                            <p>If a fuse has blown, check for possible fi re hazards and any injury to person(s) requiring immediate evacuation.</p>
+                            <p>For power outage exceeding</p>
+                            <p>
+                                <input id="minute" type="text" placeholder="minutes">
+                            </p>
+                            <p><span id="minute_par">(minutes)</span> minutes, check with substation /power office.</p>
+                            <p>Confirm availability of fuel for generator.</p>
+                            <p>Inspect all UPSs for battery outage warning.</p>
+                            <p>Assess alternative lighting arrangement, whenever required.</p>
+                            <p>Instruct the guard to enforce restricted entry.</p>
+                            <p>Inform the appropriate person from the Contingency Plan Contact List.</p>
+                            <p>Assess if power outage could cause business disruption.</p>
+                        </div>
+
+                        <h4>Evacuation Procedure</h4>
+                        <div class="paragraph-padding">
+                            <p>In case of fi re hazards, follow the evacuation procedure suggested in case of fire.</p>
+                        </div>
+                    </div>  <!-- End of Form 3 -->
+
+                    <!-- Form 4 - Nonsystem Emergency - Civil Disorder, Vandalism -->
+                    <div data-role="page" id="form4" class="upage-content ac0 content-area vertical-col">
+                        <h4 class="d-margins sub-menu">Civil Disorder, Vandalism</h4>
+                        <h4>Action</h4>
+                        <div class="paragraph-padding">
+                            <p>At each stage, assess whether it is possible to carry out the suggested action. If not, move on to the next action. Evacuate only after assessing the scenario and preferably after getting the go-ahead from concerned authorities.</p>
+                            <p>
+                                <input id="auditee_name_2" type="text" placeholder="Name of auditee">
+                            </p>
+                            <p><span id="auditee_name_par_2">(Name of auditee)</span> recognizes human resources as his or her most valuable resource.</p>
+                            <p>Inform the appropriate person from the Contingency Plan Contact List.</p>
+                            <p>When evacuation is ordered, shut down power system, including UPS.</p>
+                            <p>Shut down computers. If time does not permit, disconnect the power line.</p>
+                            <p>Remove server and data backup from the affected location.</p>
+                            <p>Remove other IT resources from the affected location, to the extent possible.</p>
+                            <p>Lock the location as per evacuation guide.</p>
+                            <p>Reenter the premises after the appropriate authorities give the go-ahead.</p>
+                        </div>
+                        <h4>Evacuation Procedure</h4>
+                        <div class="paragraph-padding">
+                            <p>Follow instructions of the civil authorities whenever applicable.</p>
+                            <p>Assess approach from the main and emergency exit.</p>
+                            <p>First evacuate injured personnel followed by others along with IT resources.</p>
+                            <p>Form a queue for evacuation. If possible, take head count to ensure safe evacuation of all.</p>
+                        </div>
+                    </div>  <!-- End of Form 4 -->
+
+                    <!-- Form 5 - Nonsystem Emergency - Evolving Natural Calamity (Flood, Isolation, etc.) -->
+                    <div data-role="page" id="form5" class="upage-content ac0 content-area vertical-col">
+                        <h4 class="d-margins sub-menu">Evolving Natural Calamity (Flood, Isolation, etc.)</h4>
+                        <h4>Action</h4>
+                        <div class="paragraph-padding">
+                            <p>At each stage, assess whether it is possible to carry out the suggested action. If not, move on to the next action. Evacuate only after assessing the scenario and preferably after getting the go-ahead from concerned authorities.</p>
+                            <p>
+                                <input id="auditee_name_3" type="text" placeholder="Name of auditee">
+                            </p>
+                            <p><span id="auditee_name_par_3">(Name of auditee)</span> recognizes human resources as his or her most valuable resource.</p>
+                            <p>Inform the appropriate person from the Contingency Plan Contact List.</p>
+                            <p>Initiate action to procure necessary supply to face prolonged isolated stay at the facility.</p>
+                            <p>Recharge battery-based communication devices, such as mobile phones.</p>
+                            <p>When evacuation is ordered, shut down power systems, including connection from UPS.</p>
+                            <p>Shut down computers. If time does not permit, disconnect the power line.</p>
+                            <p>Remove server and data backup from the location.</p>
+                            <p>Remove other IT resources from the location, to the extent possible.</p>
+                            <p>If removal is not possible, relocate to reduce chances of loss, for example, locate on a high location in case of fl ood.</p>
+                            <p>Lock the location as per evacuation guide.</p>
+                            <p>Reenter the premises, after the appropriate authorities give the go-ahead.</p>
+                        </div>
+                        <h4>Evacuation Procedure</h4>
+                        <div class="paragraph-padding">
+                            <p>Evacuees who were separated from the group must establish contact with office head to confirm evacuation.</p>
+                            <p>Lock the location, if complete evacuation is established.</p>
+                        </div>
+                    </div>  <!-- End of Form 5 -->
+
+                    <!-- Form 6 - Sudden Natural Calamity (Lightning, Earthquake) -->
+                    <div data-role="page" id="form6" class="upage-content ac0 content-area vertical-col">
+                        <h4 class="d-margins sub-menu">Sudden Natural Calamity (Lightning, Earthquake)</h4>
+                        <h4>Action</h4>
+                        <div class="paragraph-padding">
+                            <p>At each stage, assess whether it is possible to carry out the suggested action. If not, move on to the next action.  If there is no time at all, move on to evacuation procedure.</p>
+                            <p>
+                                <input id="auditee_name_4" type="text" placeholder="Name of auditee">
+                            </p>
+                            <p><span id="auditee_name_par_4">(Name of auditee)</span> recognizes human resources as his or her most valuable resource.</p>
+                            <p>Identify any injured personnel and proceed for immediate evacuation.</p>
+                            <p>Shut down power systems, including connection from UPS.</p>
+                            <p>Shut down computers. If time does not permit, disconnect the power line.</p>
+                            <p>Remove server and data backup from the affected location.</p>
+                            <p>Remove other IT resources from the affected location.</p>
+                            <p>Lock the location as per evacuation guide.</p>
+                            <p>Inform the appropriate person from the Contingency Plan Contact List.</p>
+                        </div>
+                        <h4>Evacuation Procedure</h4>
+                        <div class="paragraph-padding">
+                            <p>Follow the instructions of the civil authorities whenever applicable.</p>
+                            <p>Assess approach from the main and emergency exits.</p>
+                            <p>First evacuate injured personnel followed by others along with IT resources.</p>
+                            <p>Form a line for evacuation. If possible, take a headcount to ensure the safe evacuation of all.</p>
+                            <p>Evacuees who were separated from the group must establish contact with office head to confirm evacuation.</p>
+                            <p>Lock the location, if complete evacuation is established.</p>
+                        </div>
+                    </div>  <!-- End of Form 6 -->
+
+                    <!-- Form 7 - System Emergency - Malfunction -->
+                    <div data-role="page" id="form7" class="upage-content ac0 content-area vertical-col">
+                        <h4 class="d-margins sub-menu">Malfunction</h4>
+                        <h4>Action</h4>
+                        <div class="paragraph-padding">
+                            <p>Contact contingency plan designate for support and log in the problem.</p>
+                            <p>Ensure availability of last data backup.</p>
+                        </div>
+                    </div>  <!-- End of Form 7 -->
+
+                    <!-- Form 8 - System Emergency - Virus -->
+                    <div data-role="page" id="form8" class="upage-content ac0 content-area vertical-col">
+                        <h4 class="d-margins sub-menu">Virus</h4>
+                        <h4>Action</h4>
+                        <div class="paragraph-padding">
+                            <p> Notify Virus Alert Team.</p>
+                            <p>De-link affected machine(s) from network and other shared resources.</p>
+                            <p>Take custody of last data backup.</p>
+                        </div>
+                    </div>  <!-- End of Form 8 -->
 
                 </div>
                 <!-- End 0f scroll -->
@@ -103,9 +233,13 @@
             $(document).ready(function() {
 
                 var number = 1;
-                var max = 2;    // Jumlah semua Form
+                var max = 8;    // Jumlah semua Form
 
                 $("#form1").show();
+                /* Menampilkan data yang tersimpan pada Form 1 */
+                $("#office_name").val(localStorage.getItem("emergency_office_name"));
+                $("#office_address").val(localStorage.getItem("emergency_office_address"));
+                $("#office_contact").val(localStorage.getItem("emergency_office_contact"));
 
                 /* Menyembunyikan Form lain */
                 for (var i = 2; i <= max; i++) {
@@ -116,6 +250,99 @@
                 $("#check").hide();
                 $("#back").hide();
 
+                // MENYIMPAN DATA =======================
+                //** Dilakukan sebelum var number ditambah atau dikurangi
+                $("#back, #next").click(function(){
+                    if(number == 1){      // Form 1
+                        // Mengambil data dari form
+                        var office_name = $("#office_name").val();
+                        var office_address = $("#office_address").val();
+                        var office_contact = $("#office_contact").val();
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("emergency_office_name", office_name);
+                            localStorage.setItem("emergency_office_address", office_address);
+                            localStorage.setItem("emergency_office_contact", office_contact);
+                        }
+                    }
+                    else if(number == 2){      // Form 2
+                        // Mengambil data dari form
+                        var auditee_name = $("#auditee_name").val();
+                        // Meletakkan hasi input di paragraf
+                        if(auditee_name != ''){
+                            $("#auditee_name_par").text(auditee_name);
+                        }else{
+                            $("#auditee_name_par").text("(Name of auditee)");
+                        }
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("emergency_auditee_name", auditee_name);
+                        }
+                    }
+                    else if(number == 3){      // Form 3
+                        // Mengambil data dari form
+                        var minute = $("#minute").val();
+                        // Meletakkan hasi input di paragraf
+                        if(minute != ''){
+                            $("#minute_par").text(minute);
+                        }else{
+                            $("#minute_par").text("Minutes");
+                        }
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("emergency_minute", minute);
+                        }
+                    }
+                    else if(number == 4){      // Form 4
+                        // Mengambil data dari form
+                        var auditee_name_2 = $("#auditee_name_2").val();
+                        // Meletakkan hasi input di paragraf
+                        if(auditee_name_2 != ''){
+                            $("#auditee_name_par_2").text(auditee_name_2);
+                        }else{
+                            $("#auditee_name_par_2").text("(Name of auditee)");
+                        }
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("emergency_auditee_name_2", auditee_name_2);
+                        }
+                    }
+                    else if(number == 5){      // Form 5
+                        // Mengambil data dari form
+                        var auditee_name_3 = $("#auditee_name_3").val();
+                        // Meletakkan hasi input di paragraf
+                        if(auditee_name_3 != ''){
+                            $("#auditee_name_par_3").text(auditee_name_3);
+                        }else{
+                            $("#auditee_name_par_3").text("(Name of auditee)");
+                        }
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("emergency_auditee_name_3", auditee_name_3);
+                        }
+                    }
+                    else if(number == 6){      // Form 6
+                        // Mengambil data dari form
+                        var auditee_name_4 = $("#auditee_name_4").val();
+                        // Meletakkan hasi input di paragraf
+                        if(auditee_name_4 != ''){
+                            $("#auditee_name_par_4").text(auditee_name_4);
+                        }else{
+                            $("#auditee_name_par_4").text("(Name of auditee)");
+                        }
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("emergency_auditee_name_4", auditee_name_4);
+                        }
+                    }
+                });
+
                 /* NEXT PAGE */
                 $("#next").click(function(){
                     /* Berpindah halaman */
@@ -123,23 +350,79 @@
                     number += 1;
                     $("#form"+number.toString()).show();
                 });
+
+                /* LAST PAGE */
                 $("#check").click(function(){
-                    /*if(number == 12){    // Form 12
-                        // Mengambil data dari form
-                        var alt_site_2 = document.getElementsByName("alternative-site-2")[0].value;
-                        // Jika perangkat support dengan Local Storage
-                        if (typeof(Storage) !== "undefined") {
-                            // Simpan
-                            localStorage.setItem("alternate_site_alt_site_2", alt_site_2);
-                        }
-                    }*/
                     window.location = "index.html";
                 });
+
                 /* BACK PAGE */
                 $("#back").click(function(){
                     $("#form"+number.toString()).hide();
                     number -= 1;
                     $("#form"+number.toString()).show();
+                });
+
+                // MENAMPILKAN DATA =======================
+                //** Dilakukan setelah var number ditambah atau dikurangi
+                $("#back, #next").click(function(){
+                    if(number == 1){    // Form 1
+                        $("#office_name").val(localStorage.getItem("emergency_office_name"));
+                        $("#office_address").val(localStorage.getItem("emergency_office_address"));
+                        $("#office_contact").val(localStorage.getItem("emergency_office_contact"));
+                    }
+                    else if(number == 2){      // Form 2
+                        var temp = localStorage.getItem("emergency_auditee_name");
+                        // Meletakkan data di input dan paragraf
+                        if(temp != ''){
+                            $("#auditee_name").val(temp);
+                            $("#auditee_name_par").text(temp);
+                        }else{
+                            $("#auditee_name_par").text("(Name of auditee)");
+                        }
+                    }
+                    else if(number == 3){      // Form 3
+                        temp = localStorage.getItem("emergency_minute");
+                        // Meletakkan data di input dan paragraf
+                        if(temp != ''){
+                            $("#minute").val(temp);
+                            $("#minute_par").text(temp);
+                        }else{
+                            $("#minute_par").text("(minutes)");
+                        }
+                    }
+                    else if(number == 4){      // Form 4
+                        temp = localStorage.getItem("emergency_auditee_name_2");
+                        // Meletakkan data di input dan paragraf
+                        if(temp != ''){
+                            $("#auditee_name_2").val(temp);
+                            $("#auditee_name_par_2").text(temp);
+                        }else{
+                            $("#auditee_name_par_2").text("(Name of auditee)");
+                        }
+                    }
+                    else if(number == 5){      // Form 5
+                        temp = localStorage.getItem("emergency_auditee_name_3");
+                        // Meletakkan data di input dan paragraf
+                        if(temp != ''){
+                            $("#auditee_name_3").val(temp);
+                            $("#auditee_name_par_3").text(temp);
+                        }else{
+                            $("#auditee_name_par_3").text("(Name of auditee)");
+                        }
+
+                    }
+                    else if(number == 6){      // Form 6
+                        temp = localStorage.getItem("emergency_auditee_name_4");
+                        // Meletakkan data di input dan paragraf
+                        if(temp != ''){
+                            $("#auditee_name_4").val(temp);
+                            $("#auditee_name_par_4").text(temp);
+                        }else{
+                            $("#auditee_name_par_4").text("(Name of auditee)");
+                        }
+
+                    }
                 });
 
                 // MENGATUR TOMBOL

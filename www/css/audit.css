@@ -216,14 +216,15 @@ h4{
 
 /*** FORM 6 ***/
 .paragraph-padding{
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 .paragraph-space{
     margin-top: 10px;
 }
 .sub-menu{
-    height: 40px;
+    height: auto;
+    min-height: 40px;
     padding-top: 12px;
     padding-bottom: 12px;
     background-color:darkgrey;
