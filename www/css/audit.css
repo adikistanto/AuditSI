@@ -227,11 +227,14 @@ h4{
     min-height: 40px;
     padding-top: 12px;
     padding-bottom: 12px;
-    background-color:darkgrey;
+    background-color: #F0F0F0;
 }
 .sub-menu ~h4{
     font-size: 16px;
     font-weight: 600;
+}
+input[type="text"].positive{
+    color: #387EF5;
 }
 
 

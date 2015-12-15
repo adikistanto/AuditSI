@@ -59,9 +59,9 @@
                         <div class="paragraph-padding">
                             <p>At each stage, assess whether it is possible to carry out the suggested action. If not, move on to the next action. If there is no time, evacuate immediately.</p>
                             <p>
-                                <input id="auditee_name" type="text" placeholder="Name of auditee">
+                                <input id="auditee_name" class="positive" type="text" placeholder="Name of auditee">
                             </p>
-                            <p><span class="positive" id="auditee_name_par">(Name of auditee)</span> recognizes human resources as his or her most valuable resource.</p>
+                            <p><span id="auditee_name_par" class="positive">(Name of auditee)</span> recognizes human resources as his or her most valuable resource.</p>
                             <p>Identify any injured personnel for immediate vacuation.</p>
                             <p>Shut down computers. Shut down power system, including connection from uninterruptible power supply (UPS).</p>
                             <p>Remove server and data backup from the affected location.</p>
@@ -88,9 +88,9 @@
                             <p>If a fuse has blown, check for possible fi re hazards and any injury to person(s) requiring immediate evacuation.</p>
                             <p>For power outage exceeding</p>
                             <p>
-                                <input id="minute" type="text" placeholder="minutes">
+                                <input id="minute" class="positive" type="text" placeholder="minutes">
                             </p>
-                            <p><span id="minute_par">(minutes)</span> minutes, check with substation /power office.</p>
+                            <p><span id="minute_par" class="positive">(minutes)</span> minutes, check with substation /power office.</p>
                             <p>Confirm availability of fuel for generator.</p>
                             <p>Inspect all UPSs for battery outage warning.</p>
                             <p>Assess alternative lighting arrangement, whenever required.</p>
@@ -112,9 +112,9 @@
                         <div class="paragraph-padding">
                             <p>At each stage, assess whether it is possible to carry out the suggested action. If not, move on to the next action. Evacuate only after assessing the scenario and preferably after getting the go-ahead from concerned authorities.</p>
                             <p>
-                                <input id="auditee_name_2" type="text" placeholder="Name of auditee">
+                                <input id="auditee_name_2" class="positive" type="text" placeholder="Name of auditee">
                             </p>
-                            <p><span id="auditee_name_par_2">(Name of auditee)</span> recognizes human resources as his or her most valuable resource.</p>
+                            <p><span id="auditee_name_par_2" class="positive">(Name of auditee)</span> recognizes human resources as his or her most valuable resource.</p>
                             <p>Inform the appropriate person from the Contingency Plan Contact List.</p>
                             <p>When evacuation is ordered, shut down power system, including UPS.</p>
                             <p>Shut down computers. If time does not permit, disconnect the power line.</p>
@@ -139,9 +139,9 @@
                         <div class="paragraph-padding">
                             <p>At each stage, assess whether it is possible to carry out the suggested action. If not, move on to the next action. Evacuate only after assessing the scenario and preferably after getting the go-ahead from concerned authorities.</p>
                             <p>
-                                <input id="auditee_name_3" type="text" placeholder="Name of auditee">
+                                <input id="auditee_name_3" class="positive" type="text" placeholder="Name of auditee">
                             </p>
-                            <p><span id="auditee_name_par_3">(Name of auditee)</span> recognizes human resources as his or her most valuable resource.</p>
+                            <p><span id="auditee_name_par_3" class="positive">(Name of auditee)</span> recognizes human resources as his or her most valuable resource.</p>
                             <p>Inform the appropriate person from the Contingency Plan Contact List.</p>
                             <p>Initiate action to procure necessary supply to face prolonged isolated stay at the facility.</p>
                             <p>Recharge battery-based communication devices, such as mobile phones.</p>
@@ -167,9 +167,9 @@
                         <div class="paragraph-padding">
                             <p>At each stage, assess whether it is possible to carry out the suggested action. If not, move on to the next action.  If there is no time at all, move on to evacuation procedure.</p>
                             <p>
-                                <input id="auditee_name_4" type="text" placeholder="Name of auditee">
+                                <input id="auditee_name_4" class="positive" type="text" placeholder="Name of auditee">
                             </p>
-                            <p><span id="auditee_name_par_4">(Name of auditee)</span> recognizes human resources as his or her most valuable resource.</p>
+                            <p><span id="auditee_name_par_4" class="positive">(Name of auditee)</span> recognizes human resources as his or her most valuable resource.</p>
                             <p>Identify any injured personnel and proceed for immediate evacuation.</p>
                             <p>Shut down power systems, including connection from UPS.</p>
                             <p>Shut down computers. If time does not permit, disconnect the power line.</p>
@@ -447,6 +447,15 @@
                         $("#back").hide();
                         $("#next").show();
                         $("#check").hide();
+                    }
+                    
+                    /* Mengganti Header */
+                    if(number==1){
+                        $("#header_text").text("Emergency Procedures");
+                    }else if(number==2 || number==6){
+                        $("#header_text").text("Nonsystem Emergency");
+                    }else if(number==7){
+                        $("#header_text").text("System Emergency");
                     }
                 });
 
