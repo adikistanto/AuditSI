@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
+        <link rel="stylesheet" type="text/css" href="css/alternative-site-procedure_main.less.css" class="main-less">
+        <link rel="stylesheet" type="text/css" href="css/audit.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+        <script src="intelxdk.js"></script>
+        <script src="cordova.js"></script>
+        <script src="xhr.js"></script>
+        <script src="xdk/init-dev.js"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.js"></script>
+        <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+        <script type="application/javascript" src="js/alternative-site-procedure_init_services.js"></script>
+    </head>
+
+    <body ng-app="myApp">
+
+        <div class="upage" id="mainpage">
+            <div class="upage-outer fixed-header-footer">
+                <div class="upage-content ac0 scroll" id="page_3_48">
+                    <div class="upage-outer fixed-header-footer">
+                        <!-- Header -->
+
+                    </div>
+                    <div id="form1">
+                        <!-- FORM SATU-->
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of office</span>
+                            <input id="name_of_office" type="text" placeholder="type here">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address</span>
+                            <input id="address" type="text" placeholder="type here">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Phone number</span>
+                            <input id="phone_number" type="number" placeholder="type here">
+                        </label>
+                    </div>
+                    <!-- ---------------------------------------------------AKKHIR FORM SATU ------------------------------>
+                    <div id="form2">
+                        <!-- FORM DUA-->
+                        <h4>Physical Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                        <h4>Electrical Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                        <h4>Data Cable Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                        <h4>Water Line Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                    </div>
+                    <!----------------------------------------- AKKHIR FORM DUA ------------------------------------------->
+                    <div id="form3">
+                        <!-- FORM TIGA-->
+                        <h4>Physical Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                        <h4>Electrical Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                        <h4>Data Cable Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                    </div>
+                    <!----------------------------------------- AKKHIR FORM TIGA ------------------------------------------->
+                    <div id="form4">
+                        <!-- FORM EMPAT-->
+                        <h4>Physical Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                        <h4>Electrical Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                        <h4>Data Cable Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                    </div>
+                    <!----------------------------------------- AKKHIR FORM EMPAT ------------------------------------------->
+                    <div id="form5">
+                        <!-- FORM LIMA-->
+                        <h4>Physical Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                        <h4>Electrical Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                        <h4>Data Cable Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                    </div>
+                    <!----------------------------------------- AKKHIR FORM LIMA ------------------------------------------->
+                    <div id="form6">
+                        <!-- FORM ENAM-->
+                        <h4>Physical Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                        <h4>Electrical Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                        <h4>Data Cable Layout</h4>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Descriptions and Salient Feature</span>
+                            <input id="" type="text" placeholder="Enter descriptions and salient feature">
+                        </label>
+                        <label class="item item-input widget uib_w_6 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Drawing</span>
+                            <input id="" type="text" placeholder="Enter drawing">
+                        </label>
+                        <label class="item item-input widget uib_w_7 item-stacked-label" data-uib="ionic/input" data-ver="0">
+                            <span class="input-label">Location</span>
+                            <input id="" type="text" placeholder="Enter location">
+                        </label>
+                    </div>
+                    <!----------------------------------------- AKKHIR FORM ENAM ------------------------------------------->
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_3 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <a href="index.html">
+                            <button class="button widget uib_w_4 d-margins ion ion-home icon-left" data-uib="ionic/button" data-ver="0"></button>
+                        </a>
+                    </div>
+                    <h1 id="header_text" class="title">Documentation List</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+                <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button id="back" class="button widget uib_w_9 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0"></button>
+                    </div>
+                    <h1 class="title"></h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button id="next" class="button widget uib_w_10 d-margins ion ion-android-arrow-forward" data-uib="ionic/button" data-ver="0"></button>
+                        <button id="check" class="button widget uib_w_10 d-margins ion ion-checkmark" data-uib="ionic/button" data-ver="0"></button>
+                    </div>
+                </ion-footer-bar>
+            </div>
+
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#form1").show();
+                $("#form2").hide();
+                $("#form3").hide();
+                $("#form4").hide();
+                $("#form5").hide();
+                $("#form6").hide();
+                $("#form7").hide();
+                $("#check").hide();
+                $("#back").hide();
+                document.getElementById("header_text").innerHTML= "Layout Inventory Procedure";
+                // Retrieve data
+                var number = 1;
+                var max = 6;
+                $("#next").click(function(){
+
+                    // MENGATUR TOMBOL 
+                    $("#form"+number.toString()).hide();                    
+                    number += 1;
+                    $("#form"+number.toString()).show();
+                    if(number!=max){
+                        $("#next").show();
+                        $("#back").show();
+                        $("#check").hide();
+                    }else{
+                        $("#next").hide();
+                        $("#back").show();
+                        $("#check").show();
+                    }
+                   
+
+                    // MEMBUAT NAMA HEADER
+                    if(number==1){
+                        document.getElementById("header_text").innerHTML= "Layout Inventory Procedure";
+                    }else if(number==2){
+                        document.getElementById("header_text").innerHTML= "Building";
+                    }else if(number==3){
+                        document.getElementById("header_text").innerHTML= "Office";
+                    }else if(number==4){
+                        document.getElementById("header_text").innerHTML= "Manager's Chamber";
+                    }else if(number==5){
+                        document.getElementById("header_text").innerHTML= "Server Room";
+                    }else if(number==6){
+                        document.getElementById("header_text").innerHTML= "Others";
+                    }
+
+                });
+
+
+                $("#back").click(function(){
+                    $("#form"+number.toString()).hide();
+                    if(number-1 != 0){
+                        number -= 1;
+                    }
+                    $("#form"+number.toString()).show();
+
+                    if(number-1 != 0){
+                        $("#back").show();
+                        $("#next").show();
+                        $("#check").hide();
+                    }else{
+                        $("#back").hide();
+                        $("#next").show();
+                        $("#check").hide();
+                    }
+
+                    // MEMBUAT NAMA HEADER
+                    if(number==1){
+                        document.getElementById("header_text").innerHTML= "Layout Inventory Procedure";
+                    }else if(number==2){
+                        document.getElementById("header_text").innerHTML= "Building";
+                    }else if(number==3){
+                        document.getElementById("header_text").innerHTML= "Office";
+                    }else if(number==4){
+                        document.getElementById("header_text").innerHTML= "Manager's Chamber";
+                    }else if(number==5){
+                        document.getElementById("header_text").innerHTML= "Server Room";
+                    }else if(number==6){
+                        document.getElementById("header_text").innerHTML= "Others";
+                    }
+                });
+
+                $("#check").click(function(){
+                    window.location = "index.html";
+
+                });
+            });
+        </script>
+    </body>
+
+</html>
