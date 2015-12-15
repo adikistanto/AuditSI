@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
+        <link rel="stylesheet" type="text/css" href="css/alternative-site-procedure_main.less.css" class="main-less">
+        <link rel="stylesheet" type="text/css" href="css/audit.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+        <script src="intelxdk.js"></script>
+        <script src="cordova.js"></script>
+        <script src="xhr.js"></script>
+        <script src="xdk/init-dev.js"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.js"></script>
+        <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+        <script type="application/javascript" src="js/alternative-site-procedure_init_services.js"></script>
+    </head>
+
+    <body ng-app="myApp">
+
+        <div class="upage" id="mainpage">
+            <div class="upage-outer fixed-header-footer">
+
+                <!-- Header -->
+                <ion-header-bar class="bar inner-element uib_w_3 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <a href="index.html">
+                            <button class="button widget uib_w_4 d-margins ion ion-home icon-left" data-uib="ionic/button" data-ver="0"></button>
+                        </a>
+                    </div>
+                    <h1 id="header_text" class="title">Hardware Inventory Procedure</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+                <!-- End of Header -->
+
+                <div class="scroll">
+                    <!-- Form 1 - Alternative Site Procedure -->
+                    <div data-role="page" id="form1" class="upage-content ac0 content-area vertical-col">
+                        <form>
+                            <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
+                                <input type="text" placeholder="Enter office's name" name="office-name">
+                            </label>
+                            <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address*</span>
+                                <input type="text" placeholder="Enter office's address" name="office-address">
+                            </label>
+                            <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Phone/ Email*</span>
+                                <input type="text" placeholder="Enter office's phone/ email" name="office-contact">
+                            </label>
+                        </form>
+                    </div>
+                    <!-- End of Form 1-->
+
+                    <!-- Form 2 - Hardware Inventory -->
+                    <div data-role="page" id="form2" class="upage-content ac0 content-area vertical-col">
+                        <form>
+                            <label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Name Of Hardware*</span>
+                                <input type="text" placeholder="Enter name of hardware" name="responsibility" value="">
+                            </label>
+                            <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Installed On*</span>
+                                <input type="text" placeholder="Enter installed on" name="employee-name">
+                            </label>
+                            <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Make</span>
+                                <input type="date" placeholder="Enter make date" name="alternative">
+                            </label>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">No. ID</span>
+                                <input type="text" placeholder="Enter ID No." name="alternative">
+                            </label>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Warranty</span>
+                                <input type="text" placeholder="Enter warranty long" name="alternative">
+                            </label>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">AMC</span>
+                                <input type="text" placeholder="Enter AMC" name="alternative">
+                            </label>
+                        <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Support Contact</span>
+                                <input type="text" placeholder="Enter support contact" name="alternative">
+                            </label>
+                        </form>
+                        <div class="add">
+                            <button class="button button-assertive icon ion-plus-circled"></button>
+                        </div>
+                    </div>
+                     <!-- End of Form 2-->
+                   
+                </div>
+                <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button id="back" class="button widget uib_w_9 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0"></button>
+                    </div>
+                    <h1 class="title"></h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button id="next" class="button widget uib_w_10 d-margins ion ion-android-arrow-forward" data-uib="ionic/button" data-ver="0"></button>
+                        <a href=index.html><button id="check" class="button widget uib_w_10 d-margins ion ion-checkmark" data-uib="ionic/button" data-ver="0"></button></a>
+                    </div>
+                </ion-footer-bar>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+
+                var number = 1;
+                var max = 2;    // Jumlah maksimal Form
+
+                $("#form1").show();
+
+                /* Menyembunyikan Form lain */
+                for (var i = 2; i <= max; i++) {
+                    $("#form"+i).hide();
+                }
+                /* Menyembunyikan tombol back dan check */
+                $("#check").hide();
+                $("#back").hide();
+
+                $("#next").click(function(){
+                    $("#form"+number.toString()).hide();
+                    number += 1;
+                    $("#form"+number.toString()).show();
+                });
+                $("#back").click(function(){
+                    $("#form"+number.toString()).hide();
+                    number -= 1;
+                    $("#form"+number.toString()).show();
+                });
+
+                // MENGATUR TOMBOL
+                $("#back, #next").click(function(){
+                    /* Scroll to top */
+                    $("div.scroll").scrollTop(0);
+                    
+                    // Menyembunyikan tombol check
+                    if((number!=max) && (number!=1)){
+                        $("#next").show();
+                        $("#back").show();
+                        $("#check").hide();
+                    }
+                    // Menyembunyikan tombol next - halaman terakhir
+                    else if(number == max){
+                        $("#next").hide();
+                        $("#back").show();
+                        $("#check").show();
+                    }
+                    // Menyembunyikan tombol back dan check - halaman 1
+                    else{
+                        $("#back").hide();
+                        $("#next").show();
+                        $("#check").hide();
+                    }
+
+                    /* Mengganti Header */
+                    if(number==1){
+                        document.getElementById("header_text").innerHTML= "Hardware Inventory Procedure";
+                    }else if(number==2){
+                        document.getElementById("header_text").innerHTML= "Hardware Inventory";
+                    }
+                });
+
+                /* Menambahkan form 2 */
+                $(".add button").click(function(){
+                    $("#form2 form").append('<label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Name Of Hardware*</span><input type="text" placeholder="Enter hardware name" name="responsibility" value=""></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Installed On*</span><input type="text" placeholder="Enter installed on" name="employee-name"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Make</span><input type="date" placeholder="Enter make date" name="alternative"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">No. ID</span><input type="text" placeholder="Enter ID No." name="alternative">  </label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Warranty</span><input type="text" placeholder="Enter warranty long" name="alternative"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">AMC</span><input type="text" placeholder="Enter AMC" name="alternative"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Support Contact</span><input type="text" placeholder="Enter support contact" name="alternative"> </label>');
+                });
+            });
+        </script>
+    </body>
+
+</html>

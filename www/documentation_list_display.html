@@ -27,10 +27,19 @@
                 <div class="upage-content ac0" id="page_3_48">
                     <div class="upage-outer fixed-header-footer">
                         <!-- Header -->
-
                     </div>
                 </div>
 
+                <ion-header-bar class="bar inner-element uib_w_1 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                    <h1 class="title">header</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+                <ion-footer-bar class="bar inner-element uib_w_2 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                    <h1 class="title">footer</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-footer-bar>
             </div>
 
         </div>
@@ -38,10 +47,10 @@
             $(document).ready(function() {
                 var docDefinition = { content: 'This is an sample PDF printed with pdfMake' };
                 // open the PDF in a new window
-                //pdfMake.createPdf(docDefinition).open();
+                pdfMake.createPdf(docDefinition).open();
 
                 // print the PDF (temporarily Chrome-only)
-                //pdfMake.createPdf(docDefinition).print();
+                pdfMake.createPdf(docDefinition).print();
 
                 // download the PDF (temporarily Chrome-only)
                 pdfMake.createPdf(docDefinition).download('optionalName.pdf');
