@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
+        <link rel="stylesheet" type="text/css" href="css/alternative-site-procedure_main.less.css" class="main-less">
+        <link rel="stylesheet" type="text/css" href="css/audit.css">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+        <script src="intelxdk.js"></script>
+        <script src="cordova.js"></script>
+        <script src="xhr.js"></script>
+        <script src="xdk/init-dev.js"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.js"></script>
+        <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+        <script type="application/javascript" src="js/alternative-site-procedure_init_services.js"></script>
+    </head>
+
+    <body ng-app="myApp">
+
+        <div class="upage" id="mainpage">
+            <div class="upage-outer fixed-header-footer">
+                <!-- Header -->
+                <ion-header-bar class="bar inner-element uib_w_3 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <a href="index.html">
+                            <button class="button widget uib_w_4 d-margins ion ion-home icon-left" data-uib="ionic/button" data-ver="0"></button>
+                        </a>
+                    </div>
+                    <h1 id="header_text" class="title">External Support Agreements</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+                <!-- End of Header -->
+
+                <div class="scroll">
+                    <!-- Form 1 -  External Support Agreements -->
+                    <div data-role="page" id="form1" class="upage-content ac0 content-area vertical-col">
+                        <form>
+                            <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
+                                <input id="office_name" type="text" placeholder="Enter office's name">
+                            </label>
+                            <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address*</span>
+                                <input id="office_address" type="text" placeholder="Enter office's address">
+                            </label>
+                            <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Phone/ Email*</span>
+                                <input id="office_contact" type="text" placeholder="Enter office's phone/ email">
+                            </label>
+                        </form>
+                    </div>
+                    <!-- End of Form 1-->
+
+                    <!-- Form 2 - Vendor -->
+                    <div data-role="page" id="form2" class="upage-content ac0 content-area vertical-col">
+                        <form>
+                            <div class="vendor">
+                                <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Vendor</span>
+                                    <input id="vendor_name" type="text" placeholder="Enter vendor's name">
+                                </label>
+                                <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Terms of Agreement</span>
+                                    <textarea id="terms_agreement" placeholder="Enter terms of agreement" rows="3" wrap="soft"></textarea>
+                                </label>
+                                <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Location of Agreement</span>
+                                    <input type="text" placeholder="Enter location of agreement" id="location_agreement">
+                                </label>
+                                <label class="contract item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract</span>
+                                    <input type="text" placeholder="Enter point of contract 1" id="location_agreement">
+                                </label>
+                                <label class="item item-input widget uib_w_5 item-floating-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract</span>
+                                    <input type="text" placeholder="Enter point of contract 2" id="location_agreement">
+                                </label>
+                                <label class="item item-input widget uib_w_5 item-floating-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract</span>
+                                    <input type="text" placeholder="Enter point of contract 3" id="location_agreement">
+                                </label>
+                            </div>
+                        </form>
+                        <div class="add">
+                            <button class="button button-assertive icon ion-plus-circled"></button>
+                        </div>
+                    </div>  <!-- End of Form 2 -->
+
+                    <!-- Form 3 - Date Verified -->
+                    <div data-role="page" id="form3" class="upage-content ac0 content-area vertical-col">
+                        <form>
+                            <label class="item item-input widget uib_w_11 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Last Update</span>
+                                <input type="date" placeholder="Enter last update date">
+                            </label>
+                            <label class="item item-input widget uib_w_12 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Verification</span>
+                                <input type="date">
+                            </label>
+                            <label class="item item-input widget uib_w_13 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Sent to  Head Office</span>
+                                <input type="date">
+                            </label>
+                            <label class="item item-input widget uib_w_14 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Sent to  Branch</span>
+                                <input type="date">
+                            </label>
+                            <label class="item item-input widget uib_w_15 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Sent to  Off-Site</span>
+                                <input type="date">
+                            </label>
+                        </form>
+                    </div>  <!-- End of Form 3 -->
+
+                </div>  <!-- End of scroll -->
+
+                <!-- Footer -->
+                <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button id="back" class="button widget uib_w_9 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0"></button>
+                    </div>
+                    <h1 id="result" class="title"></h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button id="next" class="button widget uib_w_10 d-margins ion ion-android-arrow-forward" data-uib="ionic/button" data-ver="0"></button>
+                        <button id="check" class="button widget uib_w_10 d-margins ion ion-checkmark" data-uib="ionic/button" data-ver="0"></button>
+                    </div>
+                </ion-footer-bar>
+                <!-- End of Footer -->
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                var number = 1;
+                var max = 3;    // Jumlah semua Form
+
+                $("#form1").show();
+                /* Menampilkan data yang tersimpan pada Form 1 */
+
+                /* Menyembunyikan Form lain */
+                for (var i = 2; i <= max; i++) {
+                    $("#form"+i).hide();
+                }
+
+                /* Menyembunyikan tombol back dan check */
+                $("#check").hide();
+                $("#back").hide();
+
+                // MENYIMPAN DATA =======================
+
+                /* NEXT PAGE */
+                $("#next").click(function(){
+                    /* Berpindah halaman */
+                    $("#form"+number.toString()).hide();
+                    number += 1;
+                    $("#form"+number.toString()).show();
+                });
+
+                /* LAST PAGE */
+                $("#check").click(function(){
+                    window.location = "index.html";
+                });
+
+                /* BACK PAGE */
+                $("#back").click(function(){
+                    $("#form"+number.toString()).hide();
+                    number -= 1;
+                    $("#form"+number.toString()).show();
+                });
+
+                // MENAMPILKAN DATA =======================
+
+                // MENGATUR TOMBOL
+                $("#back, #next").click(function(){
+                    /* Scroll to top */
+                    $("div.scroll").scrollTop(0);
+
+                    // Menyembunyikan tombol check
+                    if((number!=max) && (number!=1)){
+                        $("#next").show();
+                        $("#back").show();
+                        $("#check").hide();
+                    }
+                    // Menyembunyikan tombol next - halaman terakhir
+                    else if(number == max){
+                        $("#next").hide();
+                        $("#back").show();
+                        $("#check").show();
+                    }
+                    // Menyembunyikan tombol back dan check - halaman 1
+                    else{
+                        $("#back").hide();
+                        $("#next").show();
+                        $("#check").hide();
+                    }
+                    
+                    /* Mengganti Header */
+                    if(number==1){
+                        $("#header_text").text("External Support Agreements");
+                    }else if(number==2){
+                        $("#header_text").text("Vendors");
+                    }else if(number==3){
+                        $("#header_text").text("Date Verified");
+                    }
+                });
+
+
+            });
+        </script>
+
+    </body>
+</html>

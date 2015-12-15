@@ -69,3 +69,21 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
+@media all {
+  .grid-pad {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (min-width: 317px) {
+  .row-height-1 > .col > .content-area {
+    min-height: 100px;
+  }
+}
+@media all and (min-width: 317px) {
+  .row-height-2 > .col > .content-area {
+    min-height: 100px;
+  }
+}
