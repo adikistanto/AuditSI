@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
+        <link rel="stylesheet" type="text/css" href="css/alternative-site-procedure_main.less.css" class="main-less">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+        <script src="intelxdk.js"></script>
+        <script src="cordova.js"></script>
+        <script src="xhr.js"></script>
+        <script src="xdk/init-dev.js"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.js"></script>
+        <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+        <script type="application/javascript" src="js/alternative-site-procedure_init_services.js">
+        </script>
+        <link rel="stylesheet" type="text/css" href="css/audit.css">
+    </head>
+
+    <body ng-app="myApp">
+
+        <div class="upage" id="mainpage">
+            <div class="upage-outer fixed-header-footer">
+                <!-- Header -->
+                <ion-header-bar class="bar inner-element uib_w_3 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <a href="index.html">
+                            <button class="button widget uib_w_4 d-margins ion ion-home icon-left" data-uib="ionic/button" data-ver="0"></button>
+                        </a>
+                    </div>
+                    <h1 id="header_text" class="title">Alternative Site Procedure</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+                <!-- End of Header -->
+
+                <!-- Content -->
+                <div class="scroll display d-margins">
+                    <!-- Form 1 - Alternative Site -->
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-2">Name of Office: <span id="office_name"></span></div>
+                        <div class="col-3"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-2">Address: <span id="office_address"></span></div>
+                        <div class="col-3"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-2">Phone No./E-mail ID: <span id="office_contact"></span></div>
+                        <div class="col-3">Page ___ of ___</div>
+                    </div>
+                    <!-- End of Form 1 - Alternative Site -->
+
+                    <div class="row header">Alternative Site Team</div>
+
+                    <!-- Form 2 - Alternative Site Team -->
+                    <div class="row sub-header">
+                        <div class="col-1">Responsibility</div>
+                        <div class="col-2">Name of Employee</div>
+                        <div class="col-3">Alternative</div>
+                    </div>
+                    <div id="form2"></div>
+                    <!-- End of Form 2 -->
+
+                    <!-- Form 3 - First Alternative Site -->
+                    <div class="row sub-header">First Alternative Site</div>
+                    <div class="row">
+                        <div class="col-1">Name of Location</div>
+                        <div class="col-4" id="location_name"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">Address</div>
+                        <div class="col-4" id="location_address"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">Person to Contact</div>
+                        <div class="col-4" id="contact_person"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">Alternative Person(s)</div>
+                        <div class="col-4" id="alternative_name"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">How to Reach</div>
+                        <div class="col-4" id="reach"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">Time to Reach</div>
+                        <div class="col-4" id="time"></div>
+                    </div>
+                    <!-- End of Form 3 -->
+
+                    <!-- Form 4 - Facilities -->
+                    <div class="row sub-header">
+                        <div class="col-1">Facilities</div>
+                        <div class="col-5">Available</div>
+                        <div class="col-5">Required</div>
+                        <div class="col-5">To Be Procured</div>
+                    </div>
+                    <div class="row" id="floor_space">
+                        <div class="col-1">Floor Space</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="computer">
+                        <div class="col-1">Computers</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="power_point">
+                        <div class="col-1">Power Points</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="software">
+                        <div class="col-1">Software</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="network">
+                        <div class="col-1">Network</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="peripheral_device">
+                        <div class="col-1">Peripheral Devices</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="customer_service">
+                        <div class="col-1">Customer Service Area</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="services_offered">
+                        <div class="col-1">Services Offered</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <!-- End of Form 4 -->
+                    
+                    <!-- Form 5 - Facility Provider -->
+                    <div class="row sub-header">
+                        <div class="col-1">Facility Provider</div>
+                        <div class="col-6">Name, Address, and Contact Number</div>
+                        <div class="col-5">Lead Time</div>
+                    </div>
+                    <div class="row" id="computer_provider">
+                        <div class="col-1">Computers</div>
+                        <div class="col-6"></div>
+                        <div class="col-5"></div>
+                    </div>
+                    <div class="row" id="software_provider">
+                        <div class="col-1">Software</div>
+                        <div class="col-6"></div>
+                        <div class="col-5"></div>
+                    </div>
+                    <div class="row" id="network_provider">
+                        <div class="col-1">Network</div>
+                        <div class="col-6"></div>
+                        <div class="col-5"></div>
+                    </div>
+                    <div class="row" id="peripheral_provider">
+                        <div class="col-1">Peripheral Devices</div>
+                        <div class="col-6"></div>
+                        <div class="col-5"></div>
+                    </div>
+                    <!-- End of Form 5 -->
+                    
+                    <!-- Form 6 - Restoration Target -->
+                    <div class="row sub-header">
+                        <div class="col-1">Restoration Target</div>
+                        <div class="col-5">Time to Shift</div>
+                        <div class="col-5">Time to Setup</div>
+                        <div class="col-5">Time to Restart</div>
+                    </div>
+                    <div class="row" id="hours">
+                        <div class="col-1">Hours</div>
+                        <div class="col-5"></div>
+                        <div class="col-5"></div>
+                        <div class="col-5"></div>
+                    </div>
+                    <!-- End of Form 6 -->
+                    
+                    <!-- Form 7 Alternative Site Layout -->
+                    <div class="row sub-header">Alternative Site Layout</div>
+                    <div class="row" id="alternative_site">Alternative Site Layout</div>
+                    <!-- End of Form 7 -->
+                    
+                    <!-- Form 8 - Second Alternative Site -->
+                    <div class="row sub-header">Second Alternative Site</div>
+                    <div class="row">
+                        <div class="col-1">Name of Location</div>
+                        <div class="col-4" id="location_name_2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">Address</div>
+                        <div class="col-4" id="location_address_2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">Person to Contact</div>
+                        <div class="col-4" id="contact_person_2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">Alternative Person(s)</div>
+                        <div class="col-4" id="alternative_name_2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">How to Reach</div>
+                        <div class="col-4" id="reach_2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">Time to Reach</div>
+                        <div class="col-4" id="time_2"></div>
+                    </div>
+                    <!-- End of Form 8 -->
+
+                    <!-- Form 9 - Facilities -->
+                    <div class="row sub-header">
+                        <div class="col-1">Facilities</div>
+                        <div class="col-5">Available</div>
+                        <div class="col-5">Required</div>
+                        <div class="col-5">To Be Procured</div>
+                    </div>
+                    <div class="row" id="floor_space_2">
+                        <div class="col-1">Floor Space</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="computer_2">
+                        <div class="col-1">Computers</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="power_point_2">
+                        <div class="col-1">Power Points</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="software_2">
+                        <div class="col-1">Software</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="network_2">
+                        <div class="col-1">Network</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="peripheral_device_2">
+                        <div class="col-1">Peripheral Devices</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="customer_service_2">
+                        <div class="col-1">Customer Service Area</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <div class="row" id="services_offered_2">
+                        <div class="col-1">Services Offered</div>
+                        <div class="col-5 available"></div>
+                        <div class="col-5 required"></div>
+                        <div class="col-5 procured"></div>
+                    </div>
+                    <!-- End of Form 9 -->
+                    
+                    <!-- Form 10 - Facility Provider 2 -->
+                    <div class="row">
+                        <div class="col-1">Facility Provider</div>
+                        <div class="col-6">Name, Address, and Contact Number</div>
+                        <div class="col-5">Lead Time</div>
+                    </div>
+                    <div class="row" id="computer_provider_2">
+                        <div class="col-1">Computers</div>
+                        <div class="col-6"></div>
+                        <div class="col-5"></div>
+                    </div>
+                    <div class="row" id="software_provider_2">
+                        <div class="col-1">Software</div>
+                        <div class="col-6"></div>
+                        <div class="col-5"></div>
+                    </div>
+                    <div class="row" id="network_provider_2">
+                        <div class="col-1">Network</div>
+                        <div class="col-6"></div>
+                        <div class="col-5"></div>
+                    </div>
+                    <div class="row" id="peripheral_provider_2">
+                        <div class="col-1">Peripheral Devices</div>
+                        <div class="col-6"></div>
+                        <div class="col-5"></div>
+                    </div>
+                    <!-- End of Form 10 -->
+                    
+                    <!-- Form 11 - Restoration Target 2 -->
+                    <div class="row sub-header">
+                        <div class="col-1">Restoration Target</div>
+                        <div class="col-5">Time to Shift</div>
+                        <div class="col-5">Time to Setup</div>
+                        <div class="col-5">Time to Restart</div>
+                    </div>
+                    <div class="row" id="hours_2">
+                        <div class="col-1">Hours</div>
+                        <div class="col-5"></div>
+                        <div class="col-5"></div>
+                        <div class="col-5"></div>
+                    </div>
+                    <!-- End of Form 11 -->
+                    
+                    <!-- Form 12 Alternative Site Layout 2 -->
+                    <div class="row sub-header">Alternative Site Layout</div>
+                    <div class="row" id="alternative_site_2"></div>
+                    <!-- End of Form 12 -->
+                    
+
+                </div>
+                <!-- End of Content -->
+
+                <!-- Footer -->
+                <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button id="back" class="button widget uib_w_9 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0"></button>
+                    </div>
+                    <h1 id="result" class="title"></h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button id="next" class="button widget uib_w_10 d-margins ion ion-android-arrow-forward" data-uib="ionic/button" data-ver="0"></button>
+                        <button id="check" class="button widget uib_w_10 d-margins ion ion-checkmark" data-uib="ionic/button" data-ver="0"></button>
+                    </div>
+                </ion-footer-bar>
+                <!-- End of Footer -->
+
+            </div>
+        </div>
+    </body>
+
+</html>
