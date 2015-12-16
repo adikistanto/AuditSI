@@ -45,12 +45,93 @@
         </div>
         <script>
             $(document).ready(function() {
-                var docDefinition = { content: 'This is an sample PDF printed with pdfMake' };
+                var sample=1;
+                var docDefinition = {
+                    content: [
+                        { text: 'Alternative Site Procedure',bold: true},
+				        '   Name of office      :',
+                        '   Address             :',
+                        '   Phone Number/ Email :',
+                        {   
+                            table: {
+                                widths: [ 125, 100,100,100 ],
+                                headerRows: 2,
+                                // keepWithHeaderRows: 1,
+                                body: [
+                                    //kategori 1
+                                    [{ text: 'Alternative Site Team', colSpan: 4, alignment: 'left' },{},{},{}],
+                                    [{ text: 'Responsibility', alignment: 'center' }, { text: 'Name of Employee', style: 'tableHeader', alignment: 'center' }, { text: 'Alternatif', style: 'tableHeader', alignment: 'center' ,colSpan: 2,},{}],
+                                    [{text:'-'},{text:'-'},{text:'-',colSpan: 2},{}],
+                                    //kategoti 2
+                                    [{ text: 'Alternative Site', style: 'tableHeader', colSpan: 4, alignment: 'left',bold: true },{},{},{}],
+                                    [{ text: 'Name Of Location', style: 'tableHeader', alignment: 'left' }, {text:'',colSpan: 3}, {},{}],
+                                     [{ text: 'Address', style: 'tableHeader', alignment: 'left' }, {text:'',colSpan: 3}, {},{}],
+                                     [{ text: 'Person Contact', style: 'tableHeader', alignment: 'left' }, {text:'',colSpan: 3}, {},{}],
+                                     [{ text: 'Alternative Persone', style: 'tableHeader', alignment: 'left' }, {text:'',colSpan: 3}, {},{}],
+                                     [{ text: 'How to Reach', style: 'tableHeader', alignment: 'left' }, {text:'',colSpan: 3}, {},{}],
+                                     [{ text: 'Time to Reach', style: 'tableHeader', alignment: 'left' }, {text:'',colSpan: 3}, {},{}],
+                                    //kategori 3
+                                    [{ text: 'Fasilities', style: 'tableHeader', alignment: 'center',bold: true }, { text: 'Availaible', style: 'tableHeader', alignment: 'center',bold: true }, { text: 'Required', style: 'tableHeader', alignment: 'center',bold: true},{ text: 'To be procured', style: 'tableHeader', alignment: 'center',bold: true}],
+                                     [{ text: 'Floor Space', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Computers', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Power Point', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Software', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Network', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Pheriperal Device', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Costumer Service', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Service Offered', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                    // kategori 4
+                                    [{ text: 'Fasility Provider', style: 'tableHeader', alignment: 'center',bold: true }, { text: 'Name, Address, Contact', style: 'tableHeader', alignment: 'center',bold: true,colSpan: 2 }, {},{ text: 'Lead Time', style: 'tableHeader', alignment: 'center',bold: true}],
+                                    [{ text: 'Commputer' }, {text:'-',colSpan: 2 }, {},{ text: '-'}],
+                                     [{ text: 'Software' }, {text:'-',colSpan: 2 }, {},{ text: '-'}],
+                                     [{ text: 'Network' }, {text:'-',colSpan: 2 }, {},{ text: '-'}],
+                                     [{ text: 'Peripheral Device' }, {text:'-',colSpan: 2 }, {},{ text: '-'}],
+                                    
+                                    // kateegori 5
+                                     [{ text: 'Restoration Target', style: 'tableHeader', alignment: 'center',bold: true }, { text: 'Time to Shift', style: 'tableHeader', alignment: 'center',bold: true }, { text: 'Time to Setup', style: 'tableHeader', alignment: 'center',bold: true},{ text: 'Time to Restart', style: 'tableHeader', alignment: 'center',bold: true}],
+                                      [{ text: 'Hour', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                    
+                                    // kategori 6
+                                     [{ text: 'Alternative Site Layout', style: 'tableHeader', colSpan: 4, alignment: 'left' },{},{},{}],
+                                     [{ text: 'Alternative Site', style: 'tableHeader', colSpan: 4, alignment: 'left',bold: true },{},{},{}],
+                                    [{ text: 'Name Of Location', style: 'tableHeader', alignment: 'left' }, {text:'',colSpan: 3}, {},{}],
+                                     [{ text: 'Address', style: 'tableHeader', alignment: 'left' }, {text:'',colSpan: 3}, {},{}],
+                                     [{ text: 'Person Contact', style: 'tableHeader', alignment: 'left' }, {text:'',colSpan: 3}, {},{}],
+                                     [{ text: 'Alternative Persone', style: 'tableHeader', alignment: 'left' }, {text:'',colSpan: 3}, {},{}],
+                                     [{ text: 'How to Reach', style: 'tableHeader', alignment: 'left' }, {text:'',colSpan: 3}, {},{}],
+                                     [{ text: 'Time to Reach', style: 'tableHeader', alignment: 'left' }, {text:'',colSpan: 3}, {},{}],
+                                    //kategori 7
+                                    [{ text: 'Fasilities', style: 'tableHeader', alignment: 'center',bold: true }, { text: 'Availaible', style: 'tableHeader', alignment: 'center',bold: true }, { text: 'Required', style: 'tableHeader', alignment: 'center',bold: true},{ text: 'To be procured', style: 'tableHeader', alignment: 'center',bold: true}],
+                                     [{ text: 'Floor Space', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Computers', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Power Point', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Software', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Network', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Pheriperal Device', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Costumer Service', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                     [{ text: 'Service Offered', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                    // kategori 8
+                                    [{ text: 'Fasility Provider', style: 'tableHeader', alignment: 'center',bold: true }, { text: 'Name, Address, Contact', style: 'tableHeader', alignment: 'center',bold: true,colSpan: 2 }, {},{ text: 'Lead Time', style: 'tableHeader', alignment: 'center',bold: true}],
+                                    [{ text: 'Commputer' }, {text:'-',colSpan: 2 }, {},{ text: '-'}],
+                                     [{ text: 'Software' }, {text:'-',colSpan: 2 }, {},{ text: '-'}],
+                                     [{ text: 'Network' }, {text:'-',colSpan: 2 }, {},{ text: '-'}],
+                                     [{ text: 'Peripheral Device' }, {text:'-',colSpan: 2 }, {},{ text: '-'}],
+                                    
+                                    // kateegori 9
+                                     [{ text: 'Restoration Target', style: 'tableHeader', alignment: 'center',bold: true }, { text: 'Time to Shift', style: 'tableHeader', alignment: 'center',bold: true }, { text: 'Time to Setup', style: 'tableHeader', alignment: 'center',bold: true},{ text: 'Time to Restart', style: 'tableHeader', alignment: 'center',bold: true}],
+                                      [{ text: 'Hour', style: 'tableHeader', alignment: 'left' }, {text:'-'}, {text:'-'},{text:'-'}],
+                                    
+                                ]
+                            }
+                        
+                        }
+                    ]
+                };
                 // open the PDF in a new window
-                pdfMake.createPdf(docDefinition).open();
+                //pdfMake.createPdf(docDefinition).open();
 
                 // print the PDF (temporarily Chrome-only)
-                pdfMake.createPdf(docDefinition).print();
+                //pdfMake.createPdf(docDefinition).print();
 
                 // download the PDF (temporarily Chrome-only)
                 pdfMake.createPdf(docDefinition).download('optionalName.pdf');
