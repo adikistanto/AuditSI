@@ -2,6 +2,16 @@ body{
     background-color: #FFF;
 }
 .scroll{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0px;
+    bottom: 44px;
+    left: 0px;
+    right: 0px;
+    z-index: 0px;
+}
+.ion-scroll{
     height: auto;
     position: absolute;
     top: 0px;
@@ -239,6 +249,50 @@ input[type="text"].positive{
 /*** FORM 7 - External Support Agreements ***/
 .contract{
     padding-top: 17px;
+}
+
+/*** DISPLAY FORM 1 ***/
+.display{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 44px;
+    left: 0px;
+    right: 0px;
+    z-index: 0px;
+    overflow: scroll;
+}
+
+
+.header{
+    background-color: #EEE;
+    font-weight: 600;
+}
+.sub-header{
+    background-color: #F0F0F0;
+    font-weight: 600;
+}
+.row{
+    width: auto;
+    height: auto;
+}
+.col-1,
+.col-2,
+.col-3{
+    width: 300px;
+    height: auto;
+}
+/*.col-1,
+.col-3{
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}*/
+.col-4{
+    width: 600px;
+}
+.col-5{
+    width: 200px;
 }
 
 
