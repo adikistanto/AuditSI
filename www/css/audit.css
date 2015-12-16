@@ -15,7 +15,7 @@ body{
     height: auto;
     position: absolute;
     top: 0px;
-    bottom: 44px;
+    bottom: 0px;
     left: 0px;
     right: 0px;
     z-index: 0px;
@@ -263,19 +263,23 @@ input[type="text"].positive{
     z-index: 0px;
     overflow: scroll;
 }
-
-
 .header{
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
     background-color: #EEE;
     font-weight: 600;
 }
 .sub-header{
+    line-height: 35px;
+    vertical-align: middle;
     background-color: #F0F0F0;
     font-weight: 600;
 }
 .row{
     width: auto;
     height: auto;
+    min-height: 35px;
 }
 .col-1,
 .col-2,
@@ -293,6 +297,9 @@ input[type="text"].positive{
 }
 .col-5{
     width: 200px;
+}
+.col-6{
+    width: 400px;
 }
 
 
