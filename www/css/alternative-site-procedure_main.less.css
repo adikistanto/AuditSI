@@ -69,3 +69,39 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
+@media all {
+  .grid-pad {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (min-width: 900px) {
+  .row-height-1 > .col > .content-area {
+    min-height: 100px;
+  }
+}
+@media all and (min-width: 900px) {
+  .row-height-2 > .col > .content-area {
+    min-height: 100px;
+  }
+}
+.uib_row_1:not(.cright) > .col {
+  padding-right: 20px;
+}
+.uib_row_1.cright > .col {
+  padding-left: 20px;
+}
+@media all {
+  .col-0_12-12 {
+    width: auto;
+    float: none !important;
+  }
+  .urow:not(.cright) > .col-0_12-12 {
+    padding-right: 0px !important;
+  }
+  .urow.cright > .col-0_12-12 {
+    padding-left: 0px !important;
+  }
+}

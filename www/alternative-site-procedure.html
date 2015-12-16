@@ -634,7 +634,7 @@
                     </div>
                     <!-- End of Form 12 -->
                 </div>  <!-- End of scroll -->
-                
+
                 <!-- Footer -->
                 <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
                     <div class="buttons widget-container content-area horiz-area wrapping-col">
@@ -656,7 +656,7 @@
                 var number = 1;
                 var max = 12;    // Jumlah semua Form
                 var form2_length = localStorage.getItem("alt_site_form2_length");
-                
+
                 $("#form1").show();
                 // Menampilkan data Form 1 (jika ada)
                 document.getElementsByName("office-name")[0].value = localStorage.getItem("alternate_site_office_name");
@@ -665,7 +665,10 @@
 
                 /* Menampilkan Form 2 tambahan (jika ada) */
                 for (var i = 1; i < form2_length; i++) {
-                    $("#form2 form").append('<div class="team"><label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span><input type="text" placeholder="Enter responsibility" name="responsibility" value=""></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span><input type="text" placeholder="Enter employee\'s name" name="employee-name"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span><input type="text" placeholder="Enter alternative" name="alternative"></label></div>');
+                    var cek_value = localStorage.getItem("alternate_site_responsibility"+i);
+                    if(cek_value != ''){
+                        $("#form2 form").append('<div class="team"><label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span><input type="text" placeholder="Enter responsibility" name="responsibility" value=""></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span><input type="text" placeholder="Enter employee\'s name" name="employee-name"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span><input type="text" placeholder="Enter alternative" name="alternative"></label></div>');
+                    }
                 }
 
                 /* Menyembunyikan Form lain */

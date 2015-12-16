@@ -11,6 +11,15 @@ body{
     right: 0px;
     z-index: 0px;
 }
+.ion-scroll{
+    height: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 44px;
+    left: 0px;
+    right: 0px;
+    z-index: 0px;
+}
 a{
     text-decoration: none;
 }
@@ -22,7 +31,7 @@ a{
     z-index: 10;
 }
 .form-item:hover ion-item{
-    background-color: #92CBE6;
+    background-color: #64D3F3;
     color: #FFF;
 }
 
@@ -216,23 +225,75 @@ h4{
 
 /*** FORM 6 ***/
 .paragraph-padding{
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 .paragraph-space{
     margin-top: 10px;
 }
 .sub-menu{
-    height: 40px;
+    height: auto;
+    min-height: 40px;
     padding-top: 12px;
     padding-bottom: 12px;
-    background-color:darkgrey;
+    background-color: #F0F0F0;
 }
 .sub-menu ~h4{
     font-size: 16px;
     font-weight: 600;
 }
+input[type="text"].positive{
+    color: #387EF5;
+}
 
+/*** FORM 7 - External Support Agreements ***/
+.contract{
+    padding-top: 17px;
+}
+
+/*** DISPLAY FORM 1 ***/
+.display{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 44px;
+    left: 0px;
+    right: 0px;
+    z-index: 0px;
+    overflow: scroll;
+}
+
+
+.header{
+    background-color: #EEE;
+    font-weight: 600;
+}
+.sub-header{
+    background-color: #F0F0F0;
+    font-weight: 600;
+}
+.row{
+    width: auto;
+    height: auto;
+}
+.col-1,
+.col-2,
+.col-3{
+    width: 300px;
+    height: auto;
+}
+/*.col-1,
+.col-3{
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}*/
+.col-4{
+    width: 600px;
+}
+.col-5{
+    width: 200px;
+}
 
 
 
