@@ -35,11 +35,11 @@
                 </ion-header-bar>
                 <!-- End of Header -->
 
-                <div class="scroll">
+                <ion-content [overflow-scroll="true"] class="scroll">
                     <!-- Form 1 - Emergency Procedure -->
                     <div data-role="page" id="form1" class="upage-content ac0 content-area vertical-col">
                         <form>
-                            <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
+                            <label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
                                 <input id="office_name" type="text" placeholder="Enter office's name">
                             </label>
                             <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address*</span>
@@ -77,7 +77,8 @@
                             <p>Form a queue for evacuation. If possible, take headcount to ensure safe evacuation of all.</p>
                             <p>Separated evacuees must establish contact with office head to confirm evacuation.</p>
                         </div>
-                    </div>  <!-- End of Form 2 -->
+                    </div>
+                    <!-- End of Form 2 -->
 
                     <!-- Form 3 - Nonsystem Emergency - Power -->
                     <div data-role="page" id="form3" class="upage-content ac0 content-area vertical-col">
@@ -103,7 +104,8 @@
                         <div class="paragraph-padding">
                             <p>In case of fi re hazards, follow the evacuation procedure suggested in case of fire.</p>
                         </div>
-                    </div>  <!-- End of Form 3 -->
+                    </div>
+                    <!-- End of Form 3 -->
 
                     <!-- Form 4 - Nonsystem Emergency - Civil Disorder, Vandalism -->
                     <div data-role="page" id="form4" class="upage-content ac0 content-area vertical-col">
@@ -130,7 +132,8 @@
                             <p>First evacuate injured personnel followed by others along with IT resources.</p>
                             <p>Form a queue for evacuation. If possible, take head count to ensure safe evacuation of all.</p>
                         </div>
-                    </div>  <!-- End of Form 4 -->
+                    </div>
+                    <!-- End of Form 4 -->
 
                     <!-- Form 5 - Nonsystem Emergency - Evolving Natural Calamity (Flood, Isolation, etc.) -->
                     <div data-role="page" id="form5" class="upage-content ac0 content-area vertical-col">
@@ -158,14 +161,15 @@
                             <p>Evacuees who were separated from the group must establish contact with office head to confirm evacuation.</p>
                             <p>Lock the location, if complete evacuation is established.</p>
                         </div>
-                    </div>  <!-- End of Form 5 -->
+                    </div>
+                    <!-- End of Form 5 -->
 
                     <!-- Form 6 - Sudden Natural Calamity (Lightning, Earthquake) -->
                     <div data-role="page" id="form6" class="upage-content ac0 content-area vertical-col">
                         <h4 class="d-margins sub-menu">Sudden Natural Calamity (Lightning, Earthquake)</h4>
                         <h4>Action</h4>
                         <div class="paragraph-padding">
-                            <p>At each stage, assess whether it is possible to carry out the suggested action. If not, move on to the next action.  If there is no time at all, move on to evacuation procedure.</p>
+                            <p>At each stage, assess whether it is possible to carry out the suggested action. If not, move on to the next action. If there is no time at all, move on to evacuation procedure.</p>
                             <p>
                                 <input id="auditee_name_4" class="positive" type="text" placeholder="Name of auditee">
                             </p>
@@ -187,7 +191,8 @@
                             <p>Evacuees who were separated from the group must establish contact with office head to confirm evacuation.</p>
                             <p>Lock the location, if complete evacuation is established.</p>
                         </div>
-                    </div>  <!-- End of Form 6 -->
+                    </div>
+                    <!-- End of Form 6 -->
 
                     <!-- Form 7 - System Emergency - Malfunction -->
                     <div data-role="page" id="form7" class="upage-content ac0 content-area vertical-col">
@@ -197,20 +202,22 @@
                             <p>Contact contingency plan designate for support and log in the problem.</p>
                             <p>Ensure availability of last data backup.</p>
                         </div>
-                    </div>  <!-- End of Form 7 -->
+                    </div>
+                    <!-- End of Form 7 -->
 
                     <!-- Form 8 - System Emergency - Virus -->
                     <div data-role="page" id="form8" class="upage-content ac0 content-area vertical-col">
                         <h4 class="d-margins sub-menu">Virus</h4>
                         <h4>Action</h4>
                         <div class="paragraph-padding">
-                            <p> Notify Virus Alert Team.</p>
+                            <p>Notify Virus Alert Team.</p>
                             <p>De-link affected machine(s) from network and other shared resources.</p>
                             <p>Take custody of last data backup.</p>
                         </div>
-                    </div>  <!-- End of Form 8 -->
+                    </div>
+                    <!-- End of Form 8 -->
 
-                </div>
+                </ion-content>
                 <!-- End 0f scroll -->
 
                 <!-- Footer -->
@@ -428,7 +435,7 @@
                 // MENGATUR TOMBOL
                 $("#back, #next").click(function(){
                     /* Scroll to top */
-                    $("div.scroll").scrollTop(0);
+                    $('.scroll').scrollTop(0);
 
                     // Menyembunyikan tombol check
                     if((number!=max) && (number!=1)){
@@ -464,4 +471,5 @@
         </script>
 
     </body>
+
 </html>

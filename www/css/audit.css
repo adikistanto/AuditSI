@@ -2,8 +2,7 @@ body{
     background-color: #FFF;
 }
 .scroll{
-    overflow-y: scroll;
-    overflow-x: hidden;
+    height: auto;
     position: absolute;
     top: 0px;
     bottom: 44px;
@@ -22,7 +21,7 @@ a{
     z-index: 10;
 }
 .form-item:hover ion-item{
-    background-color: #92CBE6;
+    background-color: #64D3F3;
     color: #FFF;
 }
 

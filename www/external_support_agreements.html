@@ -4,7 +4,6 @@
     <head>
         <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
         <link rel="stylesheet" type="text/css" href="css/alternative-site-procedure_main.less.css" class="main-less">
-        <link rel="stylesheet" type="text/css" href="css/audit.css">
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -16,7 +15,9 @@
         <script type="application/javascript" src="lib/jquery.min.js"></script>
         <script type="application/javascript" src="marginal/marginal-position.js"></script>
         <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
-        <script type="application/javascript" src="js/alternative-site-procedure_init_services.js"></script>
+        <script type="application/javascript" src="js/alternative-site-procedure_init_services.js">
+        </script>
+        <link rel="stylesheet" type="text/css" href="css/audit.css">
     </head>
 
     <body ng-app="myApp">
@@ -35,11 +36,11 @@
                 </ion-header-bar>
                 <!-- End of Header -->
 
-                <div class="scroll">
+                <ion-content [overflow-scroll="true"] class="scroll d-margins">
                     <!-- Form 1 -  External Support Agreements -->
                     <div data-role="page" id="form1" class="upage-content ac0 content-area vertical-col">
                         <form>
-                            <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
+                            <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Office*</span>
                                 <input id="office_name" type="text" placeholder="Enter office's name">
                             </label>
                             <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Address*</span>
@@ -56,53 +57,56 @@
                     <div data-role="page" id="form2" class="upage-content ac0 content-area vertical-col">
                         <form>
                             <div class="vendor">
-                                <label class="item item-input widget uib_w_3 d-margins item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Vendor</span>
-                                    <input id="vendor_name" type="text" placeholder="Enter vendor's name">
+                                <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Vendor</span>
+                                    <input name="vendor_name" type="text" placeholder="Enter vendor's name">
                                 </label>
                                 <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Terms of Agreement</span>
-                                    <textarea id="terms_agreement" placeholder="Enter terms of agreement" rows="3" wrap="soft"></textarea>
+                                    <textarea name="terms_agreement" placeholder="Enter terms of agreement" rows="3" wrap="soft"></textarea>
                                 </label>
                                 <label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Location of Agreement</span>
-                                    <input type="text" placeholder="Enter location of agreement" id="location_agreement">
+                                    <input name="location_agreement" type="text" placeholder="Enter location of agreement">
                                 </label>
-                                <label class="contract item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract</span>
-                                    <input type="text" placeholder="Enter point of contract 1" id="location_agreement">
+                                <label class="item item-input widget uib_w_11 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract 1</span>
+                                    <input name="contract_1" type="text" placeholder="Enter last update date">
                                 </label>
-                                <label class="item item-input widget uib_w_5 item-floating-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract</span>
-                                    <input type="text" placeholder="Enter point of contract 2" id="location_agreement">
+                                <label class="item item-input widget uib_w_12 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract 2</span>
+                                    <input name="contract_2" type="text">
                                 </label>
-                                <label class="item item-input widget uib_w_5 item-floating-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract</span>
-                                    <input type="text" placeholder="Enter point of contract 3" id="location_agreement">
+                                <label class="item item-input widget uib_w_13 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract 3</span>
+                                    <input name="contract_3" type="text">
                                 </label>
                             </div>
                         </form>
                         <div class="add">
                             <button class="button button-assertive icon ion-plus-circled"></button>
                         </div>
-                    </div>  <!-- End of Form 2 -->
+                    </div>
+                    <!-- End of Form 2 -->
 
                     <!-- Form 3 - Date Verified -->
                     <div data-role="page" id="form3" class="upage-content ac0 content-area vertical-col">
                         <form>
-                            <label class="item item-input widget uib_w_11 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Last Update</span>
-                                <input type="date" placeholder="Enter last update date">
+                            <label class="item item-input widget uib_w_11 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Last Update</span>
+                                <input id="last_update" type="date" placeholder="Enter last update date">
                             </label>
                             <label class="item item-input widget uib_w_12 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Verification</span>
-                                <input type="date">
+                                <input id="verification" type="date">
                             </label>
                             <label class="item item-input widget uib_w_13 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Sent to  Head Office</span>
-                                <input type="date">
+                                <input id="sent_head" type="date">
                             </label>
                             <label class="item item-input widget uib_w_14 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Sent to  Branch</span>
-                                <input type="date">
+                                <input id="sent_branch" type="date">
                             </label>
                             <label class="item item-input widget uib_w_15 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Sent to  Off-Site</span>
-                                <input type="date">
+                                <input id="sent_offsite" type="date">
                             </label>
                         </form>
-                    </div>  <!-- End of Form 3 -->
+                    </div>
+                    <!-- End of Form 3 -->
 
-                </div>  <!-- End of scroll -->
+                </ion-content>
+                <!-- End of scroll -->
 
                 <!-- Footer -->
                 <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
@@ -121,13 +125,25 @@
 
         <!-- JavaScript -->
         <script type="text/javascript">
-            $(document).ready(function() {
+            $(document).ready(function(){
 
                 var number = 1;
                 var max = 3;    // Jumlah semua Form
+                var form2_length = localStorage.getItem("external_support_form2_length");
 
                 $("#form1").show();
                 /* Menampilkan data yang tersimpan pada Form 1 */
+                $("#office_name").val(localStorage.getItem("external_support_name"));
+                $("#office_address").val(localStorage.getItem("external_support_address"));
+                $("#office_contact").val(localStorage.getItem("external_support_contact"));
+
+                /* Menampilkan Form 2 tambahan (jika ada) */
+                for (var i = 1; i < form2_length; i++) {
+                    var cek_value = localStorage.getItem("external_support_vendor_name"+i);
+                    if(cek_value != ''){
+                        $("#form2 form").append('<div class="vendor d-margins"><label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Vendor</span><input id="vendor_name" type="text" placeholder="Enter vendor\'s name"></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Terms of Agreement</span><textarea id="terms_agreement" placeholder="Enter terms of agreement" rows="3" wrap="soft"></textarea></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Location of Agreement</span><input id="location_agreement" type="text" placeholder="Enter location of agreement"></label><label class="item item-input widget uib_w_11 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract 1</span><input id="contract_1" type="text" placeholder="Enter last update date"></label><label class="item item-input widget uib_w_12 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract 2</span><input id="contract_2" type="text"></label><label class="item item-input widget uib_w_13 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract 3</span><input id="contract_3" type="text"></label></div>');
+                    }
+                }
 
                 /* Menyembunyikan Form lain */
                 for (var i = 2; i <= max; i++) {
@@ -139,6 +155,47 @@
                 $("#back").hide();
 
                 // MENYIMPAN DATA =======================
+                //** Dilakukan sebelum var number ditambah atau dikurangi
+                $("#back, #next").click(function(){
+                    if(number == 1){      // Form 1
+                        // Mengambil data dari form
+                        var office_name = $("#office_name").val();
+                        var office_address = $("#office_address").val();
+                        var office_contact = $("#office_contact").val();
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("external_support_name", office_name);
+                            localStorage.setItem("external_support_address", office_address);
+                            localStorage.setItem("external_support_contact", office_contact);
+                        }
+                    }
+                    else if(number == 2){      // Form 2
+                        // Menghitung jumlah form vendor
+                        form2_length = $('input[name="vendor_name"]').length;
+                        localStorage.setItem("external_support_form2_length",form2_length);
+
+                        // Mengambil data dari form
+                        for (var i = 0; i < form2_length; i++) {
+                            var vendor_name = $('input[name="vendor_name"]:eq('+i+')').val();
+                            var terms_agreement = $('textarea[name="terms_agreement"]:eq('+i+')').val();
+                            var location_agreement = $('input[name="location_agreement"]:eq('+i+')').val();
+                            var contract_1 = $('input[name="contract_1"]:eq('+i+')').val();
+                            var contract_2 = $('input[name="contract_2"]:eq('+i+')').val();
+                            var contract_3 = $('input[name="contract_3"]:eq('+i+')').val();
+                            // Jika perangkat support dengan Local Storage
+                            if (typeof(Storage) !== "undefined") {
+                                // Simpan
+                                localStorage.setItem("external_support_vendor_name"+i, vendor_name);
+                                localStorage.setItem("external_support_terms_agreement"+i, terms_agreement);
+                                localStorage.setItem("external_support_location_agreement"+i, location_agreement);
+                                localStorage.setItem("external_support_contract_1"+i, contract_1);
+                                localStorage.setItem("external_support_contract_2"+i, contract_2);
+                                localStorage.setItem("external_support_contract_3"+i, contract_3);
+                            }
+                        }
+                    }
+                });
 
                 /* NEXT PAGE */
                 $("#next").click(function(){
@@ -150,6 +207,23 @@
 
                 /* LAST PAGE */
                 $("#check").click(function(){
+                    if(number == 3){      // Form 3
+                        // Mengambil data dari form
+                        var last_update = $("#last_update").val();
+                        var verification = $("#verification").val();
+                        var sent_head = $("#sent_head").val();
+                        var sent_branch = $("#sent_branch").val();
+                        var sent_offsite = $("#sent_offsite").val();
+                        // Jika perangkat support dengan Local Storage
+                        if (typeof(Storage) !== "undefined") {
+                            // Simpan
+                            localStorage.setItem("external_support_last_update", last_update);
+                            localStorage.setItem("external_support_verification", verification);
+                            localStorage.setItem("external_support_sent_head", sent_head);
+                            localStorage.setItem("external_support_sent_branch", sent_branch);
+                            localStorage.setItem("external_support_sent_offsite", sent_offsite);
+                        }
+                    }
                     window.location = "index.html";
                 });
 
@@ -165,7 +239,7 @@
                 // MENGATUR TOMBOL
                 $("#back, #next").click(function(){
                     /* Scroll to top */
-                    $("div.scroll").scrollTop(0);
+                    $(".scroll").scrollTop(0);
 
                     // Menyembunyikan tombol check
                     if((number!=max) && (number!=1)){
@@ -185,7 +259,7 @@
                         $("#next").show();
                         $("#check").hide();
                     }
-                    
+
                     /* Mengganti Header */
                     if(number==1){
                         $("#header_text").text("External Support Agreements");
@@ -194,11 +268,14 @@
                     }else if(number==3){
                         $("#header_text").text("Date Verified");
                     }
+
+                    $(".add button").click(function(){
+                        $("#form2 form").append('<div class="vendor d-margins"><label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Vendor</span><input name="vendor_name" type="text" placeholder="Enter vendor\'s name"></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/textarea" data-ver="0"><span class="input-label">Terms of Agreement</span><textarea name="terms_agreement" placeholder="Enter terms of agreement" rows="3" wrap="soft"></textarea></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Location of Agreement</span><input name="location_agreement" type="text" placeholder="Enter location of agreement"></label><label class="item item-input widget uib_w_11 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract 1</span><input name="contract_1" type="text" placeholder="Enter last update date"></label><label class="item item-input widget uib_w_12 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract 2</span><input name="contract_2" type="text"></label><label class="item item-input widget uib_w_13 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Point of Contract 3</span><input name="contract_3" type="text"></label></div>');
+                    });
                 });
-
-
             });
         </script>
 
     </body>
+
 </html>
