@@ -64,7 +64,13 @@
                         <div class="col-2">Name of Employee</div>
                         <div class="col-3">Alternative</div>
                     </div>
-                    <div id="form2"></div>
+                    <div id="form2">
+                        <div class="row">
+                            <div class="col-1 responsibility"></div>
+                            <div class="col-2 employee_name"></div>
+                            <div class="col-3 alternative"></div>
+                        </div>
+                    </div>
                     <!-- End of Form 2 -->
 
                     <!-- Form 3 - First Alternative Site -->
@@ -104,54 +110,54 @@
                     </div>
                     <div class="row" id="floor_space">
                         <div class="col-1">Floor Space</div>
-                        <div class="col-5 available"></div>
-                        <div class="col-5 required"></div>
-                        <div class="col-5 procured"></div>
+                        <div class="col-5 kelas0"></div>
+                        <div class="col-5 kelas1"></div>
+                        <div class="col-5 kelas2"></div>
                     </div>
                     <div class="row" id="computer">
                         <div class="col-1">Computers</div>
-                        <div class="col-5 available"></div>
-                        <div class="col-5 required"></div>
-                        <div class="col-5 procured"></div>
+                        <div class="col-5 kelas0"></div>
+                        <div class="col-5 kelas1"></div>
+                        <div class="col-5 kelas2"></div>
                     </div>
                     <div class="row" id="power_point">
                         <div class="col-1">Power Points</div>
-                        <div class="col-5 available"></div>
-                        <div class="col-5 required"></div>
-                        <div class="col-5 procured"></div>
+                        <div class="col-5 kelas0"></div>
+                        <div class="col-5 kelas1"></div>
+                        <div class="col-5 kelas2"></div>
                     </div>
                     <div class="row" id="software">
                         <div class="col-1">Software</div>
-                        <div class="col-5 available"></div>
-                        <div class="col-5 required"></div>
-                        <div class="col-5 procured"></div>
+                        <div class="col-5 kelas0"></div>
+                        <div class="col-5 kelas1"></div>
+                        <div class="col-5 kelas2"></div>
                     </div>
                     <div class="row" id="network">
                         <div class="col-1">Network</div>
-                        <div class="col-5 available"></div>
-                        <div class="col-5 required"></div>
-                        <div class="col-5 procured"></div>
+                        <div class="col-5 kelas0"></div>
+                        <div class="col-5 kelas1"></div>
+                        <div class="col-5 kelas2"></div>
                     </div>
                     <div class="row" id="peripheral_device">
                         <div class="col-1">Peripheral Devices</div>
-                        <div class="col-5 available"></div>
-                        <div class="col-5 required"></div>
-                        <div class="col-5 procured"></div>
+                        <div class="col-5 kelas0"></div>
+                        <div class="col-5 kelas1"></div>
+                        <div class="col-5 kelas2"></div>
                     </div>
                     <div class="row" id="customer_service">
                         <div class="col-1">Customer Service Area</div>
-                        <div class="col-5 available"></div>
-                        <div class="col-5 required"></div>
-                        <div class="col-5 procured"></div>
+                        <div class="col-5 kelas0"></div>
+                        <div class="col-5 kelas1"></div>
+                        <div class="col-5 kelas2"></div>
                     </div>
                     <div class="row" id="services_offered">
                         <div class="col-1">Services Offered</div>
-                        <div class="col-5 available"></div>
-                        <div class="col-5 required"></div>
-                        <div class="col-5 procured"></div>
+                        <div class="col-5 kelas0"></div>
+                        <div class="col-5 kelas1"></div>
+                        <div class="col-5 kelas2"></div>
                     </div>
                     <!-- End of Form 4 -->
-                    
+
                     <!-- Form 5 - Facility Provider -->
                     <div class="row sub-header">
                         <div class="col-1">Facility Provider</div>
@@ -179,7 +185,7 @@
                         <div class="col-5"></div>
                     </div>
                     <!-- End of Form 5 -->
-                    
+
                     <!-- Form 6 - Restoration Target -->
                     <div class="row sub-header">
                         <div class="col-1">Restoration Target</div>
@@ -189,17 +195,17 @@
                     </div>
                     <div class="row" id="hours">
                         <div class="col-1">Hours</div>
-                        <div class="col-5"></div>
-                        <div class="col-5"></div>
-                        <div class="col-5"></div>
+                        <div class="col-5" id="shift"></div>
+                        <div class="col-5" id="setup"></div>
+                        <div class="col-5" id="restart"></div>
                     </div>
                     <!-- End of Form 6 -->
-                    
+
                     <!-- Form 7 Alternative Site Layout -->
                     <div class="row sub-header">Alternative Site Layout</div>
                     <div class="row" id="alternative_site">Alternative Site Layout</div>
                     <!-- End of Form 7 -->
-                    
+
                     <!-- Form 8 - Second Alternative Site -->
                     <div class="row sub-header">Second Alternative Site</div>
                     <div class="row">
@@ -284,7 +290,7 @@
                         <div class="col-5 procured"></div>
                     </div>
                     <!-- End of Form 9 -->
-                    
+
                     <!-- Form 10 - Facility Provider 2 -->
                     <div class="row">
                         <div class="col-1">Facility Provider</div>
@@ -312,7 +318,7 @@
                         <div class="col-5"></div>
                     </div>
                     <!-- End of Form 10 -->
-                    
+
                     <!-- Form 11 - Restoration Target 2 -->
                     <div class="row sub-header">
                         <div class="col-1">Restoration Target</div>
@@ -322,36 +328,150 @@
                     </div>
                     <div class="row" id="hours_2">
                         <div class="col-1">Hours</div>
-                        <div class="col-5"></div>
-                        <div class="col-5"></div>
-                        <div class="col-5"></div>
+                        <div class="col-5" id="shift_2"></div>
+                        <div class="col-5" id="setup_2"></div>
+                        <div class="col-5" id="restart_2"></div>
                     </div>
                     <!-- End of Form 11 -->
-                    
+
                     <!-- Form 12 Alternative Site Layout 2 -->
                     <div class="row sub-header">Alternative Site Layout</div>
                     <div class="row" id="alternative_site_2"></div>
                     <!-- End of Form 12 -->
-                    
+
+                    <!-- Print -->
+                    <a href="documentation_list_display.html" style="margin-left: 30px;">
+                        <button class="button icon-right ion-printer button-positive">Print</button>
+                    </a>
 
                 </div>
                 <!-- End of Content -->
 
-                <!-- Footer -->
-                <ion-footer-bar class="bar inner-element uib_w_8 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
-                    <div class="buttons widget-container content-area horiz-area wrapping-col">
-                        <button id="back" class="button widget uib_w_9 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0"></button>
-                    </div>
-                    <h1 id="result" class="title"></h1>
-                    <div class="buttons widget-container content-area horiz-area wrapping-col">
-                        <button id="next" class="button widget uib_w_10 d-margins ion ion-android-arrow-forward" data-uib="ionic/button" data-ver="0"></button>
-                        <button id="check" class="button widget uib_w_10 d-margins ion ion-checkmark" data-uib="ionic/button" data-ver="0"></button>
-                    </div>
-                </ion-footer-bar>
-                <!-- End of Footer -->
 
             </div>
         </div>
+
+        <!-- JavaScript -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                var form2_length = localStorage.getItem("alt_site_form2_length");
+
+                /* Menampilkan data Form 1 */
+                $('#office_name').text(localStorage.getItem("alternate_site_office_name"));
+                $('#office_address').text(localStorage.getItem("alternate_site_office_address"));
+                $('#office_contact').text(localStorage.getItem("alternate_site_office_contact"));
+
+                /* Menampilkan data Form 2 */
+                $(".responsibility").text(localStorage.getItem("alternate_site_responsibility"+0));
+                $(".employee-name").text(localStorage.getItem("alternate_site_employee_name"+0));
+                $(".alternative").text(localStorage.getItem("alternate_site_alternative"+0));
+                /* Jika lebih dari 1 */
+                if(form2_length > 1){
+                    for (var i = 1; i < form2_length; i++) {
+                        var responsibility = localStorage.getItem("alternate_site_responsibility"+i);
+                        var employee = localStorage.getItem("alternate_site_employee_name"+i);
+                        var alternative = localStorage.getItem("alternate_site_alternative"+i);
+                        if(responsibility != ''){
+                            $('#form2').append('<div class="col-1 responsibility">'+responsibility+'</div><div class="col-2 employee_name">'+employee+'</div><div class="col-3 alternative">'+alternative+'</div>');
+                        }
+                    }
+                }
+
+                /* Menampilkan data Form 3 */
+                $('#location_name').text(localStorage.getItem("alternate_site_location_name"));
+                $('#location_address').text(localStorage.getItem("alternate_site_location_address"));
+                $('#contact_person').text(localStorage.getItem("alternate_site_contact_person"));
+                $('#alternative_name').text(localStorage.getItem("alternate_site_alternative_name"));
+                $('#reach').text(localStorage.getItem("alternate_site_reach"));
+                $('#team').text(localStorage.getItem("alternate_site_team"));
+
+                /* Menampilkan data Form 4 */
+                var result_1 = localStorage.getItem("alternate_site_floor_space_1");
+                var result_2 = localStorage.getItem("alternate_site_computer_1");
+                var result_3 = localStorage.getItem("alternate_site_power_points_1");
+                var result_4 = localStorage.getItem("alternate_site_software_1");
+                var result_5 = localStorage.getItem("alternate_site_network_1");
+                var result_6 = localStorage.getItem("alternate_site_peripheral_devices_1");
+                var result_7 = localStorage.getItem("alternate_site_customer_service_area_1");
+                var result_8 = localStorage.getItem("alternate_site_services_offered_1");
+
+                $('#floor_space .kelas'+result_1).text("Ya");
+                $('#computer .kelas'+result_2).text("Ya");
+                $('#power_point .kelas'+result_3).text("Ya");
+                $('#software .kelas'+result_4).text("Ya");
+                $('#network .kelas'+result_5).text("Ya");
+                $('#peripheral_device .kelas'+result_6).text("Ya");
+                $('#customer_service .kelas'+result_7).text("Ya");
+                $('#services_offered .kelas'+result_8).text("Ya");
+
+                /* Menampilkan data Form 5 */
+                $('#computer_provider .col-6').text(localStorage.getItem("alternate_site_compt_provider_1"));
+                $('#computer_provider .col-5').text(localStorage.getItem("alternate_site_compt_lead_time_1"));
+                $('#software_provider .col-6').text(localStorage.getItem("alternate_site_soft_provider_1"));
+                $('#software_provider .col-5').text(localStorage.getItem("alternate_site_soft_lead_time_1"));
+                $('#network_provider .col-6').text(localStorage.getItem("alternate_site_net_provider_1"));
+                $('#network_provider .col-5').text(localStorage.getItem("alternate_site_net_lead_time_1"));
+                $('#peripheral_provider .col-6').text(localStorage.getItem("alternate_site_peri_provider_1"));
+                $('#peripheral_provider .col-5').text(localStorage.getItem("alternate_site_peri_lead_time_1"));
+
+                /* Menampilkan data Form 6 */
+                $('#shift').text(localStorage.getItem("alternate_site_time_shift_1"));
+                $('#setup').text(localStorage.getItem("alternate_site_time_setup_1"));
+                $('#restart').text(localStorage.getItem("alternate_site_time_restart_1"));
+
+                /* Menampilkan data Form 7 */
+                $('#alternative_site').text(localStorage.getItem("alternate_site_alt_site_1"));
+
+
+                /* Menampilkan data Form 8 */
+                $('#location_name_2').text(localStorage.getItem("alternate_site_location_name_2"));
+                $('#location_address_2').text(localStorage.getItem("alternate_site_location_address_2"));
+                $('#contact_person_2').text(localStorage.getItem("alternate_site_contact_person_2"));
+                $('#alternative_name_2').text(localStorage.getItem("alternate_site_alternative_name_2"));
+                $('#reach_2').text(localStorage.getItem("alternate_site_reach"));
+                $('#team_2').text(localStorage.getItem("alternate_site_team"));
+
+                /* Menampilkan data Form 9 */
+                var result_1 = localStorage.getItem("alternate_site_floor_space_2");
+                var result_2 = localStorage.getItem("alternate_site_computer_2");
+                var result_3 = localStorage.getItem("alternate_site_power_points_2");
+                var result_4 = localStorage.getItem("alternate_site_software_2");
+                var result_5 = localStorage.getItem("alternate_site_network_2");
+                var result_6 = localStorage.getItem("alternate_site_peripheral_devices_2");
+                var result_7 = localStorage.getItem("alternate_site_customer_service_area_2");
+                var result_8 = localStorage.getItem("alternate_site_services_offered_2");
+
+                $('#floor_space_2 .kelas'+result_1).text("Ya");
+                $('#computer_2 .kelas'+result_2).text("Ya");
+                $('#power_point_2 .kelas'+result_3).text("Ya");
+                $('#software_2 .kelas'+result_4).text("Ya");
+                $('#network_2 .kelas'+result_5).text("Ya");
+                $('#peripheral_device_2 .kelas'+result_6).text("Ya");
+                $('#customer_service_2 .kelas'+result_7).text("Ya");
+                $('#services_offered_2 .kelas'+result_8).text("Ya");
+
+                /* Menampilkan data Form 10 */
+                $('#computer_provider_2 .col-6').text(localStorage.getItem("alternate_site_compt_provider_2"));
+                $('#computer_provider_2 .col-5').text(localStorage.getItem("alternate_site_compt_lead_time_2"));
+                $('#software_provider_2 .col-6').text(localStorage.getItem("alternate_site_soft_provider_2"));
+                $('#software_provider_2 .col-5').text(localStorage.getItem("alternate_site_soft_lead_time_2"));
+                $('#network_provider_2 .col-6').text(localStorage.getItem("alternate_site_net_provider_2"));
+                $('#network_provider_2 .col-5').text(localStorage.getItem("alternate_site_net_lead_time_2"));
+                $('#peripheral_provider_2 .col-6').text(localStorage.getItem("alternate_site_peri_provider_2"));
+                $('#peripheral_provider_2 .col-5').text(localStorage.getItem("alternate_site_peri_lead_time_2"));
+
+                /* Menampilkan data Form 11 */
+                $('#shift_2').text(localStorage.getItem("alternate_site_time_shift_2"));
+                $('#setup_2').text(localStorage.getItem("alternate_site_time_setup_2"));
+                $('#restart_2').text(localStorage.getItem("alternate_site_time_restart_2"));
+
+                /* Menampilkan data Form 12 */
+                $('#alternative_site_2').text(localStorage.getItem("alternate_site_alt_site_2"));
+
+            });
+        </script>
+
     </body>
 
 </html>
