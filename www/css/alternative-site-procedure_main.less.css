@@ -7,6 +7,11 @@
 .upage-outer.fixed-header-footer {
   position: static;
 }
+.list .d-margins,
+.button-bar .d-margins,
+.tabs .d-margins {
+  margin: 0;
+}
 .vertical-col > ion-list.widget,
 .vertical-col > .widget.item-radio,
 .vertical-col > .widget.item-toggle,
@@ -34,11 +39,6 @@
   margin-left: 0;
   display: inline-block;
   width: 100%;
-}
-.list .d-margins,
-.button-bar .d-margins,
-.tabs .d-margins {
-  margin: 0;
 }
 @media all {
   .wrapping-col > .d-margins,
