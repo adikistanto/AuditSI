@@ -264,6 +264,11 @@ input[type="text"].positive{
     overflow-y: scroll;
     overflow-x: scroll;
 }
+.row{
+    width: 100%;
+    height: auto;
+    min-height: 35px;
+}
 .header{
     background-color: #C0C0C0;
     font-weight: 600;
@@ -271,11 +276,7 @@ input[type="text"].positive{
 .sub-header{
     background-color: #F0F0F0;
     font-weight: 600;
-}
-.row{
-    width: auto;
-    height: auto;
-    min-height: 35px;
+    margin-bottom: 5px;
 }
 .col-1,
 .col-2,
@@ -283,11 +284,9 @@ input[type="text"].positive{
     width: 300px;
     height: auto;
 }
-/*.col-1,
-.col-3{
-    border-left: 1px solid #333;
+.b-right{
     border-right: 1px solid #333;
-}*/
+}
 .col-4{
     width: 600px;
 }
@@ -297,11 +296,37 @@ input[type="text"].positive{
 .col-6{
     width: 400px;
 }
-
-
-
-
-
+.ion-checkmark-round{
+    text-align: center;
+}
+.header,
+.sub-header,
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6{
+    padding-top: 7px;
+}
+/*#form2{
+    height: 35px;
+    margin-top: -5px;
+}
+#form2 .row{
+    margin-top: -7px;
+    margin-bottom: -4px;
+}*/
+#alternative_site,
+#alternative_site_2{
+    height: 80px;
+}
+.a{
+    background-color: blanchedalmond
+}
+.b{
+    background-color: azure
+}
 
 
 
