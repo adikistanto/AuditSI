@@ -509,11 +509,157 @@
                 doc.text(215, 120, ":");
                 var off_contact = localStorage.getItem('alternate_site_office_contact');
                 doc.fromHTML(off_contact, 220, 102, {'width': 180});
-
+                doc.text(450, 120, "Page___of___");
+                
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 140, 500, 30, 'F');
+                doc.text(68, 160, "Alternative Site Team");
+                doc.setFillColor(215, 200, 200);
+                doc.rect(50, 170, 500, 30, 'F');
+                doc.text(68, 190, "Responsibility");
+                doc.text(208, 190, "Name of Employee");
+                doc.text(368, 190, "Alternative");
+               
+
+                doc.setLineWidth(0.1);
+                doc.line(203, 200, 203, 250);
+                doc.line(363, 200, 363, 250);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 250, 500, 30, 'F');
+                doc.text(68, 270, "Firsr Alternative Site");
+                doc.text(68, 295, "Name of Location");
+                doc.text(68, 310, "Address");
+                doc.text(68, 325, "Person to Contact");
+                doc.text(68, 340, "Alternative Person(s)");
+                doc.text(68, 355, "How to Reach");
+                doc.text(68, 370, "Time to Reach");
 
                 
+                doc.setLineWidth(0.1);
+                doc.line(203, 270, 203, 380);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 380, 500, 30, 'F');
+                doc.text(68, 400, "Facilities");
+                doc.text(208, 400, "Available");
+                doc.text(307, 400, "Required");
+                doc.text(406, 400, "To Be Procured");
+                doc.text(68, 425, "Floor Space");
+                doc.text(68, 440, "Computers");
+                doc.text(68, 455, "Power Points");
+                doc.text(68, 470, "Software");
+                doc.text(68, 485, "Network");
+                doc.text(68, 500, "Peripheral Devices");
+                doc.text(68, 515, "Customer Service Area");
+                doc.text(68, 530, "Services Offered");
+                
+                doc.setLineWidth(0.1);
+                doc.line(203, 410, 203, 540);
+                doc.line(302, 410, 302, 540);
+                doc.line(401, 410, 401, 540);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 540, 500, 30, 'F');
+                doc.text(68, 560, "Facility Provider");
+                doc.text(208, 560, "Name, Address, and Contact Number");
+                doc.text(406, 560, "Lead Time");
+                doc.text(68, 585, "Computers");
+                doc.text(68, 600, "Software");
+                doc.text(68, 615, "Network");
+                doc.text(68, 630, "Peripheral Devices");
+                
+                doc.setLineWidth(0.1);
+                doc.line(203, 570, 203, 640);
+                doc.line(401, 570, 401, 640);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 640, 500, 30, 'F');
+                doc.text(68, 660, "Restoration Target");
+                doc.text(208, 660, "Time to Shift");
+                doc.text(307, 660, "Time to Setup");
+                doc.text(406, 660, "Time to Restart");
+                doc.text(68, 685, "Hours");
+                
+                doc.setLineWidth(0.1);
+                doc.line(203, 670, 203, 695);
+                doc.line(302, 670, 302, 695);
+                doc.line(401, 670, 401, 695);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 695, 500, 30, 'F');
+                doc.text(68, 715, "Alternative Site Layout");
+                
+                
+                //second page
+                doc.addPage();
+                doc.text(450, 120, "Page___of___");
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 140, 500, 30, 'F');
+                doc.text(68, 160, "Second Alternative Site");
+                doc.text(68, 185, "Name of Location");
+                doc.text(68, 200, "Address");
+                doc.text(68, 215, "Person to Contact");
+                doc.text(68, 230, "Alternative Person(s)");
+                doc.text(68, 245, "How to Reach");
+                doc.text(68, 260, "Time to Reach");
+                
+                doc.setLineWidth(0.1);
+                doc.line(203, 170, 203, 270);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 270, 500, 30, 'F');
+                doc.text(68, 290, "Facilities");
+                doc.text(208, 290, "Available");
+                doc.text(307, 290, "Required");
+                doc.text(406, 290, "To Be Procured");
+                doc.text(68, 315, "Floor Space");
+                doc.text(68, 330, "Computers");
+                doc.text(68, 355, "Power Points");
+                doc.text(68, 370, "Software");
+                doc.text(68, 385, "Network");
+                doc.text(68, 400, "Peripheral Devices");
+                doc.text(68, 415, "Customer Service Area");
+                doc.text(68, 430, "Services Offered");
+                
+                doc.setLineWidth(0.1);
+                doc.line(203, 310, 203, 440);
+                doc.line(302, 310, 302, 440);
+                doc.line(401, 310, 302, 440);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 440, 500, 30, 'F');
+                doc.text(68, 460, "Facility Provider");
+                doc.text(208, 460, "Name, Address, and Contact Number");
+                doc.text(406, 460, "Lead Time");
+                doc.text(68, 485, "Computers");
+                doc.text(68, 500, "Software");
+                doc.text(68, 515, "Network");
+                doc.text(68, 530, "Peripheral Devices");
+                
+                doc.setLineWidth(0.1);
+                doc.line(203, 470, 203, 540);
+                doc.line(401, 470, 203, 540);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 540, 500, 30, 'F');
+                doc.text(68, 560, "Restoration Target");
+                doc.text(208, 560, "Time to Shift");
+                doc.text(307, 560, "Time to Setup");
+                doc.text(406, 560, "Time to Restart");
+                doc.text(68, 585, "Hours");
+                
+                doc.setLineWidth(0.1);
+                doc.line(203, 580, 203, 595);
+                doc.line(302, 580, 302, 595);
+                doc.line(401, 580, 401, 595);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 595, 500, 30, 'F');
+                doc.text(68, 615, "Alternative Site Layout");
+                
+
                 var pdfOutput = doc.output();
 
                 window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem) {
@@ -537,6 +683,7 @@
                           console.log(error);
                        });
                     });
+                alert("Export successfully! Check exported file in your device storage.");
             }
         </script>
 
