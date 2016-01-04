@@ -354,9 +354,11 @@
                     <!-- End of Form 12 -->
 
                     <!-- Print -->
+                    <!--
                     <a href="documentation_list_display.html" style="margin-left: 30px;">
                         <button class="button icon-right ion-printer button-positive">Print</button>
                     </a>
+                    -->
                     <!-- Export PDF -->
                     <a href="javascript:printDocument();" style="margin-left: 30px;">
                         <button  class="button icon-right ion-printer button-positive">Export to PDF</button>
@@ -520,33 +522,33 @@
                 doc.rect(50, 170, 500, 30, 'F');
                 doc.text(68, 190, "Responsibility");
                 var responsibility = localStorage.getItem("alternate_site_responsibility"+0);
-                doc.fromHTML(responsibility, 68, 172, {'width': 180});
+                doc.fromHTML(responsibility, 68, 197, {'width': 180});
                 doc.text(208, 190, "Name of Employee");
                 var employee_name = localStorage.getItem("alternate_site_employee_name"+0);
-                doc.fromHTML(employee_name, 208, 172, {'width': 180});
+                doc.fromHTML(employee_name, 208, 197, {'width': 180});
                 doc.text(368, 190, "Alternative");
                 var alternative_emp = localStorage.getItem("alternate_site_alternative"+0);
-                doc.fromHTML(alternative_emp, 368, 172, {'width': 180});
+                doc.fromHTML(alternative_emp, 368, 197, {'width': 180});
                 doc.setLineWidth(0.1);
                 doc.line(203, 200, 203, 250);
                 doc.line(363, 200, 363, 250);
-                var form2_length = localStorage.getItem("alt_site_form2_length");
+                
                 /* Jika lebih dari 1 */
-                /*
-                var row_height = 172;
-                if(form2_length > 1){
-                    for (var i = 1; i < form2_length; i++) {
-                        row_height = row_height +15;
-                        var responsibility = localStorage.getItem("alternate_site_responsibility"+i);
-                        doc.fromHTML(responsibility, 68, row_height, {'width': 180});
-                        var employee_name = localStorage.getItem("alternate_site_employee_name"+i);
-                        doc.fromHTML(employee_name, 208, row_height, {'width': 180});
-                        var alternative_emp = localStorage.getItem("alternate_site_alternative"+i);
-                        doc.fromHTML(alternative_emp, 368, row_height, {'width': 180});
-                        }
-                    }
-                }
-                */
+                var form2_length = localStorage.getItem("alt_site_form2_length");
+                var row_heights = 197;
+                var form2_length2 = Number(form2_length);
+                if(form2_length2 > 1){
+                    for (var j=1; j < form2_length2; j++) {
+                        row_heights = row_heights+15;
+                        var iterate1 = localStorage.getItem("alternate_site_responsibility"+j);
+                        doc.fromHTML(iterate1, 68, row_heights, {'width': 180});
+                        var iterate2 = localStorage.getItem("alternate_site_employee_name"+j);
+                        doc.fromHTML(iterate2, 208, row_heights, {'width': 180});
+                        var iterate3 = localStorage.getItem("alternate_site_alternative"+j);
+                        doc.fromHTML(iterate3, 368, row_heights, {'width': 180}); 
+                        } 
+                }            
+                
                 //data form 3
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 250, 500, 30, 'F');
@@ -579,6 +581,14 @@
                 doc.text(208, 400, "Available");
                 doc.text(307, 400, "Required");
                 doc.text(406, 400, "To Be Procured");
+                var result_1 = localStorage.getItem("alternate_site_floor_space_1");
+                var result_2 = localStorage.getItem("alternate_site_computer_1");
+                var result_3 = localStorage.getItem("alternate_site_power_points_1");
+                var result_4 = localStorage.getItem("alternate_site_software_1");
+                var result_5 = localStorage.getItem("alternate_site_network_1");
+                var result_6 = localStorage.getItem("alternate_site_peripheral_devices_1");
+                var result_7 = localStorage.getItem("alternate_site_customer_service_area_1");
+                var result_8 = localStorage.getItem("alternate_site_services_offered_1");
                 doc.text(68, 425, "Floor Space");
                 if(result_1=='0'){
                     doc.text(208, 425, "Yes");
@@ -646,8 +656,7 @@
                 doc.setLineWidth(0.1);
                 doc.line(203, 410, 203, 540);
                 doc.line(302, 410, 302, 540);
-                doc.line(401, 410, 401, 540);
-                
+                doc.line(401, 410, 401, 540);        
                 
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 540, 500, 30, 'F');
@@ -700,9 +709,8 @@
                 doc.rect(50, 695, 500, 30, 'F');
                 doc.text(68, 715, "Alternative Site Layout");
                 var alternative_site_layout = localStorage.getItem("alternate_site_alt_site_1");
-                doc.fromHTML(alternative_site_layout, 68, 697, {'width': 180});
-                
-                
+                doc.fromHTML(alternative_site_layout, 68, 722, {'width': 180});
+               
                 //second page
                 doc.addPage();
                 doc.text(450, 120, "Page 2 of 2");
@@ -730,7 +738,7 @@
                 doc.fromHTML(time2, 208, 242, {'width': 180});
                 doc.setLineWidth(0.1);
                 doc.line(203, 170, 203, 270);
-            
+                
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 270, 500, 30, 'F');
                 doc.text(68, 290, "Facilities");
@@ -753,7 +761,6 @@
                 }else{
                     doc.text(406, 315, "Yes");
                 }
-                
                 doc.text(68, 330, "Computers");
                 if(result2_2=='0'){
                     doc.text(208, 330, "Yes");
@@ -762,112 +769,111 @@
                 }else{
                     doc.text(406, 330, "Yes");
                 }
-                doc.text(68, 355, "Power Points");
+                doc.text(68, 345, "Power Points");
                 if(result2_3=='0'){
-                    doc.text(208, 355, "Yes");
+                    doc.text(208, 345, "Yes");
                 }else if(result2_3=='1'){
-                    doc.text(307, 355, "Yes");
+                    doc.text(307, 345, "Yes");
                 }else{
-                    doc.text(406, 355, "Yes");
+                    doc.text(406, 345, "Yes");
                 }
-                doc.text(68, 370, "Software");
+                doc.text(68, 360, "Software");
                 if(result2_4=='0'){
-                    doc.text(208, 370, "Yes");
+                    doc.text(208, 360, "Yes");
                 }else if(result2_4=='1'){
-                    doc.text(307, 370, "Yes");
+                    doc.text(307, 360, "Yes");
                 }else{
-                    doc.text(406, 370, "Yes");
+                    doc.text(406, 360, "Yes");
                 }
-                doc.text(68, 385, "Network");
+                doc.text(68, 375, "Network");
                 if(result2_5=='0'){
-                    doc.text(208, 385, "Yes");
+                    doc.text(208, 375, "Yes");
                 }else if(result2_5=='1'){
-                    doc.text(307, 385, "Yes");
+                    doc.text(307, 375, "Yes");
                 }else{
-                    doc.text(406, 385, "Yes");
+                    doc.text(406, 375, "Yes");
                 }
-                doc.text(68, 400, "Peripheral Devices");
+                doc.text(68, 390, "Peripheral Devices");
                 if(result2_6=='0'){
-                    doc.text(208, 400, "Yes");
+                    doc.text(208, 390, "Yes");
                 }else if(result2_6=='1'){
-                    doc.text(307, 400, "Yes");
+                    doc.text(307, 390, "Yes");
                 }else{
-                    doc.text(406, 400, "Yes");
+                    doc.text(406, 390, "Yes");
                 }
-                doc.text(68, 415, "Customer Service Area");
+                doc.text(68, 405, "Customer Service Area");
                 if(result2_7=='0'){
-                    doc.text(208, 415, "Yes");
+                    doc.text(208, 405, "Yes");
                 }else if(result2_7=='1'){
-                    doc.text(307, 415, "Yes");
+                    doc.text(307, 405, "Yes");
                 }else{
-                    doc.text(406, 415, "Yes");
+                    doc.text(406, 405, "Yes");
                 }
-                doc.text(68, 430, "Services Offered");
+                doc.text(68, 420, "Services Offered");
                 if(result2_8=='0'){
-                    doc.text(208, 430, "Yes");
+                    doc.text(208, 420, "Yes");
                 }else if(result2_8=='1'){
-                    doc.text(307, 430, "Yes");
+                    doc.text(307, 420, "Yes");
                 }else{
-                    doc.text(406, 430, "Yes");
+                    doc.text(406, 420, "Yes");
                 }
                 doc.setLineWidth(0.1);
-                doc.line(203, 300, 203, 440);
-                doc.line(302, 300, 302, 440);
-                doc.line(401, 300, 401, 440);
-
+                doc.line(203, 300, 203, 430);
+                doc.line(302, 300, 302, 430);
+                doc.line(401, 300, 401, 430);
                 
                 doc.setFillColor(215, 215, 215);
-                doc.rect(50, 440, 500, 30, 'F');
-                doc.text(68, 460, "Facility Provider");
-                doc.text(208, 460, "Name, Address, and Contact Number");
-                doc.text(406, 460, "Lead Time");
-                doc.text(68, 485, "Computers");
+                doc.rect(50, 430, 500, 30, 'F');
+                doc.text(68, 450, "Facility Provider");
+                doc.text(208, 450, "Name, Address, and Contact Number");
+                doc.text(406, 450, "Lead Time");
+                doc.text(68, 475, "Computers");
                 var comp_data2 = localStorage.getItem("alternate_site_compt_provider_2");
                 var comp_time2 = localStorage.getItem("alternate_site_compt_lead_time_2");
-                doc.fromHTML(comp_data2, 208, 467, {'width': 180});
-                doc.fromHTML(comp_time2, 406, 467, {'width': 180});
-                doc.text(68, 500, "Software");
+                doc.fromHTML(comp_data2, 208, 457, {'width': 180});
+                doc.fromHTML(comp_time2, 406, 457, {'width': 180});
+                doc.text(68, 490, "Software");
                 var soft_data2 = localStorage.getItem("alternate_site_soft_provider_2");
                 var soft_time2 = localStorage.getItem("alternate_site_soft_lead_time_2");
-                doc.fromHTML(soft_data2, 208, 482, {'width': 180});
-                doc.fromHTML(soft_time2, 406, 482, {'width': 180});
-                doc.text(68, 515, "Network");
+                doc.fromHTML(soft_data2, 208, 472, {'width': 180});
+                doc.fromHTML(soft_time2, 406, 472, {'width': 180});
+                doc.text(68, 505, "Network");
                 var net_data2 = localStorage.getItem("alternate_site_net_provider_2");
                 var net_time2 = localStorage.getItem("alternate_site_net_lead_time_2");
-                doc.fromHTML(net_data2, 208, 497, {'width': 180});
-                doc.fromHTML(net_time2, 406, 497, {'width': 180});
-                doc.text(68, 530, "Peripheral Devices");
+                doc.fromHTML(net_data2, 208, 487, {'width': 180});
+                doc.fromHTML(net_time2, 406, 487, {'width': 180});
+                doc.text(68, 520, "Peripheral Devices");
                 var per_data2 = localStorage.getItem("alternate_site_peri_provider_2");
                 var per_time2 = localStorage.getItem("alternate_site_peri_lead_time_2");
-                doc.fromHTML(per_data2, 208, 412, {'width': 180});
-                doc.fromHTML(per_time2, 406, 412, {'width': 180});
+                doc.fromHTML(per_data2, 208, 502, {'width': 180});
+                doc.fromHTML(per_time2, 406, 502, {'width': 180});
                 doc.setLineWidth(0.1);
-                doc.line(203, 470, 203, 540);
-                doc.line(401, 470, 401, 540);
+                doc.line(203, 460, 203, 530);
+                doc.line(401, 460, 401, 530);
                 
                 doc.setFillColor(215, 215, 215);
-                doc.rect(50, 540, 500, 30, 'F');
-                doc.text(68, 560, "Restoration Target");
-                doc.text(208, 560, "Time to Shift");
-                doc.text(307, 560, "Time to Setup");
-                doc.text(406, 560, "Time to Restart");
-                doc.text(68, 585, "Hours");
+                doc.rect(50, 530, 500, 30, 'F');
+                doc.text(68, 550, "Restoration Target");
+                doc.text(208, 550, "Time to Shift");
+                doc.text(307, 550, "Time to Setup");
+                doc.text(406, 550, "Time to Restart");
+                doc.text(68, 575, "Hours");
                 var shift2 = localStorage.getItem("alternate_site_time_shift_2");
                 var setup2 = localStorage.getItem("alternate_site_time_setup_2");
                 var restart2 = localStorage.getItem("alternate_site_time_restart_2");
-                doc.fromHTML(shift2, 208, 667, {'width': 180});
-                doc.fromHTML(setup2, 307, 667, {'width': 180});
-                doc.fromHTML(restart2, 406, 667, {'width': 180});
+                doc.fromHTML(shift2, 208, 557, {'width': 180});
+                doc.fromHTML(setup2, 307, 557, {'width': 180});
+                doc.fromHTML(restart2, 406, 557, {'width': 180});
                 doc.setLineWidth(0.1);
-                doc.line(203, 570, 203, 595);
-                doc.line(302, 570, 302, 595);
-                doc.line(401, 570, 401, 595);
+                doc.line(203, 560, 203, 585);
+                doc.line(302, 560, 302, 585);
+                doc.line(401, 560, 401, 585);
                 
                 doc.setFillColor(215, 215, 215);
-                doc.rect(50, 595, 500, 30, 'F');
-                doc.text(68, 615, "Alternative Site Layout");
+                doc.rect(50, 585, 500, 30, 'F');
+                doc.text(68, 605, "Alternative Site Layout");
                 var alternative_site_layout2 = localStorage.getItem("alternate_site_alt_site_2");
-                doc.fromHTML(alternative_site_layout2, 68, 697, {'width': 180});
+                doc.fromHTML(alternative_site_layout2, 68, 612, {'width': 180});
                 
                 var pdfOutput = doc.output();
 
@@ -892,6 +898,7 @@
                           console.log(error);
                        });
                     });
+                
                 alert("Export successfully! Check the exported file in your device storage.");
             }
         </script>
