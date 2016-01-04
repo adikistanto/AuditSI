@@ -530,8 +530,9 @@
                 doc.setLineWidth(0.1);
                 doc.line(203, 200, 203, 250);
                 doc.line(363, 200, 363, 250);
-                
+                var form2_length = localStorage.getItem("alt_site_form2_length");
                 /* Jika lebih dari 1 */
+                /*
                 var row_height = 172;
                 if(form2_length > 1){
                     for (var i = 1; i < form2_length; i++) {
@@ -545,7 +546,7 @@
                         }
                     }
                 }
-                
+                */
                 //data form 3
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 250, 500, 30, 'F');
@@ -722,10 +723,10 @@
                 var alt_person2 = localStorage.getItem("alternate_site_alternative_name_2");
                 doc.fromHTML(alt_person2, 208, 212, {'width': 180});
                 doc.text(68, 245, "How to Reach");
-                var reach2 = localStorage.getItem("alternate_site_reach_2");
+                var reach2 = localStorage.getItem("alternate_site_reach");
                 doc.fromHTML(reach2, 208, 227, {'width': 180});
                 doc.text(68, 260, "Time to Reach");
-                var time2 = localStorage.getItem("alternate_site_team_2");
+                var time2 = localStorage.getItem("alternate_site_team");
                 doc.fromHTML(time2, 208, 242, {'width': 180});
                 doc.setLineWidth(0.1);
                 doc.line(203, 170, 203, 270);
@@ -867,7 +868,7 @@
                 doc.text(68, 615, "Alternative Site Layout");
                 var alternative_site_layout2 = localStorage.getItem("alternate_site_alt_site_2");
                 doc.fromHTML(alternative_site_layout2, 68, 697, {'width': 180});
-            
+                
                 var pdfOutput = doc.output();
 
                 window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem) {
