@@ -16,6 +16,20 @@
         <script type="application/javascript" src="marginal/marginal-position.js"></script>
         <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
         <script type="application/javascript" src="js/alternative-site-procedure_init_services.js">
+        
+        <script type="application/javascript" src="js/app.js"></script>
+        <script type="application/javascript" src="js/init-app.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="app_framework/pageChangeRepeater.js"></script>
+        <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+        <script type="application/javascript" src="js/jspdf.js"></script>
+        <script type="application/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script type="application/javascript" src="js/FileSaver.js"></script>
+        <script type="application/javascript" src="js/FileSaver.min.js"></script>
+        <script type="application/javascript" src="js/Gruntfile.js"></script>
+        <script type="application/javascript" src="js/from_html.js"></script>
+        <script type="application/javascript" src="js/split_text_to_size.js"></script>
+        <script type="application/javascript" src="js/standard_fonts_metrics.js"></script>
         </script>
         <link rel="stylesheet" type="text/css" href="css/audit.css">
     </head>
@@ -343,6 +357,10 @@
                     <a href="documentation_list_display.html" style="margin-left: 30px;">
                         <button class="button icon-right ion-printer button-positive">Print</button>
                     </a>
+                    <!-- Export PDF -->
+                    <a href="javascript:printDocument();" style="margin-left: 30px;">
+                        <button  class="button icon-right ion-printer button-positive">Export to PDF</button>
+                    </a>
 
                 </div>
                 <!-- End of Content -->
@@ -470,6 +488,56 @@
                 $('#alternative_site_2').text(localStorage.getItem("alternate_site_alt_site_2"));
 
             });
+            
+            
+            //print document
+            function printDocument(){
+                var doc = new jsPDF('p', 'pt', 'a4');
+                doc.setFont('Comic Sans');
+
+                doc.text(225, 60, "Alternative Site Procedure");
+                doc.setFontSize(12);
+                doc.text(100, 90, "Name of Office");
+                doc.text(215, 90, ":");
+                var off_name = localStorage.getItem('alternate_site_office_name');
+                doc.fromHTML(off_name, 220, 72, {'width': 180});
+                doc.text(100, 105, "Address");
+                doc.text(215, 105, ":");
+                var off_address = localStorage.getItem('alternate_site_office_address');
+                doc.fromHTML(off_address, 220, 87, {'width': 180});
+                doc.text(100, 120, "Phone no./ E-mail ID");
+                doc.text(215, 120, ":");
+                var off_contact = localStorage.getItem('alternate_site_office_contact');
+                doc.fromHTML(off_contact, 220, 102, {'width': 180});
+
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 140, 500, 30, 'F');
+
+                
+                var pdfOutput = doc.output();
+
+                window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem) {
+                    fileSystem.root.getFile("AlternativeSiteProcedure.pdf", {create: true, exclusive: false}, function(entry) {
+                        var fileEntry = entry;
+                        console.log(entry);
+
+                        entry.createWriter(function(writer) {
+                            writer.onwrite = function(evt) {
+                                console.log('success');
+                            };
+
+                            console.log('writing');;
+                            writer.write( pdfOutput );
+                          }, 
+                            function(error) {
+                                console.log(error);
+                            });
+
+                    }, function(error){
+                          console.log(error);
+                       });
+                    });
+            }
         </script>
 
     </body>
