@@ -20,7 +20,7 @@
 
     <body ng-app="myApp">
 
-        <div class="upage" id="mainpage">
+        <div class="upage" id="form">
             <div class="upage-outer fixed-header-footer">
 
                 <!-- Header -->
@@ -55,8 +55,8 @@
                     <!-- Form 2 - Alternative Site Team -->
                     <div data-role="page" id="form2" class="upage-content ac0 content-area vertical-col">
                         <form>
-                            <div class="team">
-                                <label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span>
+                            <div class="team d-margins">
+                                <label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span>
                                     <input type="text" placeholder="Enter responsibility" name="responsibility" value="">
                                 </label>
                                 <label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span>
@@ -1166,7 +1166,7 @@
 
                 /* Menambahkan form 2 */
                 $(".add button").click(function(){
-                    $("#form2 form").append('<div class="team"><label class="item item-input widget uib_w_3 item-stacked-label d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span><input type="text" placeholder="Enter responsibility" name="responsibility" value=""></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span><input type="text" placeholder="Enter employee\'s name" name="employee-name"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span><input type="text" placeholder="Enter alternative" name="alternative"></label></div>');
+                    $("#form2 form").append('<div class="team d-margins"><label class="item item-input widget uib_w_3 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Responsibility*</span><input type="text" placeholder="Enter responsibility" name="responsibility" value=""></label><label class="item item-input widget uib_w_4 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Name of Employee*</span><input type="text" placeholder="Enter employee\'s name" name="employee-name"></label><label class="item item-input widget uib_w_5 item-stacked-label" data-uib="ionic/input" data-ver="0"><span class="input-label">Alternative</span><input type="text" placeholder="Enter alternative" name="alternative"></label></div>');
                 });
             });
         </script>

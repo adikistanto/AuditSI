@@ -25,15 +25,40 @@ a{
 }
 
 /*** HOME ***/
-#menu{
-    position: fixed;
-    top: -1px;
-    z-index: 10;
+#mainpage{
+    background-color: #9CD2FF;
 }
-.form-item:hover ion-item{
-    background-color: #64D3F3;
+#title{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: 30%;
+    font-size: 26px;
+    text-align: center;
     color: #FFF;
 }
+#menu{
+    position: relative;
+    top: 40%;
+}
+#menu .button-wrapper:first-child{
+    margin-bottom: 10px;
+}
+.button-wrapper{
+    width: 90%;
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.form-item button{
+    width: 100%;
+    max-width: 600px;
+}
+/*.form-item:hover button{
+    background-color: #64D3F3;
+    color: #FFF;
+}*/
 
 /*** FORM 1 - ALTERNATIVE SITE PROCEDURE ***/
 .add{
@@ -45,176 +70,23 @@ a{
 }
 .bar-header,
 .bar-footer{
+    height: 44px;
     z-index: 10;
+}
+.header-margin{
+    margin-top: 55px;
 }
 h4{
     height: 25px;
     padding-top: 3px;
     padding-left: 10px;
 }
-.header-margin{
-    margin-top: 55px;
+#form2 form{
+    background-color: #F0F0F0;
 }
-/*** FORM 2 - COMMUNICATION ***/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*** FORM 3 - CONTINGENCY LOCK ***/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*** FORM 4 - CONTINGENCY PLAN ***/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*** FORM 5 ***/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#form2 .team{
+    background-color: #FFF;
+}
 
 
 
@@ -272,6 +144,7 @@ input[type="text"].positive{
 .header{
     background-color: #C0C0C0;
     font-weight: 600;
+    margin-bottom: 5px;
 }
 .sub-header{
     background-color: #F0F0F0;
@@ -296,47 +169,23 @@ input[type="text"].positive{
 .col-6{
     width: 400px;
 }
+.col-7{
+    width: 100%;
+}
 .ion-checkmark-round{
     text-align: center;
 }
-.header,
-.sub-header,
 .col-1,
 .col-2,
 .col-3,
 .col-4,
 .col-5,
-.col-6{
+.col-6,
+.col-7{
     padding-top: 7px;
+    padding-left: 5px;
 }
-/*#form2{
-    height: 35px;
-    margin-top: -5px;
-}
-#form2 .row{
-    margin-top: -7px;
-    margin-bottom: -4px;
-}*/
 #alternative_site,
 #alternative_site_2{
     height: 80px;
 }
-.a{
-    background-color: blanchedalmond
-}
-.b{
-    background-color: azure
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
