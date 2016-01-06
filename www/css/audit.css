@@ -42,7 +42,7 @@ a{
     position: relative;
     top: 40%;
 }
-#menu .button-wrapper:first-child{
+#menu .button-wrapper{
     margin-bottom: 10px;
 }
 .button-wrapper{

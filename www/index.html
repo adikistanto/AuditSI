@@ -64,6 +64,11 @@
                         <button class="button button-positive" data-uib="ionic/button" data-ver="0">Display</button>
                     </a>
                 </div>
+                <div class="button-wrapper widget" data-uib="ionic/button_bar" data-ver="0">
+                    <a class="form-item" href="javascript:resetLs()">
+                        <button class="button button-assertive" data-uib="ionic/button" data-ver="0">Reset Form</button>
+                    </a>
+                </div>
             </div>
         </div>
         
@@ -71,6 +76,11 @@
             $(document).ready(function(){
 
             });
+            function resetLs(){
+                localStorage.clear();
+                alert("All form has been reseted.");
+                window = "index.html";
+            }
         </script>
     </body>
 
