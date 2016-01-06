@@ -16,6 +16,20 @@
         <script type="application/javascript" src="marginal/marginal-position.js"></script>
         <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
         <script type="application/javascript" src="js/alternative-site-procedure_init_services.js">
+        
+        <script type="application/javascript" src="js/app.js"></script>
+        <script type="application/javascript" src="js/init-app.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="app_framework/pageChangeRepeater.js"></script>
+        <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+        <script type="application/javascript" src="js/jspdf.js"></script>
+        <script type="application/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script type="application/javascript" src="js/FileSaver.js"></script>
+        <script type="application/javascript" src="js/FileSaver.min.js"></script>
+        <script type="application/javascript" src="js/Gruntfile.js"></script>
+        <script type="application/javascript" src="js/from_html.js"></script>
+        <script type="application/javascript" src="js/split_text_to_size.js"></script>
+        <script type="application/javascript" src="js/standard_fonts_metrics.js"></script>
         </script>
         <link rel="stylesheet" type="text/css" href="css/audit.css">
     </head>
@@ -354,8 +368,14 @@
                     <!-- End of Form 12 -->
 
                     <!-- Print -->
+                    <!--
                     <a href="documentation_list_display.html" style="margin-left: 30px;">
                         <button class="button icon-right ion-printer button-positive">Print</button>
+                    </a>
+                    -->
+                    <!-- Export PDF -->
+                    <a href="javascript:printDocument();" style="margin-left: 30px;">
+                        <button  class="button icon-right ion-printer button-positive">Export to PDF</button>
                     </a>
 
                 </div>
@@ -484,6 +504,417 @@
                 $('#alternative_site_2').text(localStorage.getItem("alternate_site_alt_site_2"));
 
             });
+            
+            
+            //print document
+            function printDocument(){
+                var doc = new jsPDF('p', 'pt', 'a4');
+                doc.setFont('Comic Sans');
+                
+                //data form 1
+                doc.text(225, 60, "Alternative Site Procedure");
+                doc.setFontSize(12);
+                doc.text(100, 90, "Name of Office");
+                doc.text(215, 90, ":");
+                var off_name = localStorage.getItem('alternate_site_office_name');
+                doc.fromHTML(off_name, 220, 72, {'width': 180});
+                doc.text(100, 105, "Address");
+                doc.text(215, 105, ":");
+                var off_address = localStorage.getItem('alternate_site_office_address');
+                doc.fromHTML(off_address, 220, 87, {'width': 180});
+                doc.text(100, 120, "Phone no./ E-mail ID");
+                doc.text(215, 120, ":");
+                var off_contact = localStorage.getItem('alternate_site_office_contact');
+                doc.fromHTML(off_contact, 220, 102, {'width': 180});
+                doc.text(450, 120, "Page 1 of 2");
+                
+                //data form 2
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 140, 500, 30, 'F');
+                doc.text(68, 160, "Alternative Site Team");
+                doc.setFillColor(215, 200, 200);
+                doc.rect(50, 170, 500, 30, 'F');
+                doc.text(68, 190, "Responsibility");
+                var responsibility = localStorage.getItem("alternate_site_responsibility"+0);
+                doc.fromHTML(responsibility, 68, 197, {'width': 180});
+                doc.text(208, 190, "Name of Employee");
+                var employee_name = localStorage.getItem("alternate_site_employee_name"+0);
+                doc.fromHTML(employee_name, 208, 197, {'width': 180});
+                doc.text(368, 190, "Alternative");
+                var alternative_emp = localStorage.getItem("alternate_site_alternative"+0);
+                doc.fromHTML(alternative_emp, 368, 197, {'width': 180});
+                doc.setLineWidth(0.1);
+                doc.line(203, 200, 203, 250);
+                doc.line(363, 200, 363, 250);
+                
+                /* Jika lebih dari 1 */
+                var form2_length = localStorage.getItem("alt_site_form2_length");
+                var row_heights = 197;
+                var form2_length2 = Number(form2_length);
+                if(form2_length2 > 1){
+                    for (var j=1; j < form2_length2; j++) {
+                        row_heights = row_heights+15;
+                        var iterate1 = localStorage.getItem("alternate_site_responsibility"+j);
+                        doc.fromHTML(iterate1, 68, row_heights, {'width': 180});
+                        var iterate2 = localStorage.getItem("alternate_site_employee_name"+j);
+                        doc.fromHTML(iterate2, 208, row_heights, {'width': 180});
+                        var iterate3 = localStorage.getItem("alternate_site_alternative"+j);
+                        doc.fromHTML(iterate3, 368, row_heights, {'width': 180}); 
+                        } 
+                }            
+                
+                //data form 3
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 250, 500, 30, 'F');
+                doc.text(68, 270, "Firsr Alternative Site");
+                doc.text(68, 295, "Name of Location");
+                var loc_name = localStorage.getItem("alternate_site_location_name");
+                doc.fromHTML(loc_name, 208, 277, {'width': 180});
+                doc.text(68, 310, "Address");
+                var loc_address = localStorage.getItem("alternate_site_location_address");
+                doc.fromHTML(loc_address, 208, 292, {'width': 180});
+                doc.text(68, 325, "Person to Contact");
+                var contact_person = localStorage.getItem("alternate_site_contact_person");
+                doc.fromHTML(contact_person, 208, 307, {'width': 180});
+                doc.text(68, 340, "Alternative Person(s)");
+                var alt_person = localStorage.getItem("alternate_site_alternative_name");
+                doc.fromHTML(alt_person, 208, 322, {'width': 180});
+                doc.text(68, 355, "How to Reach");
+                var reach = localStorage.getItem("alternate_site_reach");
+                doc.fromHTML(reach, 208, 337, {'width': 180});
+                doc.text(68, 370, "Time to Reach");
+                var time = localStorage.getItem("alternate_site_team");
+                doc.fromHTML(time, 208, 352, {'width': 180});                
+                doc.setLineWidth(0.1);
+                doc.line(203, 280, 203, 380);
+                
+                //data form 4
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 380, 500, 30, 'F');
+                doc.text(68, 400, "Facilities");
+                doc.text(208, 400, "Available");
+                doc.text(307, 400, "Required");
+                doc.text(406, 400, "To Be Procured");
+                var result_1 = localStorage.getItem("alternate_site_floor_space_1");
+                var result_2 = localStorage.getItem("alternate_site_computer_1");
+                var result_3 = localStorage.getItem("alternate_site_power_points_1");
+                var result_4 = localStorage.getItem("alternate_site_software_1");
+                var result_5 = localStorage.getItem("alternate_site_network_1");
+                var result_6 = localStorage.getItem("alternate_site_peripheral_devices_1");
+                var result_7 = localStorage.getItem("alternate_site_customer_service_area_1");
+                var result_8 = localStorage.getItem("alternate_site_services_offered_1");
+                doc.text(68, 425, "Floor Space");
+                if(result_1=='0'){
+                    doc.text(208, 425, "Yes");
+                }else if(result_1=='1'){
+                    doc.text(307, 425, "Yes");
+                }else{
+                    doc.text(406, 425, "Yes");
+                }
+                doc.text(68, 440, "Computers");
+                if(result_2=='0'){
+                    doc.text(208, 440, "Yes");
+                }else if(result_2=='1'){
+                    doc.text(307, 440, "Yes");
+                }else{
+                    doc.text(406, 440, "Yes");
+                }
+                doc.text(68, 455, "Power Points");
+                if(result_3=='0'){
+                    doc.text(208, 455, "Yes");
+                }else if(result_3=='1'){
+                    doc.text(307, 455, "Yes");
+                }else{
+                    doc.text(406, 455, "Yes");
+                }
+                doc.text(68, 470, "Software");
+                if(result_4=='0'){
+                    doc.text(208, 470, "Yes");
+                }else if(result_4=='1'){
+                    doc.text(307, 470, "Yes");
+                }else{
+                    doc.text(406, 470, "Yes");
+                }
+                doc.text(68, 485, "Network");
+                if(result_5=='0'){
+                    doc.text(208, 485, "Yes");
+                }else if(result_5=='1'){
+                    doc.text(307, 485, "Yes");
+                }else{
+                    doc.text(406, 485, "Yes");
+                }
+                doc.text(68, 500, "Peripheral Devices");
+                if(result_6=='0'){
+                    doc.text(208, 500, "Yes");
+                }else if(result_6=='1'){
+                    doc.text(307, 500, "Yes");
+                }else{
+                    doc.text(406, 500, "Yes");
+                }
+                doc.text(68, 515, "Customer Service Area");
+                if(result_7=='0'){
+                    doc.text(208, 515, "Yes");
+                }else if(result_7=='1'){
+                    doc.text(307, 515, "Yes");
+                }else{
+                    doc.text(406, 515, "Yes");
+                }
+                doc.text(68, 530, "Services Offered");
+                if(result_8=='0'){
+                    doc.text(208, 530, "Yes");
+                }else if(result_8=='1'){
+                    doc.text(307, 530, "Yes");
+                }else{
+                    doc.text(406, 530, "Yes");
+                }
+                doc.setLineWidth(0.1);
+                doc.line(203, 410, 203, 540);
+                doc.line(302, 410, 302, 540);
+                doc.line(401, 410, 401, 540);        
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 540, 500, 30, 'F');
+                doc.text(68, 560, "Facility Provider");
+                doc.text(208, 560, "Name, Address, and Contact Number");
+                doc.text(406, 560, "Lead Time");
+                doc.text(68, 585, "Computers");
+                var comp_data = localStorage.getItem("alternate_site_compt_provider_1");
+                var comp_time = localStorage.getItem("alternate_site_compt_lead_time_1");
+                doc.fromHTML(comp_data, 208, 567, {'width': 180});
+                doc.fromHTML(comp_time, 406, 567, {'width': 180});
+                doc.text(68, 600, "Software");
+                var soft_data = localStorage.getItem("alternate_site_soft_provider_1");
+                var soft_time = localStorage.getItem("alternate_site_soft_lead_time_1");
+                doc.fromHTML(soft_data, 208, 582, {'width': 180});
+                doc.fromHTML(soft_time, 406, 582, {'width': 180});
+                doc.text(68, 615, "Network");
+                var net_data = localStorage.getItem("alternate_site_net_provider_1");
+                var net_time = localStorage.getItem("alternate_site_net_lead_time_1");
+                doc.fromHTML(net_data, 208, 597, {'width': 180});
+                doc.fromHTML(net_time, 406, 597, {'width': 180});
+                doc.text(68, 630, "Peripheral Devices");
+                var per_data = localStorage.getItem("alternate_site_peri_provider_1");
+                var per_time = localStorage.getItem("alternate_site_peri_lead_time_1");
+                doc.fromHTML(per_data, 208, 612, {'width': 180});
+                doc.fromHTML(per_time, 406, 612, {'width': 180});
+                doc.setLineWidth(0.1);
+                doc.line(203, 570, 203, 640);
+                doc.line(401, 570, 401, 640);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 640, 500, 30, 'F');
+                doc.text(68, 660, "Restoration Target");
+                doc.text(208, 660, "Time to Shift");
+                doc.text(307, 660, "Time to Setup");
+                doc.text(406, 660, "Time to Restart");
+                doc.text(68, 685, "Hours");
+                var shift = localStorage.getItem("alternate_site_time_shift_1");
+                var setup = localStorage.getItem("alternate_site_time_setup_1");
+                var restart = localStorage.getItem("alternate_site_time_restart_1");
+                doc.fromHTML(shift, 208, 667, {'width': 180});
+                doc.fromHTML(setup, 307, 667, {'width': 180});
+                doc.fromHTML(restart, 406, 667, {'width': 180});
+                doc.setLineWidth(0.1);
+                doc.line(203, 670, 203, 695);
+                doc.line(302, 670, 302, 695);
+                doc.line(401, 670, 401, 695);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 695, 500, 30, 'F');
+                doc.text(68, 715, "Alternative Site Layout");
+                var alternative_site_layout = localStorage.getItem("alternate_site_alt_site_1");
+                doc.fromHTML(alternative_site_layout, 68, 722, {'width': 180});
+               
+                //second page
+                doc.addPage();
+                doc.text(450, 120, "Page 2 of 2");
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 140, 500, 30, 'F');
+                doc.text(68, 160, "Second Alternative Site");
+                doc.text(68, 185, "Name of Location");
+                var loc_name2 = localStorage.getItem("alternate_site_location_name_2");
+                doc.fromHTML(loc_name2, 208, 167, {'width': 180});
+                doc.text(68, 200, "Address");
+                var loc_address2 = localStorage.getItem("alternate_site_location_address_2");
+                doc.fromHTML(loc_address2, 208, 182, {'width': 180});
+                doc.text(68, 215, "Person to Contact");
+                var contact_person2 = localStorage.getItem("alternate_site_contact_person_2");
+                doc.fromHTML(contact_person2, 208, 197, {'width': 180});
+                doc.text(68, 230, "Alternative Person(s)");
+                var alt_person2 = localStorage.getItem("alternate_site_alternative_name_2");
+                doc.fromHTML(alt_person2, 208, 212, {'width': 180});
+                doc.text(68, 245, "How to Reach");
+                var reach2 = localStorage.getItem("alternate_site_reach");
+                doc.fromHTML(reach2, 208, 227, {'width': 180});
+                doc.text(68, 260, "Time to Reach");
+                var time2 = localStorage.getItem("alternate_site_team");
+                doc.fromHTML(time2, 208, 242, {'width': 180});
+                doc.setLineWidth(0.1);
+                doc.line(203, 170, 203, 270);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 270, 500, 30, 'F');
+                doc.text(68, 290, "Facilities");
+                doc.text(208, 290, "Available");
+                doc.text(307, 290, "Required");
+                doc.text(406, 290, "To Be Procured");
+                var result2_1 = localStorage.getItem("alternate_site_floor_space_2");
+                var result2_2 = localStorage.getItem("alternate_site_computer_2");
+                var result2_3 = localStorage.getItem("alternate_site_power_points_2");
+                var result2_4 = localStorage.getItem("alternate_site_software_2");
+                var result2_5 = localStorage.getItem("alternate_site_network_2");
+                var result2_6 = localStorage.getItem("alternate_site_peripheral_devices_2");
+                var result2_7 = localStorage.getItem("alternate_site_customer_service_area_2");
+                var result2_8 = localStorage.getItem("alternate_site_services_offered_2");
+                doc.text(68, 315, "Floor Space");
+                if(result2_1=='0'){
+                    doc.text(208, 315, "Yes");
+                }else if(result2_1=='1'){
+                    doc.text(307, 315, "Yes");
+                }else{
+                    doc.text(406, 315, "Yes");
+                }
+                doc.text(68, 330, "Computers");
+                if(result2_2=='0'){
+                    doc.text(208, 330, "Yes");
+                }else if(result2_2=='1'){
+                    doc.text(307, 330, "Yes");
+                }else{
+                    doc.text(406, 330, "Yes");
+                }
+                doc.text(68, 345, "Power Points");
+                if(result2_3=='0'){
+                    doc.text(208, 345, "Yes");
+                }else if(result2_3=='1'){
+                    doc.text(307, 345, "Yes");
+                }else{
+                    doc.text(406, 345, "Yes");
+                }
+                doc.text(68, 360, "Software");
+                if(result2_4=='0'){
+                    doc.text(208, 360, "Yes");
+                }else if(result2_4=='1'){
+                    doc.text(307, 360, "Yes");
+                }else{
+                    doc.text(406, 360, "Yes");
+                }
+                doc.text(68, 375, "Network");
+                if(result2_5=='0'){
+                    doc.text(208, 375, "Yes");
+                }else if(result2_5=='1'){
+                    doc.text(307, 375, "Yes");
+                }else{
+                    doc.text(406, 375, "Yes");
+                }
+                doc.text(68, 390, "Peripheral Devices");
+                if(result2_6=='0'){
+                    doc.text(208, 390, "Yes");
+                }else if(result2_6=='1'){
+                    doc.text(307, 390, "Yes");
+                }else{
+                    doc.text(406, 390, "Yes");
+                }
+                doc.text(68, 405, "Customer Service Area");
+                if(result2_7=='0'){
+                    doc.text(208, 405, "Yes");
+                }else if(result2_7=='1'){
+                    doc.text(307, 405, "Yes");
+                }else{
+                    doc.text(406, 405, "Yes");
+                }
+                doc.text(68, 420, "Services Offered");
+                if(result2_8=='0'){
+                    doc.text(208, 420, "Yes");
+                }else if(result2_8=='1'){
+                    doc.text(307, 420, "Yes");
+                }else{
+                    doc.text(406, 420, "Yes");
+                }
+                doc.setLineWidth(0.1);
+                doc.line(203, 300, 203, 430);
+                doc.line(302, 300, 302, 430);
+                doc.line(401, 300, 401, 430);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 430, 500, 30, 'F');
+                doc.text(68, 450, "Facility Provider");
+                doc.text(208, 450, "Name, Address, and Contact Number");
+                doc.text(406, 450, "Lead Time");
+                doc.text(68, 475, "Computers");
+                var comp_data2 = localStorage.getItem("alternate_site_compt_provider_2");
+                var comp_time2 = localStorage.getItem("alternate_site_compt_lead_time_2");
+                doc.fromHTML(comp_data2, 208, 457, {'width': 180});
+                doc.fromHTML(comp_time2, 406, 457, {'width': 180});
+                doc.text(68, 490, "Software");
+                var soft_data2 = localStorage.getItem("alternate_site_soft_provider_2");
+                var soft_time2 = localStorage.getItem("alternate_site_soft_lead_time_2");
+                doc.fromHTML(soft_data2, 208, 472, {'width': 180});
+                doc.fromHTML(soft_time2, 406, 472, {'width': 180});
+                doc.text(68, 505, "Network");
+                var net_data2 = localStorage.getItem("alternate_site_net_provider_2");
+                var net_time2 = localStorage.getItem("alternate_site_net_lead_time_2");
+                doc.fromHTML(net_data2, 208, 487, {'width': 180});
+                doc.fromHTML(net_time2, 406, 487, {'width': 180});
+                doc.text(68, 520, "Peripheral Devices");
+                var per_data2 = localStorage.getItem("alternate_site_peri_provider_2");
+                var per_time2 = localStorage.getItem("alternate_site_peri_lead_time_2");
+                doc.fromHTML(per_data2, 208, 502, {'width': 180});
+                doc.fromHTML(per_time2, 406, 502, {'width': 180});
+                doc.setLineWidth(0.1);
+                doc.line(203, 460, 203, 530);
+                doc.line(401, 460, 401, 530);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 530, 500, 30, 'F');
+                doc.text(68, 550, "Restoration Target");
+                doc.text(208, 550, "Time to Shift");
+                doc.text(307, 550, "Time to Setup");
+                doc.text(406, 550, "Time to Restart");
+                doc.text(68, 575, "Hours");
+                var shift2 = localStorage.getItem("alternate_site_time_shift_2");
+                var setup2 = localStorage.getItem("alternate_site_time_setup_2");
+                var restart2 = localStorage.getItem("alternate_site_time_restart_2");
+                doc.fromHTML(shift2, 208, 557, {'width': 180});
+                doc.fromHTML(setup2, 307, 557, {'width': 180});
+                doc.fromHTML(restart2, 406, 557, {'width': 180});
+                doc.setLineWidth(0.1);
+                doc.line(203, 560, 203, 585);
+                doc.line(302, 560, 302, 585);
+                doc.line(401, 560, 401, 585);
+                
+                doc.setFillColor(215, 215, 215);
+                doc.rect(50, 585, 500, 30, 'F');
+                doc.text(68, 605, "Alternative Site Layout");
+                var alternative_site_layout2 = localStorage.getItem("alternate_site_alt_site_2");
+                doc.fromHTML(alternative_site_layout2, 68, 612, {'width': 180});
+                
+                var pdfOutput = doc.output();
+
+                window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem) {
+                    fileSystem.root.getFile("AlternativeSiteProcedure.pdf", {create: true, exclusive: false}, function(entry) {
+                        var fileEntry = entry;
+                        console.log(entry);
+
+                        entry.createWriter(function(writer) {
+                            writer.onwrite = function(evt) {
+                                console.log('success');
+                            };
+
+                            console.log('writing');;
+                            writer.write( pdfOutput );
+                          }, 
+                            function(error) {
+                                console.log(error);
+                            });
+
+                    }, function(error){
+                          console.log(error);
+                       });
+                    });
+                
+                alert("Export successfully! Check the exported file in your device storage.");
+            }
         </script>
 
     </body>

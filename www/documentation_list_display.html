@@ -23,30 +23,11 @@
     <body ng-app="myApp">
 
         <div class="upage" id="mainpage">
-            <div class="upage-outer fixed-header-footer">
-                <div class="upage-content ac0" id="page_3_48">
-                    <div class="upage-outer fixed-header-footer">
-                        <!-- Header -->
-                    </div>
-                </div>
-
-                <ion-header-bar class="bar inner-element uib_w_1 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
-                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
-                    <h1 class="title">header</h1>
-                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
-                </ion-header-bar>
-                <ion-footer-bar class="bar inner-element uib_w_2 bar-positive bar-footer" data-uib="ionic/footer" data-ver="0">
-                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
-                    <h1 class="title">footer</h1>
-                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
-                </ion-footer-bar>
-            </div>
-
         </div>
         <script>
             $(document).ready(function() {
                 var sample=1;
-                var docDefinition = {
+               var docDefinition = {
                     content: [
                         { text: 'Alternative Site Procedure',bold: true},
 				        '   Name of office      :',
@@ -134,7 +115,10 @@
                 //pdfMake.createPdf(docDefinition).print();
 
                 // download the PDF (temporarily Chrome-only)
-                pdfMake.createPdf(docDefinition).download('optionalName.pdf');
+                pdfMake.createPdf(docDefinition).download('Audit.pdf');
+                window.location = "index.html";
+                
+                
             });
         </script>
     </body>
