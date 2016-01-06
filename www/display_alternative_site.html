@@ -16,20 +16,20 @@
         <script type="application/javascript" src="marginal/marginal-position.js"></script>
         <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
         <script type="application/javascript" src="js/alternative-site-procedure_init_services.js">
-        
-        <script type="application/javascript" src="js/app.js"></script>
-        <script type="application/javascript" src="js/init-app.js"></script>
-        <script type="application/javascript" src="js/index_user_scripts.js"></script>
-        <script type="application/javascript" src="app_framework/pageChangeRepeater.js"></script>
-        <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
-        <script type="application/javascript" src="js/jspdf.js"></script>
-        <script type="application/javascript" src="js/jquery-1.7.1.min.js"></script>
-        <script type="application/javascript" src="js/FileSaver.js"></script>
-        <script type="application/javascript" src="js/FileSaver.min.js"></script>
-        <script type="application/javascript" src="js/Gruntfile.js"></script>
-        <script type="application/javascript" src="js/from_html.js"></script>
-        <script type="application/javascript" src="js/split_text_to_size.js"></script>
-        <script type="application/javascript" src="js/standard_fonts_metrics.js"></script>
+
+            <script type="application/javascript" src="js/app.js"></script>
+                <script type="application/javascript" src="js/init-app.js"></script>
+                    <script type="application/javascript" src="js/index_user_scripts.js"></script>
+                        <script type="application/javascript" src="app_framework/pageChangeRepeater.js"></script>
+                            <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+                                <script type="application/javascript" src="js/jspdf.js"></script>
+                                    <script type="application/javascript" src="js/jquery-1.7.1.min.js"></script>
+                                        <script type="application/javascript" src="js/FileSaver.js"></script>
+                                            <script type="application/javascript" src="js/FileSaver.min.js"></script>
+                                                <script type="application/javascript" src="js/Gruntfile.js"></script>
+                                                    <script type="application/javascript" src="js/from_html.js"></script>
+                                                        <script type="application/javascript" src="js/split_text_to_size.js"></script>
+                                                            <script type="application/javascript" src="js/standard_fonts_metrics.js"></script>
         </script>
         <link rel="stylesheet" type="text/css" href="css/audit.css">
     </head>
@@ -369,10 +369,10 @@
 
                     <!-- Print -->
                     <!--
-                    <a href="documentation_list_display.html" style="margin-left: 30px;">
-                        <button class="button icon-right ion-printer button-positive">Print</button>
-                    </a>
-                    -->
+<a href="documentation_list_display.html" style="margin-left: 30px;">
+<button class="button icon-right ion-printer button-positive">Print</button>
+</a>
+-->
                     <!-- Export PDF -->
                     <a href="javascript:printDocument();" style="margin-left: 30px;">
                         <button  class="button icon-right ion-printer button-positive">Export to PDF</button>
@@ -397,7 +397,7 @@
 
                 /* Menampilkan data Form 2 */
                 $(".responsibility").text(localStorage.getItem("alternate_site_responsibility"+0));
-                $(".employee-name").text(localStorage.getItem("alternate_site_employee_name"+0));
+                $(".employee_name").text(localStorage.getItem("alternate_site_employee_name"+0));
                 $(".alternative").text(localStorage.getItem("alternate_site_alternative"+0));
                 /* Jika lebih dari 1 */
                 if(form2_length > 1){
@@ -406,7 +406,7 @@
                         var employee = localStorage.getItem("alternate_site_employee_name"+i);
                         var alternative = localStorage.getItem("alternate_site_alternative"+i);
                         if(responsibility != ''){
-                            $('#form2').append('<div class="row"><div class="col-1 responsibility">'+responsibility+'</div><div class="col-2 employee_name">'+employee+'</div><div class="col-3 alternative">'+alternative+'</div></div>');
+                            $('#form2').append('<div class="row"><div class="col-1 responsibility b-right">'+responsibility+'</div><div class="col-2 employee_name b-right">'+employee+'</div><div class="col-3 alternative">'+alternative+'</div></div>');
                         }
                     }
                 }
@@ -503,13 +503,13 @@
                 $('#alternative_site_2').text(localStorage.getItem("alternate_site_alt_site_2"));
 
             });
-            
-            
+
+
             //print document
             function printDocument(){
                 var doc = new jsPDF('p', 'pt', 'a4');
                 doc.setFont('Comic Sans');
-                
+
                 //data form 1
                 doc.text(225, 60, "Alternative Site Procedure");
                 doc.setFontSize(12);
@@ -526,7 +526,7 @@
                 var off_contact = localStorage.getItem('alternate_site_office_contact');
                 doc.fromHTML(off_contact, 220, 102, {'width': 180});
                 doc.text(450, 120, "Page 1 of 2");
-                
+
                 //data form 2
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 140, 500, 30, 'F');
@@ -545,7 +545,7 @@
                 doc.setLineWidth(0.1);
                 doc.line(203, 200, 203, 250);
                 doc.line(363, 200, 363, 250);
-                
+
                 /* Jika lebih dari 1 */
                 var form2_length = localStorage.getItem("alt_site_form2_length");
                 var row_heights = 197;
@@ -559,9 +559,9 @@
                         doc.fromHTML(iterate2, 208, row_heights, {'width': 180});
                         var iterate3 = localStorage.getItem("alternate_site_alternative"+j);
                         doc.fromHTML(iterate3, 368, row_heights, {'width': 180}); 
-                        } 
+                    } 
                 }            
-                
+
                 //data form 3
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 250, 500, 30, 'F');
@@ -586,7 +586,7 @@
                 doc.fromHTML(time, 208, 352, {'width': 180});                
                 doc.setLineWidth(0.1);
                 doc.line(203, 280, 203, 380);
-                
+
                 //data form 4
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 380, 500, 30, 'F');
@@ -670,7 +670,7 @@
                 doc.line(203, 410, 203, 540);
                 doc.line(302, 410, 302, 540);
                 doc.line(401, 410, 401, 540);        
-                
+
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 540, 500, 30, 'F');
                 doc.text(68, 560, "Facility Provider");
@@ -699,7 +699,7 @@
                 doc.setLineWidth(0.1);
                 doc.line(203, 570, 203, 640);
                 doc.line(401, 570, 401, 640);
-                
+
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 640, 500, 30, 'F');
                 doc.text(68, 660, "Restoration Target");
@@ -717,17 +717,17 @@
                 doc.line(203, 670, 203, 695);
                 doc.line(302, 670, 302, 695);
                 doc.line(401, 670, 401, 695);
-                
+
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 695, 500, 30, 'F');
                 doc.text(68, 715, "Alternative Site Layout");
                 var alternative_site_layout = localStorage.getItem("alternate_site_alt_site_1");
                 doc.fromHTML(alternative_site_layout, 68, 722, {'width': 180});
-               
+
                 //second page
                 doc.addPage();
                 doc.text(450, 120, "Page 2 of 2");
-                
+
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 140, 500, 30, 'F');
                 doc.text(68, 160, "Second Alternative Site");
@@ -751,7 +751,7 @@
                 doc.fromHTML(time2, 208, 242, {'width': 180});
                 doc.setLineWidth(0.1);
                 doc.line(203, 170, 203, 270);
-                
+
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 270, 500, 30, 'F');
                 doc.text(68, 290, "Facilities");
@@ -834,7 +834,7 @@
                 doc.line(203, 300, 203, 430);
                 doc.line(302, 300, 302, 430);
                 doc.line(401, 300, 401, 430);
-                
+
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 430, 500, 30, 'F');
                 doc.text(68, 450, "Facility Provider");
@@ -863,7 +863,7 @@
                 doc.setLineWidth(0.1);
                 doc.line(203, 460, 203, 530);
                 doc.line(401, 460, 401, 530);
-                
+
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 530, 500, 30, 'F');
                 doc.text(68, 550, "Restoration Target");
@@ -881,13 +881,13 @@
                 doc.line(203, 560, 203, 585);
                 doc.line(302, 560, 302, 585);
                 doc.line(401, 560, 401, 585);
-                
+
                 doc.setFillColor(215, 215, 215);
                 doc.rect(50, 585, 500, 30, 'F');
                 doc.text(68, 605, "Alternative Site Layout");
                 var alternative_site_layout2 = localStorage.getItem("alternate_site_alt_site_2");
                 doc.fromHTML(alternative_site_layout2, 68, 612, {'width': 180});
-                
+
                 var pdfOutput = doc.output();
 
                 window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem) {
@@ -902,19 +902,19 @@
 
                             console.log('writing');;
                             writer.write( pdfOutput );
-                          }, 
-                            function(error) {
-                                console.log(error);
-                            });
+                        }, 
+                                           function(error) {
+                            console.log(error);
+                        });
 
                     }, function(error){
-                          console.log(error);
-                       });
+                        console.log(error);
                     });
-                
+                });
+
                 alert("Export successfully! Check the exported file in your device storage.");
             }
-            
+
         </script>
 
     </body>

@@ -26,28 +26,28 @@ a{
 
 /*** HOME ***/
 #mainpage{
-    background-color: #9CD2FF;
+    background-color: #CFE9FF;
 }
 #title{
     width: 90%;
     margin-right: auto;
     margin-left: auto;
     position: relative;
-    top: 30%;
+    top: 25%;
     font-size: 26px;
     text-align: center;
-    color: #FFF;
+    color: #4F8EF9;
 }
 #menu{
     position: relative;
-    top: 40%;
+    top: 35%;
 }
 #menu .button-wrapper{
     margin-bottom: 10px;
 }
 .button-wrapper{
     width: 90%;
-    max-width: 600px;
+    max-width: 400px;
     margin-right: auto;
     margin-left: auto;
 }
