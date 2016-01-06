@@ -363,6 +363,11 @@
                     <a href="javascript:printDocument();" style="margin-left: 30px;">
                         <button  class="button icon-right ion-printer button-positive">Export to PDF</button>
                     </a>
+                    <!-- Reset Data -->
+                    <a href="javascript:deleteLs();" style="margin-left: 30px;">
+                        <button  class="button icon-right ion-trash button-positive">Reset Data</button>
+                    </a>
+
 
                 </div>
                 <!-- End of Content -->
@@ -901,6 +906,13 @@
                 
                 alert("Export successfully! Check the exported file in your device storage.");
             }
+            
+            function deleteLs(){
+                localStorage.clear();
+                alert("All data has been reseted!");
+                window.location = "index.html";
+            }
+            
         </script>
 
     </body>
